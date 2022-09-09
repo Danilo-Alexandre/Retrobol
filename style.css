@@ -1,0 +1,211 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background-color: rgb(51, 51, 51);
+    height: 55px;
+    display: flex;
+    width: 100vw;
+    padding: 0 20px;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 1
+}
+header img{
+    height: 25px;
+    transform: rotateY(180deg);
+}
+.whats{
+    position: fixed;
+    z-index: 2;
+    right: 5px;
+    bottom: 5px;
+    height: 45px
+}
+.banner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.banner-wide{
+    display: none;
+}
+
+.banner-mobile{
+    width: min(100%, 550px );
+    align-items: center;
+    margin-top: 50px;
+
+}
+.troca{
+    background-color: rgb(198, 198, 198);
+    width: 100vw;
+    text-align: -webkit-center;
+
+}
+
+.promo{
+    display: flex;
+    align-items: center;
+    width: min(100%, 550px);
+    justify-content: space-between;
+}
+.promo-icon{
+    margin: 10px;
+    height: 25px;
+    transform: rotate(-20deg);
+}
+.promo div{
+    display: flex;
+    align-items: center;
+}
+.seta-promo-esq, .seta-promo-dir{
+    height: 15px;
+}
+.seta-promo-esq{
+    transform: rotate(180deg);
+}
+.promo p {
+    font-size: 13px;
+}
+.como-funciona{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.como-funciona p{
+    text-align: center;
+    max-width: 90vw;
+    margin: 20px 0px;
+}
+.como-funciona h1{
+    margin-top: 20px;
+    max-width: 350px;
+    text-align: center;
+    font-size: 25px;
+}
+.banner-como-funciona{
+    width: 90vw;
+    border-radius: 35px;
+}
+.times{
+    margin: 25px 0;
+
+}
+.img-times :last-child{
+    margin-left: 10px;
+}
+.img-times{
+    display: flex;
+}
+.img-times img{
+    height: 15vw;
+}
+.passo-a-passo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+.passo-a-passo h3{
+    font-size: 25px;
+}
+.passo-a-passo *{
+    margin: 12px;
+}
+.passo-a-passo img{
+    height: 50px;
+}
+.passo-a-passo button{
+    width: 100vw;
+    border: none;
+    background-color: black;
+    color: white;
+    padding: 8px;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+.assinatura{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-image: linear-gradient(white,rgb(111, 111, 111));
+
+}
+.btn-assinatura{
+    display: flex;
+}
+.btn-assinatura button{
+    margin: 15px;
+    font-size: clamp(12px,4vw,19px);
+    background-color: white;
+    border: 2px solid black;
+    padding: 6px;
+    border-radius: 15px;
+
+}
+
+.btn-assinatura button:hover{
+    color: white;
+    background-color: black;
+}
+.camiseta-assinatura{
+    width: 50vw;
+    border-radius: 50%;
+    margin: 10px 0px 20px 0px;
+}
+.assinatura li{
+    margin: 10px;
+}
+.planos{
+    margin-top: 20px;
+    display: flex;
+    width: min(100%, 550px);
+    justify-content: space-evenly;
+}
+.plano{
+    text-align: center;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+}
+/* .plano :hover{
+    border: 3px solid #0077e2;
+
+} */
+.plano label{
+    font-weight: bold;
+    font-size: 20px;
+}
+.dinheiro{
+    margin: 10px 0px;
+    font-weight: bold;
+    font-size: 26px;
+}
+.plano span{
+    font-size: 12px;
+}
+.mensalidade{
+    font-size: 11px;
+}
+.plano input{
+    margin-top: 15px;
+    transform: scale(1.7);
+}
+.quero{
+    width: 100vw;
+    border: none;
+    background-color: black;
+    color: white;
+    padding: 8px;
+    font-size: 20px;
+    margin: 30px;
+
+}
