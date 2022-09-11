@@ -23,8 +23,8 @@ header img{
 .whats{
     position: fixed;
     z-index: 2;
-    right: 5px;
-    bottom: 5px;
+    right: 10px;
+    bottom: 20px;
     height: 45px
 }
 .banner{
@@ -208,4 +208,41 @@ header img{
     font-size: 20px;
     margin: 30px;
 
+}
+
+/* RODAPÈ */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    padding: 20px 0px;
+
+    background-color: black;
+}
+
+.informacoes-rodape {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 100vw;
+    padding: 10px 0 0;
+    
+    color: white;
+}
+
+.redes-rodape {
+    display: flex;
+    flex-direction: column;
+}
+
+.redes-rodape div {
+    padding: 5px 0px;
+}
+
+#copyright {
+    color: white;
+    padding: 10px 0px 0px;
 }
