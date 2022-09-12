@@ -114,8 +114,10 @@ header img{
     align-items: center;
     margin: 20px;
 }
-.passo-a-passo h3{
+main h3{
+    text-align: center;
     font-size: 25px;
+    padding: 30px 0px;
 }
 .passo-a-passo *{
     margin: 12px;
@@ -245,4 +247,28 @@ footer {
 #copyright {
     color: white;
     padding: 10px 0px 0px;
+}
+
+@media (min-width: 481px) {
+    .banner-mobile{
+        display: none;
+    }
+    .banner-wide{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 100vw;
+        max-height: 100vh;
+        margin-top: 55px;
+    }
+
+    .passo-a-passo{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        margin: 20px;
+    }
+    
+
 }
