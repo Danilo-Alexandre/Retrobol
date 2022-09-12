@@ -211,6 +211,69 @@ main h3{
     margin: 30px;
 
 }
+.vantagens{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+
+}
+
+.vantagens span{
+    margin: 15px;
+    font-size: 30px;
+}
+.banner-vantagens{
+    width: 45vw;
+    border-radius: 50px;
+}
+.vantagens section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1.5px solid black;
+    border-radius: 20px;
+    padding: 15px;
+    margin: 10px 10px 0px 10px;
+    width: clamp(275px, 80vw,425px);
+}
+.vantagens section :first-child{
+    width: 35px;
+}
+.perguntas-e-respostas{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.vantagens section p{
+    text-align: center;
+    font-size: 15px;
+}
+.seta-vantagens-baixo{
+    width: 15px;
+
+    transform: rotate(90deg);
+
+}
+.seta-vantagens-cima{
+    width: 15px;
+    transform: rotate(270deg);
+
+}
+.descricao-vantagem {
+    margin-bottom: 15px;
+    text-align: justify;
+    width: clamp(150px, 80vw,425px);
+
+}
+.linha{
+    width: 300px;
+    height: 15px;
+    border-top: 1px solid black;
+}
 
 /* RODAPÈ */
 
