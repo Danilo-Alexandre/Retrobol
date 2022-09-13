@@ -4,6 +4,8 @@
     padding: 0;
 }
 
+/* Cabeçalho */
+
 header{
     background-color: rgb(51, 51, 51);
     height: 55px;
@@ -20,6 +22,17 @@ header img{
     height: 25px;
     transform: rotateY(180deg);
 }
+.login{
+    display: flex;
+    align-items: center;
+}
+.login span{
+    margin-left: 10px;
+    display: none;
+}
+
+/* Menu Whatsapp */
+
 .whats{
     position: fixed;
     z-index: 2;
@@ -27,6 +40,7 @@ header img{
     bottom: 20px;
     height: 45px
 }
+/* Banner principal */
 .banner{
     display: flex;
     flex-direction: column;
@@ -42,6 +56,7 @@ header img{
     margin-top: 50px;
 
 }
+/* Banner comprido */
 .troca{
     background-color: rgb(198, 198, 198);
     width: 100vw;
@@ -73,6 +88,7 @@ header img{
 .promo p {
     font-size: 13px;
 }
+/* Como funciona */
 .como-funciona{
     display: flex;
     flex-direction: column;
@@ -92,27 +108,32 @@ header img{
     font-size: 25px;
 }
 .banner-como-funciona{
-    width: 90vw;
+    width: clamp(250px, 90vw, 400px);
     border-radius: 35px;
 }
+/* Banner com os times */
 .times{
     margin: 25px 0;
+    width: 85vw;
 
 }
 .img-times :last-child{
-    margin-left: 10px;
+    padding: 0px 11.5px;
 }
 .img-times{
     display: flex;
 }
 .img-times img{
-    height: 15vw;
+    height: clamp(10px, 13vw, 85px);
+    margin: 0 3vw;
 }
+/* Passo a passo da assinatura */
 .passo-a-passo{
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 20px;
+    text-align: center;
 }
 main h3{
     text-align: center;
@@ -125,8 +146,9 @@ main h3{
 .passo-a-passo img{
     height: 50px;
 }
-.passo-a-passo button{
-    width: 100vw;
+.btn-eu-quero{
+    width: clamp(24px,85vw, 385px);
+    border-radius: 10px;
     border: none;
     background-color: black;
     color: white;
@@ -134,6 +156,7 @@ main h3{
     font-size: 20px;
     margin-bottom: 30px;
 }
+/* Assinatura e Planos */
 .assinatura{
     display: flex;
     align-items: center;
@@ -159,7 +182,7 @@ main h3{
     background-color: black;
 }
 .camiseta-assinatura{
-    width: 50vw;
+    width: clamp(150px, 50vw, 240px);
     border-radius: 50%;
     margin: 10px 0px 20px 0px;
 }
@@ -178,10 +201,7 @@ main h3{
     border-radius: 5px;
     padding: 10px;
 }
-/* .plano :hover{
-    border: 3px solid #0077e2;
 
-} */
 .plano label{
     font-weight: bold;
     font-size: 20px;
@@ -211,6 +231,7 @@ main h3{
     margin: 30px;
 
 }
+/* Vantagens */
 .vantagens{
     display: flex;
     flex-direction: column;
@@ -224,8 +245,9 @@ main h3{
     font-size: 30px;
 }
 .banner-vantagens{
-    width: 45vw;
+    width: clamp(230px,45vw,450px);
     border-radius: 50px;
+    margin-bottom: 10px;
 }
 .vantagens section{
     display: flex;
@@ -273,6 +295,7 @@ main h3{
     height: 15px;
     border-top: 1px solid black;
 }
+/* Newsletter */
 .newsletter{
     display: flex;
     flex-direction: column;
@@ -288,6 +311,8 @@ main h3{
 .newsletter p{
     width: clamp(150px, 80vw,425px);
     margin: 20px;
+    text-align: center;
+
 }
 .email{
     width: 250px;
@@ -356,11 +381,19 @@ footer {
 
     .passo-a-passo{
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+        flex-direction: column;
         align-items: center;
         margin: 20px;
     }
+    .login span{
+        display: flex;
+    }
     
 
+}
+
+@media (min-width: 881px){
+    .passo-a-passo{
+        flex-direction: row;
+    }
 }
