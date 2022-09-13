@@ -216,7 +216,6 @@ main h3{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 30px;
 
 }
 
@@ -273,6 +272,36 @@ main h3{
     width: 300px;
     height: 15px;
     border-top: 1px solid black;
+}
+.newsletter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.newsletter img{
+    width: 250px;
+   
+}
+.newsletter strong{
+    font-size: 25px;
+}
+.newsletter p{
+    width: clamp(150px, 80vw,425px);
+    margin: 20px;
+}
+.email{
+    width: 250px;
+    height: 30px;
+}
+
+.submit{
+    border: none;
+    background-color: black;
+    color: white;
+    width: 250px;
+    height: 30px;
+    margin-top: 15px;
+
 }
 
 /* RODAPÈ */
