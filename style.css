@@ -61,6 +61,7 @@ header img{
     background-color: rgb(198, 198, 198);
     width: 100vw;
     text-align: -webkit-center;
+    font-family: sans-serif;
 
 }
 
@@ -97,15 +98,17 @@ header img{
 
 }
 .como-funciona p{
-    text-align: center;
+    text-align: justify;
     max-width: 90vw;
     margin: 20px 0px;
+    font-family: sans-serif;
 }
 .como-funciona h1{
     margin-top: 20px;
     max-width: 350px;
     text-align: center;
     font-size: 25px;
+    font-family: system-ui;
 }
 .banner-como-funciona{
     width: clamp(250px, 90vw, 400px);
@@ -140,6 +143,7 @@ main h3{
     text-align: center;
     font-size: 25px;
     padding: 30px 0px;
+    font-family: sans-serif;
 }
 .passo-a-passo *{
     margin: 10px;
@@ -155,6 +159,7 @@ main h3{
     color: white;
     padding: 8px;
     font-size: 20px;
+    font-family: sans-serif;
     margin-bottom: 30px;
 }
 /* Assinatura e Planos */
@@ -163,10 +168,11 @@ main h3{
     align-items: center;
     flex-direction: column;
     background-image: linear-gradient(white,rgb(111, 111, 111));
-
+    font-family: sans-serif;
 }
 .btn-assinatura{
     display: flex;
+    font-family: sans-serif;
 }
 .btn-assinatura button{
     margin: 15px;
@@ -175,7 +181,6 @@ main h3{
     border: 2px solid black;
     padding: 6px;
     border-radius: 15px;
-
 }
 
 .btn-assinatura button:hover{
@@ -230,6 +235,7 @@ main h3{
     padding: 8px;
     font-size: 20px;
     margin: 30px;
+    font-family: system-ui;
 
 }
 /* Vantagens */
@@ -244,6 +250,7 @@ main h3{
 .vantagens span{
     margin: 15px;
     font-size: 30px;
+    font-family: sans-serif;
 }
 .banner-vantagens{
     width: clamp(230px,45vw,450px);
@@ -273,6 +280,7 @@ main h3{
 .vantagens section p{
     text-align: center;
     font-size: 15px;
+    font-family: sans-serif;
 }
 .seta-vantagens-baixo{
     width: 15px;
@@ -289,8 +297,10 @@ main h3{
     margin-bottom: 15px;
     text-align: justify;
     width: clamp(150px, 80vw,425px);
+    font-family: system-ui;
 
 }
+
 .linha{
     width: 300px;
     height: 15px;
@@ -308,11 +318,13 @@ main h3{
 }
 .newsletter strong{
     font-size: 25px;
+    font-family: sans-serif;
 }
 .newsletter p{
     width: clamp(150px, 80vw,425px);
     margin: 20px;
     text-align: center;
+    font-family: system-ui;
 
 }
 .email{
@@ -327,6 +339,7 @@ main h3{
     width: 250px;
     height: 30px;
     margin-top: 15px;
+    font-family: system-ui;
 
 }
 
@@ -339,6 +352,8 @@ footer {
     padding: 20px 0px;
     gap: 10px;
     background-color: black;
+    font-family: system-ui;
+    font-size: 12px;
 }
 
 .informacoes-rodape {
@@ -388,9 +403,11 @@ footer {
         flex-direction: column;
         align-items: center;
         margin: 20px;
+        font-family: sans-serif;
     }
     .login span{
         display: flex;
+        font-family: sans-serif;
     }
     .informacoes-rodape{
     flex-direction: row;
