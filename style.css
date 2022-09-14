@@ -128,12 +128,13 @@ header img{
     margin: 0 3vw;
 }
 /* Passo a passo da assinatura */
-.passo-a-passo{
+.passo-a-passo ul{
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 20px;
     text-align: center;
+    list-style: none;
 }
 main h3{
     text-align: center;
@@ -141,7 +142,7 @@ main h3{
     padding: 30px 0px;
 }
 .passo-a-passo *{
-    margin: 12px;
+    margin: 10px;
 }
 .passo-a-passo img{
     height: 50px;
@@ -334,27 +335,30 @@ main h3{
 footer {
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
     padding: 20px 0px;
-
+    gap: 10px;
     background-color: black;
 }
 
 .informacoes-rodape {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: flex-start;
-    width: 100vw;
-    padding: 10px 0 0;
+   
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        color: white;
     
-    color: white;
+
+
+
+  
 }
 
 .redes-rodape {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .redes-rodape div {
@@ -366,7 +370,7 @@ footer {
     padding: 10px 0px 0px;
 }
 
-@media (min-width: 414px) {
+@media (min-width: 480px) {
     .banner-mobile{
         display: none;
     }
@@ -379,7 +383,7 @@ footer {
         margin-top: 55px;
     }
 
-    .passo-a-passo{
+    .passo-a-passo {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -388,21 +392,25 @@ footer {
     .login span{
         display: flex;
     }
-
     .informacoes-rodape{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 100vw;
+    padding: 10px 0 0;
+    
     }
+   
     
 
 }
 
 @media (min-width: 768px){
-    .passo-a-passo{
+    .passo-a-passo ul{
         flex-direction: row;
     }
+  
+    
     .informacoes-rodape{
         display: flex;
         flex-direction: row;
@@ -412,13 +420,4 @@ footer {
 }
 
 @media (min-width: 820px){
-    .passo-a-passo{
-        flex-direction: row;
-    }
-    .informacoes-rodape{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 10px;
-    }
 }
