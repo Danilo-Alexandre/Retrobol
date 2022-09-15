@@ -19,8 +19,13 @@ header{
     z-index: 1
 }
 header img{
-    height: 25px;
-    transform: rotateY(180deg);
+    /* height: 25px; */
+    transform: rotateY(180deg);   
+}
+.logo img{
+    transform: rotateY(360deg);
+    width: 10vw;
+    margin-top: 4vw;
 }
 .login{
     display: flex;
