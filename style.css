@@ -205,6 +205,7 @@ main h3{
     display: flex;
     width: min(100%, 550px);
     justify-content: space-evenly;
+
 }
 .plano{
     text-align: center;
@@ -390,7 +391,7 @@ footer {
     padding: 10px 0px 0px;
 }
 
-@media (min-width: 480px) {
+@media (min-width: 414px) {
     .banner-mobile{
         display: none;
     }
@@ -420,10 +421,15 @@ footer {
     align-items: flex-start;
     width: 100vw;
     padding: 10px 0 0;
-    
     }
-   
-    
+
+    .planos{
+    gap: 10px;
+    display: flex;
+    /*width: min(100%, 550px);*/
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
 
 }
 
@@ -439,7 +445,16 @@ footer {
         align-items: center;
         gap: 10px;
     }
+
+    .planos{
+        gap: 10px;
+        display: flex;
+        width: min(100%, 550px);
+        justify-content: space-evenly;
+        flex-direction: row;
+        align-items: center;
 }
+
 
 @media (min-width: 820px){
 }
