@@ -6,8 +6,12 @@
 
 /* Cabeçalho */
 
+:root {
+    --cor-principal: rgb(51, 51, 51);
+}
+
 header{
-    background-color: rgb(51, 51, 51);
+    background-color: var(--cor-principal);
     height: 55px;
     display: flex;
     width: 100vw;
@@ -357,7 +361,7 @@ footer {
     align-items: center;
     padding: 20px 0px;
     gap: 10px;
-    background-color: black;
+    background-color: var(--cor-principal);
     font-family: system-ui;
     font-size: 12px;
 }
@@ -453,8 +457,4 @@ footer {
         justify-content: space-evenly;
         flex-direction: row;
         align-items: center;
-}
-
-
-@media (min-width: 820px){
 }

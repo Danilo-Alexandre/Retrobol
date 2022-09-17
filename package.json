@@ -1,0 +1,22 @@
+{
+  "name": "retrobol",
+  "version": "1.0.0",
+  "description": "#Inicio do projeto integrador da Digital House.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Danilo-Alexandre/Retrobol.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Danilo-Alexandre/Retrobol/issues"
+  },
+  "homepage": "https://github.com/Danilo-Alexandre/Retrobol#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
