@@ -262,6 +262,10 @@ main h3{
     font-size: 30px;
     font-family: sans-serif;
 }
+.vantagem:hover{
+    background-color: rgb(216, 216, 216);
+}
+
 .banner-vantagens{
     width: clamp(230px,45vw,450px);
     border-radius: 50px;
@@ -308,6 +312,7 @@ main h3{
     text-align: justify;
     width: clamp(150px, 80vw,425px);
     font-family: system-ui;
+    display: none;
 
 }
 
