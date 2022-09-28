@@ -174,79 +174,73 @@ main h3{
 /* Assinatura e Planos */
 .assinatura{
     display: flex;
-    align-items: center;
     flex-direction: column;
-    background-image: linear-gradient(white,rgb(111, 111, 111));
-    font-family: sans-serif;
+    justify-content: center;
+    align-items: center;
+    background: #f6f6f6;
+    gap: 30px;
+    padding: 30px;
 }
-.btn-assinatura{
+#assinaturas-planos{
+    font-family: 'Montserrat';
+    font-size: 30px;
+}
+#container-mensalidades{
     display: flex;
-    font-family: sans-serif;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 25px;
 }
-.btn-assinatura button{
-    margin: 15px;
-    font-size: clamp(12px,4vw,19px);
-    background-color: white;
-    border: 2px solid black;
-    padding: 6px;
-    border-radius: 15px;
-}
-
-.btn-assinatura button:hover{
-    color: white;
-    background-color: black;
-}
-.camiseta-assinatura{
-    width: clamp(150px, 50vw, 240px);
-    border-radius: 50%;
-    margin: 10px 0px 20px 0px;
-}
-.assinatura li{
-    margin: 10px;
-}
-.planos{
-    margin-top: 20px;
+.cobranca{
+    background: #d9d9d9;
     display: flex;
-    width: min(100%, 550px);
-    justify-content: space-evenly;
-
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 10px 25px 10px;
+    gap: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 2px 0px #736f6f;
+    transition: 0.5s;
 }
-.plano{
-    text-align: center;
-    background-color: white;
+.cobranca p:first-child{
+    font-family: 'Montserrat';
+    font-size: 20px;
+    font-weight: 600;
+    color: #858640;
+    
+}
+.cobranca:hover{
+    cursor: pointer;
+    color: white !important;
+    background: #858640;
+}
+.cobranca p{
+    font-family: 'Montserrat';
+    font-size: 15px;
+    font-weight: 600;
+}
+.cobranca span{
+    font-family: 'Montserrat';
+    font-size: 25px;
+    font-weight: 600;
+}
+#botao-assinatura{
+    font-family: 'Montserrat';
+    font-size: 20px;
+    font-weight: 700;
+    color: #858640;
+    padding: 5px 105px;
     border-radius: 5px;
-    padding: 10px;
-}
-
-.plano label{
-    font-weight: bold;
-    font-size: 20px;
-}
-.dinheiro{
-    margin: 10px 0px;
-    font-weight: bold;
-    font-size: 26px;
-}
-.plano span{
-    font-size: 12px;
-}
-.mensalidade{
-    font-size: 11px;
-}
-.plano input{
-    margin-top: 15px;
-    transform: scale(1.7);
-}
-.quero{
-    width: 100vw;
     border: none;
-    background-color: black;
+    box-shadow: 0px 2px 2px 0px #736f6f;
+    transition: 0.5s;
+}
+#botao-assinatura:hover{
+    cursor: pointer;
     color: white;
-    padding: 8px;
-    font-size: 20px;
-    margin: 30px;
-    font-family: system-ui;
-
+    background: #858640;
 }
 /* Vantagens */
 .vantagens{
@@ -400,7 +394,7 @@ footer {
     padding: 10px 0px 0px;
 }
 
-@media (min-width: 414px) {
+@media (min-width: 480px) {
     .banner-mobile{
         display: none;
     }
@@ -424,6 +418,21 @@ footer {
         display: flex;
         font-family: sans-serif;
     }
+
+    #container-mensalidades{
+        
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        gap: 5vw;
+    }
+
+    .cobranca:hover{
+        
+        position: relative;
+        bottom: 20px;
+    }
+
     .informacoes-rodape{
     flex-direction: row;
     justify-content: space-around;
@@ -445,6 +454,14 @@ footer {
 @media (min-width: 768px){
     .passo-a-passo ul{
         flex-direction: row;
+    }
+
+    #container-mensalidades{
+        
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        gap: 15vw;
     }
   
     
