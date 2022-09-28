@@ -9,3 +9,4 @@ Por um preco justo, criamos um pacote por assinatura que vai trazer toda a hist�
 Mensalmente, mandaremos camisas retrô de acordo com a sua base de interesses. Esteja sempre trajado para aquele jogo empolgante, um futebol de domingo
 acompanhado de um churrasco, ou até mesmo para ficar em casa no estilo!
 Venha conosco fazer parte desse clube dos bem vestidos!
+
