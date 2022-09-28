@@ -1,4 +1,4 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -10,7 +10,7 @@
     --cor-principal: rgb(51, 51, 51);
 }
 
-header{
+header {
     background-color: var(--cor-principal);
     height: 55px;
     display: flex;
@@ -22,51 +22,58 @@ header{
     position: fixed;
     z-index: 1
 }
-header img{
+
+header img {
     /* height: 25px; */
-    transform: rotateY(180deg);   
+    transform: rotateY(180deg);
 }
-.logo img{
+
+.logo img {
     transform: rotateY(360deg);
     width: 10vw;
     margin-top: 4vw;
 }
-.login{
+
+.login {
     display: flex;
     align-items: center;
 }
-.login span{
+
+.login span {
     margin-left: 10px;
     display: none;
 }
 
 /* Menu Whatsapp */
 
-.whats{
+.whats {
     position: fixed;
     z-index: 2;
     right: 10px;
     bottom: 20px;
     height: 45px
 }
+
 /* Banner principal */
-.banner{
+.banner {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.banner-wide{
+
+.banner-wide {
     display: none;
 }
 
-.banner-mobile{
-    width: min(100%, 550px );
+.banner-mobile {
+    width: min(100%, 550px);
     align-items: center;
     margin-top: 50px;
 
 }
+
 /* Banner comprido */
-.troca{
+.troca {
     background-color: rgb(198, 198, 198);
     width: 100vw;
     text-align: -webkit-center;
@@ -74,73 +81,88 @@ header img{
 
 }
 
-.promo{
+.promo {
     display: flex;
     align-items: center;
     width: min(100%, 550px);
     justify-content: space-between;
 }
-.promo-icon{
+
+.promo-icon {
     margin: 10px;
     height: 25px;
     transform: rotate(-20deg);
 }
-.promo div{
+
+.promo div {
     display: flex;
     align-items: center;
 }
-.seta-promo-esq, .seta-promo-dir{
+
+.seta-promo-esq,
+.seta-promo-dir {
     height: 15px;
 }
-.seta-promo-esq{
+
+.seta-promo-esq {
     transform: rotate(180deg);
 }
+
 .promo p {
     font-size: 13px;
 }
+
 /* Como funciona */
-.como-funciona{
+.como-funciona {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
 }
-.como-funciona p{
+
+.como-funciona p {
     text-align: justify;
     max-width: 90vw;
     margin: 20px 0px;
     font-family: sans-serif;
 }
-.como-funciona h1{
+
+.como-funciona h1 {
     margin-top: 20px;
     max-width: 350px;
     text-align: center;
     font-size: 25px;
     font-family: system-ui;
 }
-.banner-como-funciona{
+
+.banner-como-funciona {
     width: clamp(250px, 90vw, 400px);
     border-radius: 35px;
 }
+
 /* Banner com os times */
-.times{
+.times {
     margin: 25px 0;
     width: 85vw;
 
 }
-.img-times :last-child{
+
+.img-times :last-child {
     padding: 0px 11.5px;
 }
-.img-times{
+
+.img-times {
     display: flex;
 }
-.img-times img{
+
+.img-times img {
     height: clamp(10px, 13vw, 85px);
     margin: 0 3vw;
 }
+
 /* Passo a passo da assinatura */
-.passo-a-passo ul{
+.passo-a-passo ul {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -148,20 +170,24 @@ header img{
     text-align: center;
     list-style: none;
 }
-main h3{
+
+main h3 {
     text-align: center;
     font-size: 25px;
     padding: 30px 0px;
     font-family: sans-serif;
 }
-.passo-a-passo *{
+
+.passo-a-passo * {
     margin: 10px;
 }
-.passo-a-passo img{
+
+.passo-a-passo img {
     height: 50px;
 }
-.btn-eu-quero{
-    width: clamp(24px,85vw, 385px);
+
+.btn-eu-quero {
+    width: clamp(24px, 85vw, 385px);
     border-radius: 10px;
     border: none;
     background-color: black;
@@ -171,73 +197,85 @@ main h3{
     font-family: sans-serif;
     margin-bottom: 30px;
 }
+
 /* Assinatura e Planos */
-.assinatura{
+.assinatura {
     display: flex;
     align-items: center;
     flex-direction: column;
-    background-image: linear-gradient(white,rgb(111, 111, 111));
+    background-image: linear-gradient(white, rgb(111, 111, 111));
     font-family: sans-serif;
 }
-.btn-assinatura{
+
+.btn-assinatura {
     display: flex;
     font-family: sans-serif;
 }
-.btn-assinatura button{
+
+.btn-assinatura button {
     margin: 15px;
-    font-size: clamp(12px,4vw,19px);
+    font-size: clamp(12px, 4vw, 19px);
     background-color: white;
     border: 2px solid black;
     padding: 6px;
     border-radius: 15px;
 }
 
-.btn-assinatura button:hover{
+.btn-assinatura button:hover {
     color: white;
     background-color: black;
 }
-.camiseta-assinatura{
+
+.camiseta-assinatura {
     width: clamp(150px, 50vw, 240px);
     border-radius: 50%;
     margin: 10px 0px 20px 0px;
 }
-.assinatura li{
+
+.assinatura li {
     margin: 10px;
 }
-.planos{
+
+.planos {
     margin-top: 20px;
     display: flex;
     width: min(100%, 550px);
     justify-content: space-evenly;
 
 }
-.plano{
+
+.plano {
     text-align: center;
     background-color: white;
     border-radius: 5px;
     padding: 10px;
 }
 
-.plano label{
+.plano label {
     font-weight: bold;
     font-size: 20px;
 }
-.dinheiro{
+
+.dinheiro {
     margin: 10px 0px;
     font-weight: bold;
     font-size: 26px;
 }
-.plano span{
+
+.plano span {
     font-size: 12px;
 }
-.mensalidade{
+
+.mensalidade {
     font-size: 11px;
 }
-.plano input{
+
+.plano input {
     margin-top: 15px;
     transform: scale(1.7);
 }
-.quero{
+
+.quero {
     width: 100vw;
     border: none;
     background-color: black;
@@ -248,8 +286,9 @@ main h3{
     font-family: system-ui;
 
 }
+
 /* Vantagens */
-.vantagens{
+.vantagens {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -257,21 +296,23 @@ main h3{
 
 }
 
-.vantagens span{
+.vantagens span {
     margin: 15px;
     font-size: 30px;
     font-family: sans-serif;
 }
-.vantagem:hover{
+
+.vantagem:hover {
     background-color: rgb(216, 216, 216);
 }
 
-.banner-vantagens{
-    width: clamp(230px,45vw,450px);
+.banner-vantagens {
+    width: clamp(230px, 45vw, 450px);
     border-radius: 50px;
     margin-bottom: 10px;
 }
-.vantagens section{
+
+.vantagens section {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -279,75 +320,86 @@ main h3{
     border-radius: 20px;
     padding: 15px;
     margin: 10px 10px 0px 10px;
-    width: clamp(275px, 80vw,425px);
+    width: clamp(275px, 80vw, 425px);
 }
-.vantagens section :first-child{
+
+.vantagens section :first-child {
     width: 35px;
 }
-.perguntas-e-respostas{
+
+.perguntas-e-respostas {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
 }
-.vantagens section p{
+
+.vantagens section p {
     text-align: center;
     font-size: 15px;
     font-family: sans-serif;
 }
-.seta-vantagens-baixo{
+
+.seta-vantagens-baixo {
     width: 15px;
 
     transform: rotate(90deg);
 
 }
-.seta-vantagens-cima{
+
+.seta-vantagens-cima {
     width: 15px;
     transform: rotate(270deg);
 
 }
+
 .descricao-vantagem {
     margin-bottom: 15px;
     text-align: justify;
-    width: clamp(150px, 80vw,425px);
+    width: clamp(150px, 80vw, 425px);
     font-family: system-ui;
     display: none;
 
 }
 
-.linha{
+.linha {
     width: 300px;
     height: 15px;
     border-top: 1px solid black;
 }
+
 /* Newsletter */
-.newsletter{
+.newsletter {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.newsletter img{
+
+.newsletter img {
     width: 250px;
-   
+
 }
-.newsletter strong{
+
+.newsletter strong {
     font-size: 25px;
     font-family: sans-serif;
 }
-.newsletter p{
-    width: clamp(150px, 80vw,425px);
+
+.newsletter p {
+    width: clamp(150px, 80vw, 425px);
     margin: 20px;
     text-align: center;
     font-family: system-ui;
 
 }
-.email{
+
+.email {
     width: 250px;
     height: 30px;
 }
 
-.submit{
+.submit {
     border: none;
     background-color: black;
     color: white;
@@ -372,17 +424,17 @@ footer {
 }
 
 .informacoes-rodape {
-   
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-        color: white;
-    
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    color: white;
 
 
 
-  
+
+
 }
 
 .redes-rodape {
@@ -400,11 +452,17 @@ footer {
     padding: 10px 0px 0px;
 }
 
+.logo-footer img {
+    height: 250px;
+    width: 300px;
+}
+
 @media (min-width: 414px) {
-    .banner-mobile{
+    .banner-mobile {
         display: none;
     }
-    .banner-wide{
+
+    .banner-wide {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -420,46 +478,55 @@ footer {
         margin: 20px;
         font-family: sans-serif;
     }
-    .login span{
+
+    .login span {
         display: flex;
         font-family: sans-serif;
     }
-    .informacoes-rodape{
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: flex-start;
-    width: 100vw;
-    padding: 10px 0 0;
-    }
 
-    .planos{
-    gap: 10px;
-    display: flex;
-    /*width: min(100%, 550px);*/
-    justify-content: space-evenly;
-    flex-direction: column;
-    align-items: center;
-
-}
-
-@media (min-width: 768px){
-    .passo-a-passo ul{
+    .informacoes-rodape {
         flex-direction: row;
-    }
-  
-    
-    .informacoes-rodape{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 10px;
+        justify-content: space-around;
+        align-items: flex-start;
+        width: 100vw;
+        padding: 10px 0 0;
     }
 
-    .planos{
+    .planos {
         gap: 10px;
         display: flex;
-        width: min(100%, 550px);
+        /*width: min(100%, 550px);*/
         justify-content: space-evenly;
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
-}}}
+    }
+
+    .redes-sociais-footer {
+        height: 15px;
+    }
+
+
+
+    @media (min-width: 768px) {
+        .passo-a-passo ul {
+            flex-direction: row;
+        }
+
+
+        .informacoes-rodape {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .planos {
+            gap: 10px;
+            display: flex;
+            width: min(100%, 550px);
+            justify-content: space-evenly;
+            flex-direction: row;
+            align-items: center;
+        }
+    }
+}
