@@ -410,13 +410,45 @@ main h3 {
 
 }
 
+.test {
+    display: flex;
+}
+
+.slogam-clubista h1 {
+    width: auto;
+    height: 37px;
+    top: 1804px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    text-align: center;
+    color: #000000;
+
+}
+
+.baloes {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    justify-content: center;
+}
+
+.balao-esquerda{
+    padding-top: 10px;
+}
+
+.balao-direita {
+    padding-top: 40px;
+}
+
 /* RODAPÈ */
 
 footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px 0px;
+    padding-bottom: 20px;
     gap: 10px;
     background-color: var(--cor-principal);
     font-family: system-ui;
@@ -430,11 +462,7 @@ footer {
     align-items: center;
     gap: 15px;
     color: white;
-
-
-
-
-
+    padding-left: 30px;
 }
 
 .redes-rodape {
@@ -445,7 +473,7 @@ footer {
 }
 
 
-.redes-rodape-2{
+.redes-rodape-2 {
     padding-left: 120px;
 }
 
@@ -455,8 +483,11 @@ footer {
 }
 
 .logo-footer img {
-    height: 250px;
+    height: 240px;
     width: 300px;
+    padding-left: 50px;
+    align-items: center;
+
 }
 
 @media (min-width: 414px) {
@@ -492,7 +523,7 @@ footer {
         align-items: flex-start;
         width: 100vw;
         padding: 10px 0 0;
-            }
+    }
 
     .planos {
         gap: 10px;
