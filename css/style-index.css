@@ -441,10 +441,12 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 }
 
-.redes-rodape div {
-    padding: 5px 0px;
+
+.redes-rodape-2{
+    padding-left: 120px;
 }
 
 #copyright {
@@ -490,7 +492,7 @@ footer {
         align-items: flex-start;
         width: 100vw;
         padding: 10px 0 0;
-    }
+            }
 
     .planos {
         gap: 10px;
