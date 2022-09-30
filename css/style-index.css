@@ -185,6 +185,45 @@ main h3{
     font-family: 'Montserrat';
     font-size: 30px;
 }
+
+#botoes-planos{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    
+}
+
+#lista-planos{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#botoes-planos button{
+    background:#f8f8f8;
+    border-radius: 10px;
+    border-style: none;
+    border: #858640 solid 2px;
+    padding: 7px 16px;
+    transition: all 0.5s;
+}
+
+#botoes-planos button:hover{
+    background: #858640;
+    cursor: pointer;
+    color: white;
+}
+#imagem-planos{
+    width: 200px;
+    border-radius: 50%;
+    margin-bottom: 18px;
+}
+
+
+
+
 #container-mensalidades{
     display: flex;
     flex-direction: column;
@@ -419,18 +458,19 @@ footer {
         font-family: sans-serif;
     }
 
+
     #container-mensalidades{
         
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
-        gap: 5vw;
+        gap: 15vw;
+        height: 145px;
     }
 
     .cobranca:hover{
         
-        position: relative;
-        bottom: 20px;
+        margin-bottom: 20px;
     }
 
     .informacoes-rodape{
@@ -456,12 +496,13 @@ footer {
         flex-direction: row;
     }
 
-    #container-mensalidades{
-        
-        flex-direction: row;
-        justify-content: space-around;
+    
+
+    #conteiner-imagem-lista{
+        display: flex;
         align-items: center;
-        gap: 15vw;
+        justify-content: space-evenly;
+        width: 50vw;
     }
   
     
