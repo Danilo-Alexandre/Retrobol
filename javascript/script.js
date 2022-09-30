@@ -43,10 +43,56 @@ cobranca.forEach((plano)=>{
 
     })
 })
+
+// botaoCoracao.addEventListener("mouseover", ()=>{
+//     botaoCoracao.style.background = "#858640"
+//     botaoCoracao.style.color = "white"
+
+// })
+
+// botaoMundial.addEventListener("mouseover", ()=>{
+//     botaoMundial.style.background = "#858640"
+//     botaoMundial.style.color = "white"
+
+// })
+
+// botaoNacional.addEventListener("mouseover", ()=>{
+//     botaoNacional.style.background = "#858640"
+//     botaoNacional.style.color = "white"
+
+// })
+
+// botaoCoracao.addEventListener("mouseout", ()=>{
+//     botaoCoracao.style.background = "#f8f8f8"
+//     botaoCoracao.style.color = "black"
+
+// })
+
+// botaoMundial.addEventListener("mouseout", ()=>{
+//     botaoMundial.style.background = "#f8f8f8"
+//     botaoMundial.style.color = "black"
+
+// })
+
+// botaoNacional.addEventListener("mouseout", ()=>{
+//     botaoNacional.style.background = "#f8f8f8"
+//     botaoNacional.style.color = "black"
+
+// })
+
+
+
+
 botaoCoracao.addEventListener("click",()=>{
     listaDescricao1.innerText = "mudou1"
     listaDescricao2.innerText = "mudou2"
     listaDescricao3.innerText = "mudou3"
+    botaoCoracao.style.background = "#858640"
+    botaoCoracao.style.color = "white"
+    botaoMundial.style.background = "#f8f8f8"
+    botaoMundial.style.color = "black"
+    botaoNacional.style.background = "#f8f8f8"
+    botaoNacional.style.color = "black"
     valorAnual.innerText = "189,99"
     valorSemestral.innerText = "159,99"
     valorTrimestral.innerText = "139,99"
@@ -60,6 +106,12 @@ botaoNacional.addEventListener("click",()=>{
     listaDescricao1.innerText = "nacional1"
     listaDescricao2.innerText = "nacional2"
     listaDescricao3.innerText = "nacional3"
+    botaoCoracao.style.background = "#f8f8f8"
+    botaoCoracao.style.color = "black"
+    botaoMundial.style.background = "#f8f8f8"
+    botaoMundial.style.color = "black"
+    botaoNacional.style.background = "#858640"
+    botaoNacional.style.color = "white"
     valorAnual.innerText = "199,99"
     valorSemestral.innerText = "149,99"
     valorTrimestral.innerText = "129,99"
@@ -72,6 +124,12 @@ botaoMundial.addEventListener("click",()=>{
     listaDescricao1.innerText = "mundial1"
     listaDescricao2.innerText = "mundial2"
     listaDescricao3.innerText = "mundial3"
+    botaoCoracao.style.background = "#f8f8f8"
+    botaoCoracao.style.color = "black"
+    botaoMundial.style.background = "#858640"
+    botaoMundial.style.color = "white"
+    botaoNacional.style.background = "#f8f8f8"
+    botaoNacional.style.color = "black"
     valorAnual.innerText = "209,99"
     valorSemestral.innerText = "189,99"
     valorTrimestral.innerText = "159,99"

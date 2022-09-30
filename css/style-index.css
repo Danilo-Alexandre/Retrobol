@@ -211,9 +211,9 @@ main h3{
 }
 
 #botoes-planos button:hover{
-    background: #858640;
+    background: #858640 !important;
     cursor: pointer;
-    color: white;
+    color: white !important;
 }
 #imagem-planos{
     width: 200px;
