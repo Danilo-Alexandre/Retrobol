@@ -49,14 +49,32 @@ header img{
     bottom: 20px;
     height: 45px
 }
+
 /* Banner principal */
-.banner{
+.bannerWide {
+    display: none;
+  }
+.bannerCarroussel{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    padding-top: 60px;
 }
-.banner-wide{
-    display: none;
+
+.bannerCarroussel div{
+    display: flex;
+    align-items: center;
+}
+.bannerWide :last-child{
+    padding: 0px 11.5px;
+}
+.bannerWide {
+    display: flex;
+}
+.bannerWide img{
+    width: clamp(247px, 105vw, 768px);
+    margin: 0 1vw;
 }
 
 .banner-mobile{
@@ -71,7 +89,6 @@ header img{
     width: 100vw;
     text-align: -webkit-center;
     font-family: sans-serif;
-
 }
 
 .promo{
@@ -104,7 +121,6 @@ header img{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
 .como-funciona p{
     text-align: justify;
@@ -127,18 +143,51 @@ header img{
 .times{
     margin: 25px 0;
     width: 85vw;
-
 }
-.img-times :last-child{
+
+.carroussel {
+    display: none;
+  }
+.timesCarroussel{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 30px;
+}
+.timesCarroussel div{
+    display: flex;
+    align-items: center;
+}
+.seta-time-esq, .seta-time-dir{
+    width: 15px;
+}
+.seta-time-esq{
+    transform: rotate(180deg);
+}
+/* Adiciona animação na seta */
+.seta-time-esq:hover, .seta-time-dir:hover {
+    background-color: rgba(40, 39, 39, 0.178);
+  }
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+.carroussel :last-child{
     padding: 0px 11.5px;
 }
-.img-times{
+.carroussel {
     display: flex;
 }
-.img-times img{
-    height: clamp(10px, 13vw, 85px);
+.carroussel img{
+    width: clamp(10px, 78vw, 768px);
     margin: 0 3vw;
 }
+
 /* Passo a passo da assinatura */
 .passo-a-passo ul{
     display: flex;
