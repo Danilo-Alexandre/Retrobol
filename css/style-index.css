@@ -194,32 +194,46 @@ main h3{
     
 }
 
+
 #lista-planos{
     display: flex;
-    align-items: center;
     flex-direction: column;
     gap: 15px;
 }
 
 #botoes-planos button{
-    background:#f8f8f8;
     border-radius: 10px;
     border-style: none;
     border: #858640 solid 2px;
     padding: 7px 16px;
     transition: all 0.5s;
 }
+#botao-coracao{
+    background: #858640 ;
+
+    color: white ;
+
+}
+
 
 #botoes-planos button:hover{
     background: #858640 !important;
     cursor: pointer;
     color: white !important;
 }
+
+#container-imagem-lista{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
 #imagem-planos{
     width: 200px;
     border-radius: 50%;
     margin-bottom: 18px;
 }
+
 
 
 
@@ -235,25 +249,39 @@ main h3{
     background: #d9d9d9;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     padding: 15px 10px 25px 10px;
     gap: 25px;
     border-radius: 10px;
     box-shadow: 0px 2px 2px 0px #736f6f;
     transition: 0.5s;
+    width: 115px;
 }
+
+
 .cobranca p:first-child{
     font-family: 'Montserrat';
     font-size: 20px;
     font-weight: 600;
     color: #858640;
     
+    
 }
+
+
+.cobranca >p{
+    transition: 0.5s;
+
+}
+
+.cobranca:hover > p {
+    color: white !important;
+}
+
 .cobranca:hover{
     cursor: pointer;
-    color: white !important;
-    background: #858640;
+    background: #858640 !important;
 }
 .cobranca p{
     font-family: 'Montserrat';
@@ -464,7 +492,7 @@ footer {
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
-        gap: 15vw;
+        gap: 10vw;
         height: 145px;
     }
 
@@ -497,12 +525,18 @@ footer {
     }
 
     
+    .cobranca{
+        width: 150px;
+    }
 
-    #conteiner-imagem-lista{
+    
+    #container-imagem-lista{
         display: flex;
+        flex-direction: row;
         align-items: center;
+        gap: 30px;
         justify-content: space-evenly;
-        width: 50vw;
+        width: 55vw;
     }
   
     

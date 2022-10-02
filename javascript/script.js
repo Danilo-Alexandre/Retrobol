@@ -26,115 +26,130 @@ const valorAnual = document.querySelector("#valor-anual")
 const valorSemestral = document.querySelector("#valor-semestral")
 const valorTrimestral = document.querySelector("#valor-trimestral")
 const imagemPlanos = document.querySelector("#imagem-planos")
+const planoTrimestral = document.querySelector(".plano-trimestral")
+const planoAnual = document.querySelector(".plano-anual")
+const planoSemestral = document.querySelector(".plano-semestral")
 
 
+planoAnual.addEventListener("click", ()=>{
+    planoAnual.firstElementChild.style.color = "white";
+    planoAnual.lastElementChild.style.color = "white"
+    planoAnual.style.marginBottom = "20px";
+    planoAnual.style.background = "#858640";
 
-cobranca.forEach((plano)=>{
-    plano.addEventListener("mouseover", ()=>{
-        plano.firstElementChild.style.color = "white";
-        plano.firstElementChild.style.transition = "0.5s";
-    })
+    planoSemestral.firstElementChild.style.color = "#858640"
+    planoSemestral.lastElementChild.style.color = "black"
+    planoSemestral.style.marginBottom = "0px"
+    planoSemestral.style.background = "#d9d9d9"
+
+    planoTrimestral.firstElementChild.style.color = "#858640"
+    planoTrimestral.lastElementChild.style.color = "black"
+    planoTrimestral.style.marginBottom = "0px"
+    planoTrimestral.style.background = "#d9d9d9"
 })
 
-cobranca.forEach((plano)=>{
-    plano.addEventListener("mouseout", ()=>{
-        plano.firstElementChild.style.color = "#858640";
-        plano.firstElementChild.style.transition = "0.5s";
+planoSemestral.addEventListener("click", ()=>{
+    planoSemestral.firstElementChild.style.color = "white"
+    planoSemestral.lastElementChild.style.color = "white"
+    planoSemestral.style.marginBottom = "20px"
+    planoSemestral.style.background = "#858640"
+    
+    planoAnual.firstElementChild.style.color = "#858640";
+    planoAnual.lastElementChild.style.color = "black";
+    planoAnual.style.marginBottom = "0px";
+    planoAnual.style.background = "#d9d9d9";
 
-    })
+    planoTrimestral.firstElementChild.style.color = "#858640"
+    planoTrimestral.lastElementChild.style.color = "black"
+    planoTrimestral.style.marginBottom = "0px"
+    planoTrimestral.style.background = "#d9d9d9"
 })
 
-// botaoCoracao.addEventListener("mouseover", ()=>{
-//     botaoCoracao.style.background = "#858640"
-//     botaoCoracao.style.color = "white"
 
-// })
+planoTrimestral.addEventListener("click", ()=>{
+    planoTrimestral.firstElementChild.style.color = "white"
+    planoTrimestral.lastElementChild.style.color = "white"
+    planoTrimestral.style.marginBottom = "20px"
+    planoTrimestral.style.background = "#858640"
+    
+    planoSemestral.firstElementChild.style.color = "#858640"
+    planoSemestral.lastElementChild.style.color = "black"
+    planoSemestral.style.marginBottom = "0px"
+    planoSemestral.style.background = "#d9d9d9"
+    
+    planoAnual.firstElementChild.style.color = "#858640";
+    planoAnual.lastElementChild.style.color = "black";
+    planoAnual.style.marginBottom = "0px";
+    planoAnual.style.background = "#d9d9d9";
+})
 
-// botaoMundial.addEventListener("mouseover", ()=>{
-//     botaoMundial.style.background = "#858640"
-//     botaoMundial.style.color = "white"
-
-// })
-
-// botaoNacional.addEventListener("mouseover", ()=>{
-//     botaoNacional.style.background = "#858640"
-//     botaoNacional.style.color = "white"
-
-// })
-
-// botaoCoracao.addEventListener("mouseout", ()=>{
-//     botaoCoracao.style.background = "#f8f8f8"
-//     botaoCoracao.style.color = "black"
-
-// })
-
-// botaoMundial.addEventListener("mouseout", ()=>{
-//     botaoMundial.style.background = "#f8f8f8"
-//     botaoMundial.style.color = "black"
-
-// })
-
-// botaoNacional.addEventListener("mouseout", ()=>{
-//     botaoNacional.style.background = "#f8f8f8"
-//     botaoNacional.style.color = "black"
-
-// })
-
-
-
-
+  
 botaoCoracao.addEventListener("click",()=>{
-    listaDescricao1.innerText = "mudou1"
-    listaDescricao2.innerText = "mudou2"
-    listaDescricao3.innerText = "mudou3"
+    listaDescricao1.innerText = "Escolha um time do coração"
+    listaDescricao2.innerText = "Receba uma linda camisa retrô todo mês"
+    listaDescricao3.innerText = "Uma camisa extra no plano anual"
+
     botaoCoracao.style.background = "#858640"
     botaoCoracao.style.color = "white"
+
     botaoMundial.style.background = "#f8f8f8"
     botaoMundial.style.color = "black"
+
     botaoNacional.style.background = "#f8f8f8"
     botaoNacional.style.color = "black"
-    valorAnual.innerText = "189,99"
-    valorSemestral.innerText = "159,99"
-    valorTrimestral.innerText = "139,99"
-    imagemPlanos.src = "./imgs/assinaturas/03e1ebc41-a2b300ad1c71f5eb6d16160152993443-1024-1024.jpg"
+
+    valorAnual.innerText = "159,99"
+    valorSemestral.innerText = "189,99"
+    valorTrimestral.innerText = "199,99"
+
+    imagemPlanos.src = "./imgs/assinaturas/inter.jpg"
 
     
 
 
 })
 botaoNacional.addEventListener("click",()=>{
-    listaDescricao1.innerText = "nacional1"
-    listaDescricao2.innerText = "nacional2"
-    listaDescricao3.innerText = "nacional3"
-    botaoCoracao.style.background = "#f8f8f8"
+    listaDescricao1.innerText = "Camisas retrô dos principais times do Brasil"
+    listaDescricao2.innerText = "Incluído camisas da seleção!"
+    listaDescricao3.innerText = "Uma camisa extra no plano anual"
+
+    botaoCoracao.style.background = "none"
     botaoCoracao.style.color = "black"
+
     botaoMundial.style.background = "#f8f8f8"
     botaoMundial.style.color = "black"
+
     botaoNacional.style.background = "#858640"
     botaoNacional.style.color = "white"
-    valorAnual.innerText = "199,99"
-    valorSemestral.innerText = "149,99"
-    valorTrimestral.innerText = "129,99"
-    imagemPlanos.src = "./imgs/assinaturas/camisa_retro_internacional_1994_559_1_efb7d5bd98d08515fd32e0ebdf0a41b6.webp"
+
+    valorAnual.innerText = "169,99"
+    valorSemestral.innerText = "199,99"
+    valorTrimestral.innerText = "200,99"
+
+    imagemPlanos.src = "./imgs/assinaturas/brasil1.png"
 
 
 
 })
 botaoMundial.addEventListener("click",()=>{
-    listaDescricao1.innerText = "mundial1"
-    listaDescricao2.innerText = "mundial2"
-    listaDescricao3.innerText = "mundial3"
-    botaoCoracao.style.background = "#f8f8f8"
+    listaDescricao1.innerText = "As camisas retrô mais bonitas de seleções e clubes mundiais"
+    listaDescricao2.innerText = "Frete Grátis"
+    listaDescricao3.innerText = "Uma camisa extra no plano anual"
+
+    botaoCoracao.style.background = "none"
     botaoCoracao.style.color = "black"
+
     botaoMundial.style.background = "#858640"
     botaoMundial.style.color = "white"
+
     botaoNacional.style.background = "#f8f8f8"
     botaoNacional.style.color = "black"
-    valorAnual.innerText = "209,99"
-    valorSemestral.innerText = "189,99"
-    valorTrimestral.innerText = "159,99"
-    imagemPlanos.src = "./imgs/assinaturas/00508915.jpg"
+
+    valorAnual.innerText = "189,99"
+    valorSemestral.innerText = "209,99"
+    valorTrimestral.innerText = "219,99"
+
+    imagemPlanos.src = "./imgs/assinaturas/barcelona1.png"
 
 })
 
-console.log(imagemPlanos)
