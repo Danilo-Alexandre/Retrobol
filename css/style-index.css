@@ -97,14 +97,32 @@ body {
     bottom: 20px;
     height: 45px
 }
+
 /* Banner principal */
-.banner{
+.bannerWide {
+    display: none;
+  }
+.bannerCarroussel{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    padding-top: 60px;
 }
-.banner-wide{
-    display: none;
+
+.bannerCarroussel div{
+    display: flex;
+    align-items: center;
+}
+.bannerWide :last-child{
+    padding: 0px 11.5px;
+}
+.bannerWide {
+    display: flex;
+}
+.bannerWide img{
+    width: clamp(247px, 105vw, 768px);
+    margin: 0 1vw;
 }
 
 .banner-mobile{
@@ -119,7 +137,6 @@ body {
     width: 100vw;
     text-align: -webkit-center;
     font-family: sans-serif;
-
 }
 
 .promo{
@@ -152,7 +169,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
 .como-funciona p{
     text-align: justify;
@@ -175,18 +191,51 @@ body {
 .times{
     margin: 25px 0;
     width: 85vw;
-
 }
-.img-times :last-child{
+
+.carroussel {
+    display: none;
+  }
+.timesCarroussel{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 30px;
+}
+.timesCarroussel div{
+    display: flex;
+    align-items: center;
+}
+.seta-time-esq, .seta-time-dir{
+    width: 15px;
+}
+.seta-time-esq{
+    transform: rotate(180deg);
+}
+/* Adiciona animação na seta */
+.seta-time-esq:hover, .seta-time-dir:hover {
+    background-color: rgba(40, 39, 39, 0.178);
+  }
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+.carroussel :last-child{
     padding: 0px 11.5px;
 }
-.img-times{
+.carroussel {
     display: flex;
 }
-.img-times img{
-    height: clamp(10px, 13vw, 85px);
+.carroussel img{
+    width: clamp(10px, 78vw, 768px);
     margin: 0 3vw;
 }
+
 /* Passo a passo da assinatura */
 .passo-a-passo ul{
     display: flex;
@@ -222,79 +271,140 @@ main h3{
 /* Assinatura e Planos */
 .assinatura{
     display: flex;
-    align-items: center;
     flex-direction: column;
-    background-image: linear-gradient(white,rgb(111, 111, 111));
-    font-family: sans-serif;
+    justify-content: center;
+    align-items: center;
+    background: #f6f6f6;
+    gap: 30px;
+    padding: 30px;
 }
-.btn-assinatura{
-    display: flex;
-    font-family: sans-serif;
-}
-.btn-assinatura button{
-    margin: 15px;
-    font-size: clamp(12px,4vw,19px);
-    background-color: white;
-    border: 2px solid black;
-    padding: 6px;
-    border-radius: 15px;
+#assinaturas-planos{
+    font-family: 'Montserrat';
+    font-size: 30px;
 }
 
-.btn-assinatura button:hover{
-    color: white;
-    background-color: black;
+#botoes-planos{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    
 }
-.camiseta-assinatura{
-    width: clamp(150px, 50vw, 240px);
+
+
+#lista-planos{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#botoes-planos button{
+    border-radius: 10px;
+    border-style: none;
+    border: #858640 solid 2px;
+    padding: 7px 16px;
+    transition: all 0.5s;
+}
+#botao-coracao{
+    background: #858640 ;
+
+    color: white ;
+
+}
+
+
+#botoes-planos button:hover{
+    background: #858640 !important;
+    cursor: pointer;
+    color: white !important;
+}
+
+#container-imagem-lista{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+#imagem-planos{
+    width: 200px;
     border-radius: 50%;
-    margin: 10px 0px 20px 0px;
+    margin-bottom: 18px;
 }
-.assinatura li{
-    margin: 10px;
-}
-.planos{
-    margin-top: 20px;
+
+
+
+
+
+#container-mensalidades{
     display: flex;
-    width: min(100%, 550px);
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 25px;
+}
+.cobranca{
+    background: #d9d9d9;
+    display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
+    align-items: center;
+    padding: 15px 10px 25px 10px;
+    gap: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 2px 0px #736f6f;
+    transition: 0.5s;
+    width: 115px;
+}
+
+
+.cobranca p:first-child{
+    font-family: 'Montserrat';
+    font-size: 20px;
+    font-weight: 600;
+    color: #858640;
+    
+    
+}
+
+
+.cobranca >p{
+    transition: 0.5s;
 
 }
-.plano{
-    text-align: center;
-    background-color: white;
+
+.cobranca:hover > p {
+    color: white !important;
+}
+
+.cobranca:hover{
+    cursor: pointer;
+    background: #858640 !important;
+}
+.cobranca p{
+    font-family: 'Montserrat';
+    font-size: 15px;
+    font-weight: 600;
+}
+.cobranca span{
+    font-family: 'Montserrat';
+    font-size: 25px;
+    font-weight: 600;
+}
+#botao-assinatura{
+    font-family: 'Montserrat';
+    font-size: 20px;
+    font-weight: 700;
+    color: #858640;
+    padding: 5px 105px;
     border-radius: 5px;
-    padding: 10px;
-}
-
-.plano label{
-    font-weight: bold;
-    font-size: 20px;
-}
-.dinheiro{
-    margin: 10px 0px;
-    font-weight: bold;
-    font-size: 26px;
-}
-.plano span{
-    font-size: 12px;
-}
-.mensalidade{
-    font-size: 11px;
-}
-.plano input{
-    margin-top: 15px;
-    transform: scale(1.7);
-}
-.quero{
-    width: 100vw;
     border: none;
-    background-color: black;
+    box-shadow: 0px 2px 2px 0px #736f6f;
+    transition: 0.5s;
+}
+#botao-assinatura:hover{
+    cursor: pointer;
     color: white;
-    padding: 8px;
-    font-size: 20px;
-    margin: 30px;
-    font-family: system-ui;
-
+    background: #858640;
 }
 /* Vantagens */
 .vantagens{
@@ -444,7 +554,7 @@ footer {
     padding: 10px 0px 0px;
 }
 
-@media (min-width: 414px) {
+@media (min-width: 480px) {
     .banner-mobile{
         display: none;
     }
@@ -468,6 +578,22 @@ footer {
         display: flex;
         font-family: sans-serif;
     }
+
+
+    #container-mensalidades{
+        
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        gap: 10vw;
+        height: 145px;
+    }
+
+    .cobranca:hover{
+        
+        margin-bottom: 20px;
+    }
+
     .informacoes-rodape{
     flex-direction: row;
     justify-content: space-around;
@@ -489,6 +615,21 @@ footer {
 @media (min-width: 768px){
     .passo-a-passo ul{
         flex-direction: row;
+    }
+
+    
+    .cobranca{
+        width: 150px;
+    }
+
+    
+    #container-imagem-lista{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 30px;
+        justify-content: space-evenly;
+        width: 55vw;
     }
   
     
