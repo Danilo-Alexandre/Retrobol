@@ -434,7 +434,7 @@ main h3 {
     justify-content: center;
 }
 
-.balao-esquerda{
+.balao-esquerda {
     padding-top: 10px;
 }
 
@@ -462,7 +462,7 @@ footer {
     align-items: center;
     gap: 15px;
     color: white;
-    padding-left: 30px;
+    text-align: center;
 }
 
 .redes-rodape {
@@ -472,10 +472,11 @@ footer {
     text-align: center;
 }
 
+/* 
 
 .redes-rodape-2 {
     padding-left: 120px;
-}
+} */
 
 #copyright {
     color: white;
@@ -483,9 +484,7 @@ footer {
 }
 
 .logo-footer img {
-    height: 240px;
-    width: 300px;
-    padding-left: 50px;
+    width: 200px;
     align-items: center;
 
 }
@@ -517,49 +516,50 @@ footer {
         font-family: sans-serif;
     }
 
-    .informacoes-rodape {
+    /* .informacoes-rodape {
         flex-direction: row;
         justify-content: space-around;
         align-items: flex-start;
         width: 100vw;
-        padding: 10px 0 0;
+        padding: 10px 0 0; */
+}
+
+.planos {
+    gap: 10px;
+    display: flex;
+    /*width: min(100%, 550px);*/
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+}
+
+.redes-sociais-footer {
+    height: 15px;
+}
+
+
+
+@media (min-width: 768px) {
+    .passo-a-passo ul {
+        flex-direction: row;
+    }
+
+
+    .informacoes-rodape {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100vh;
+        justify-content: space-between;
+        margin-top: 25px;
     }
 
     .planos {
         gap: 10px;
         display: flex;
-        /*width: min(100%, 550px);*/
+        width: min(100%, 550px);
         justify-content: space-evenly;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
-    }
-
-    .redes-sociais-footer {
-        height: 15px;
-    }
-
-
-
-    @media (min-width: 768px) {
-        .passo-a-passo ul {
-            flex-direction: row;
-        }
-
-
-        .informacoes-rodape {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .planos {
-            gap: 10px;
-            display: flex;
-            width: min(100%, 550px);
-            justify-content: space-evenly;
-            flex-direction: row;
-            align-items: center;
-        }
     }
 }
