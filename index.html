@@ -115,47 +115,52 @@
           </li>
         </ul>
       </div>
-      <div class="assinatura">
-        <button class="btn-eu-quero">Eu quero</button>
-        <h2>Assinatura e Planos</h2>
-        <div class="btn-assinatura">
-          <button>Nacional</button>
-          <button>Internacional</button>
-          <button>Todos</button>
+      <section class="assinatura">
+        <h4 id="assinaturas-planos">Assinaturas e Planos</h4>
+        <div id="botoes-planos">
+          <button id="botao-coracao">Time do Coração</button>
+          <button id="botao-nacional">Times Nacionais</button>
+          <button id="botao-mundial">Times Mundiais</button>
         </div>
-        <img
-          class="camiseta-assinatura"
-          src="./imgs/camiseta/camisetasp.webp"
-          alt=""
-        />
-        <ul>
-          <li>Lorem ipsum dolor sit amet.</li>
-          <li>Lorem ipsum dolor sit amet.</li>
-          <li>Lorem ipsum dolor sit amet.</li>
-          <li>Lorem ipsum dolor sit amet.</li>
-        </ul>
-        <div class="planos">
-          <div class="mes plano">
-            <label for="mensal"> Mensal </label>
-            <p class="dinheiro"><span>R$</span>179,90</p>
-            <p class="mensalidade">por mês</p>
-            <input type="radio" name="plano" value="mensal" id="mensal" />
+        <div id="container-imagem-lista">
+
+          <img id="imagem-planos" src="./imgs/assinaturas/inter.jpg" alt="camiseta-retro-inter">
+          <ul id="lista-planos">
+            <li id="lista-descricao1">Escolha um time do coração</li>
+            <li id="lista-descricao2">Receba uma linda camisa retrô todo mês</li>
+            <li id="lista-descricao3">Uma camisa extra no plano anual</li>
+            
+          </ul>
+        </div>
+
+
+        <div id="container-mensalidades">
+          <div class="cobranca plano-trimestral">
+            <p>Trimestral</p>
+            <p>R$
+              <span id="valor-trimestral">199,99</span>
+              /mês
+            </p>
           </div>
-          <div class="ano plano">
-            <label for="anual"> Anual </label>
-            <p class="dinheiro"><span>R$</span>139,90</p>
-            <p class="mensalidade">por mês</p>
-            <input type="radio" name="plano" value="anual" id="anual" />
+          <div class="cobranca plano-anual">
+            <p>Anual</p>
+            <p>R$
+              <span id="valor-anual">159,99</span>
+              /mês
+            </p>
           </div>
-          <div class="semestre plano">
-            <label for="semestral"> Semestral </label>
-            <p class="dinheiro"><span>R$</span>149,90</p>
-            <p class="mensalidade">por mês</p>
-            <input type="radio" name="plano" value="semestral" id="semestral" />
+          <div class="cobranca plano-semestral">
+            <p>Semestral</p>
+            <p>R$
+              <span id="valor-semestral">189,99</span>
+              /mês
+            </p>
           </div>
         </div>
-        <button class="quero">Quero assinar Retrôgol</button>
-      </div>
+        <button id="botao-assinatura">Assinar</button>
+        
+        
+      </section>
 
       <div class="vantagens">
         <span>Vantagens</span>
