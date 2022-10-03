@@ -69,6 +69,8 @@ for (let i = 0; i < col.length; i++){
 
 
 
+
+
 // POR QUE O ANUAL NÃO MUDA DE COR QUANDO PASSA O MOUSE SÓ NO CSS
 
 const cobranca = document.querySelectorAll(".cobranca")
@@ -256,3 +258,17 @@ function currentSlide(n) {
 
     slides[slideIndex-1].style.display = "block";
   }
+
+
+// side bar //
+
+const menuHam = document.getElementById('menu-hamburguer')
+const sideBar = document.getElementById('side-bar')
+
+menuHam.addEventListener('click', () => {
+    if (sideBar.classList.contains('open')) {
+        sideBar.classList.remove('open')
+    } else {
+        sideBar.classList.add('open')
+    }
+})

@@ -8,37 +8,85 @@
 
 :root {
     --cor-principal: rgb(51, 51, 51);
+    --cor-header: rgba(217, 217, 217, 1);
+    --verde-principal: rgba(133, 134, 64, 1);
+
 }
 
-header{
-    background-color: var(--cor-principal);
-    height: 55px;
-    display: flex;
-    width: 100vw;
-    padding: 0 20px;
-    color: white;
-    justify-content: space-between;
-    align-items: center;
+header {
     position: fixed;
-    z-index: 1
+    top: 0;
+
+    background-color: var(--cor-header);
+
+    width: 100%;
+
 }
-header img{
-    /* height: 25px; */
-    transform: rotateY(180deg);   
-}
-.logo img{
-    transform: rotateY(360deg);
-    width: 10vw;
-    margin-top: 4vw;
-}
-.login{
-    display: flex;
-    align-items: center;
-}
-.login span{
-    margin-left: 10px;
+
+#menu-desktop {
     display: none;
 }
+
+#menu-mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 2rem 1rem;
+}
+
+#menu-hamburguer img {
+    width: 30px;
+}
+
+.logo-mobile img {
+    height: 95px;
+}
+
+#login-mobile img {
+    width: 30px;
+}
+
+            /* CSS DO SIDE BAR */
+
+#side-bar {
+    display: none;
+
+    position: absolute;
+
+    width: 50%;
+    height: 620%;
+    top: 163px;
+    left: 0px;
+
+    background-color: var(--cor-header);
+    
+    animation: movimento-sideBar 1s normal;
+}
+
+.nav-item-mobile {
+    list-style: none;
+
+    margin: 20px 0px;
+}
+
+.nav-link-mobile {
+    text-decoration: none;
+
+    padding: 15px 25px;
+    font-size: 2rem;
+
+    color: var(--verde-principal);
+}
+
+.open {
+    display: block !important;
+}
+
+body {
+    margin-top: 101px;
+}
+
 
 /* Menu Whatsapp */
 
@@ -488,10 +536,6 @@ footer {
         align-items: center;
         gap: 15px;
         color: white;
-    
-
-
-
   
 }
 
@@ -603,4 +647,112 @@ footer {
         justify-content: space-evenly;
         flex-direction: row;
         align-items: center;
-}}}
+    }
+}
+}
+
+@media (min-width: 900px) {
+
+    #menu-mobile {
+        display: none;
+    }
+
+
+    #menu-desktop {
+        display: block;
+    }
+
+    .menu-desktop-um {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+        padding: 0 1rem;    
+    }
+    
+    .logo-retrobol img {
+        width: 110px;
+    }
+    
+    .nav-menu-desktop a {
+        text-decoration: none;
+        font-size: 1.5rem;
+        font-weight: 700;
+    
+        padding: 0px 40px;
+    
+        color: var(--verde-principal);
+    }
+    
+    
+    .nav-login {
+        display: flex;
+        align-items: center;
+    }
+    
+    .nav-login img {
+        width: 25px;
+    
+        margin-right: 5px;
+    }
+    
+    .nav-login span {
+        font-size: 1.5rem;
+    
+        color: var(--verde-principal);
+    }
+    
+    .listra-menu {
+        height: 3px;
+        background-color: var(--verde-principal);
+    }
+    
+    .nav-desktop-dois {
+        width: 100%;
+    }
+    
+    .nav-list-desktop {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+        font-size: 20px;
+    
+        padding: 0.5rem 7rem;
+    }
+    
+    .nav-item-desktop {
+        list-style: none;
+    }
+    
+    .nav-link-desktop {
+        text-decoration: none;
+        transition: all 0.7s;
+    
+        padding: 10px;
+    
+        color: var(--verde-principal);
+    }
+    
+    .nav-link-desktop:hover {
+    
+        background-color: var(--verde-principal);
+        color: var(--cor-header);
+    }
+}
+
+@keyframes movimento-sideBar {
+
+    0% {
+        transform: translateX(-50%);
+    }
+
+    50% {
+        
+    }
+
+    100% {
+        transform: translateX();
+    }
+
+}
