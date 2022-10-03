@@ -23,34 +23,57 @@
     </header>
     <main>
       <img class="whats" src="./imgs/icon/whatsapp.png" alt="" />
-      <div class="banner">
-        <img class="banner-mobile" src="./imgs/banners/banner.jpg" alt="" />
-        <img class="banner-wide" src="./imgs/banners/banner 1200.webp" alt="" />
-        <div class="troca">
-          <section class="promo">
-            <img
-              class="seta-promo-esq"
-              src="./imgs/icon/right-arrow.png"
-              alt=""
-            />
-            <div>
-              <img
-                class="promo-icon"
-                src="./imgs/icon/seta-circular.png"
-                alt=""
-              />
-              <p>
-                <strong>PRIMEIRA TROCA GRÁTIS</strong> para todas as compras
-              </p>
-            </div>
-            <img
-              class="seta-promo-dir"
-              src="./imgs/icon/right-arrow.png"
-              alt=""
-            />
+
+          <section class="bannerCarroussel">
+
+              <div class="bannerWide fade">
+                <img src="./imgs/banners/bannerA.jpeg" alt="" />
+              </div>
+
+              <div class="bannerWide fade">
+                <img src="./imgs/banners/bannerB.jpeg" alt="" />
+              </div>
+
+              <div class="bannerWide fade">
+                <img src="./imgs/banners/bannerC.jpeg" alt="" />
+              </div>
+
           </section>
-        </div>
-      </div>
+
+          <div class="troca">
+            <section class="promo">
+
+                <img class="seta-time-esq" onclick="plusBanner(-1)" src="./imgs/icon/right-arrow.png" alt="">
+    
+                <img
+                  class="promo-icon"
+                  src="./imgs/icon/seta-circular.png"
+                  alt=""
+                />
+                  <p>
+                    <strong>PRIMEIRA TROCA GRÁTIS</strong> para todas as compras
+                  </p>
+                <img  class="seta-time-dir" onclick="plusBanner(1)" src="./imgs/icon/right-arrow.png" alt="">
+            </section>
+          </div>
+
+          <h3 class="times">Com os melhores times!</h3>
+          <section class="timesCarroussel">
+            <img class="seta-time-esq" onclick="plusSlides(-1)" src="./imgs/icon/right-arrow.png" alt="">
+    
+    
+              <div class="carroussel fade">
+                <img src="./imgs/times/banner aa.png" alt="" />
+              </div>
+    
+              <div class="carroussel fade">
+                <img src="./imgs/times/banner bb.png" alt="" />
+              </div>
+    
+              <img  class="seta-time-dir" onclick="plusSlides(1)" src="./imgs/icon/right-arrow.png" alt="">
+    
+          </section>
+
       <div class="como-funciona">
         <h1>Como funciona a assinatura Retrôbol?</h1>
         <p>
@@ -65,15 +88,6 @@
             alt=""
           />
         </section>
-        <h3 class="times">Os melhores times do mundo na Retrôbol</h3>
-        <div class="img-times">
-          <img src="./imgs/times/corinthians-logo-2.svg" alt="" />
-          <img src="./imgs/times/pngegg (1).png" alt="" />
-          <img src="./imgs/times/pngegg.png" alt="" />
-          <img src="./imgs/times/santos-logo.svg" alt="" />
-          <img src="./imgs/times/real-madrid-logo-escudo.svg" alt="" />
-        </div>
-      </div>
 
       <h3>Passo a passo da assinatura</h3>
 
