@@ -1,0 +1,108 @@
+.body-cadastro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+p{
+    margin: inherit;    
+    font-family: Montserrat;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-align: center;
+
+    
+}
+
+
+/* Cadastro */
+.cadastro{
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    
+
+}
+
+.cadastro label{
+    padding-top: 8px;
+}
+
+input#e-mail{
+    padding-left: 5px;
+    border: 0.9px solid #000000;
+    border-radius: 8px;
+}
+input#cpf{
+    padding-left: 5px;
+    border: 0.9px solid #000000;
+    border-radius: 8px;
+}
+input#nome{
+    padding-left: 5px;
+    border: 0.9px solid #000000;
+    border-radius: 8px;
+}
+input#sobrenome{
+    padding-left: 5px;
+    border: 0.9px solid #000000;
+    border-radius: 8px;
+}
+input#nascimento{
+    padding-left: 5px;
+    border: 0.9px solid #000000;
+    border-radius: 8px;
+}
+input#telefone{
+    padding-left: 5px;
+    border: 0.9px solid #000000;
+    border-radius: 8px;
+}
+input#senha{
+    padding-left: 5px;
+    border: 0.9px solid #000000;
+    border-radius: 8px;
+}
+input#confirmacao{
+    padding-left: 5px;
+    border: 0.9px solid #000000;
+    border-radius: 8px;
+}
+
+
+
+/* Termos */
+
+form#termos{
+    padding-top: 10px;
+}
+
+
+/* Botoes */
+.botoes{
+    padding-top: 18px;
+    width: 35%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+button:hover{
+    cursor: pointer;
+}
+button#cadastrar{
+    width: 40%;
+    border-radius: 8px;
+    border: #858640;
+    color: white;
+    background: #858640;
+}
+button#voltar{
+    width: 40%;
+    border-radius: 8px;
+    border: #d9d9d9;
+    color: #858640;
+    background: #D9D9D9;;
+}
