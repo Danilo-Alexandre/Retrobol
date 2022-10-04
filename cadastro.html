@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="./css/style-cadastro.css">
+    <link rel="stylesheet" href="./css/style-index.css">
+</head>
+<body class="body-cadastro">
+    <header>
+
+        <div id="menu-desktop">
+  
+          <div class="menu-desktop-um">
+  
+            <div class="logo-retrobol">
+              <img src="/imgs/logo/Logo Retrôbol - branco.png" alt="Logo da RetrôBol">
+            </div>
+    
+            <nav class="nav-desktop">
+              <span class="nav-menu-desktop">
+                <a href="#">CLUBE</a>
+              </span>
+    
+              <span class="nav-menu-desktop">
+                <a href="#">LOJA</a>
+              </span>
+            </nav>
+    
+            <div id="login">
+              <div class="nav-login">
+                <img src="/imgs/icon/do-utilizador.png" alt="ícone do login">
+                <span>Login</span>
+              </div>
+            </div>
+  
+          </div>
+  
+          <div class="listra-menu">
+  
+          </div>
+  
+          <nav class="nav-desktop-dois">
+            <ul class="nav-list-desktop">
+              <li class="nav-item-desktop"><a class="nav-link-desktop" href="#">Assine</a></li>
+              <li class="nav-item-desktop"><a class="nav-link-desktop" href="#">Perfil Jogador</a></li>
+              <li class="nav-item-desktop"><a class="nav-link-desktop" href="#">Conteúdo</a></li>
+              <li class="nav-item-desktop"><a class="nav-link-desktop" href="#">Ajuda</a></li>
+            </ul>
+          </nav>
+  
+        </div>
+  
+        <div id="menu-mobile">
+  
+          <div id="menu-hamburguer">
+            <img src="/imgs/icon/menu-hamburguer.png" alt="ícone do menu hamburguer">
+          </div>
+  
+          <div class="logo-mobile">
+            <img src="/imgs/logo/Logo Retrôbol.png" alt="Logo da retrôbol">
+          </div>
+  
+          <div id="login-mobile">
+            <img src="/imgs/icon/do-utilizador.png" alt="">
+          </div>
+  
+          <div id="side-bar">
+  
+            <nav class="nav-mobile">
+              <ul class="nav-list-mobile">
+                <li class="nav-item-mobile"><a class="nav-link-mobile" href="#">CLUBE</a></li>
+                <li class="nav-item-mobile"><a class="nav-link-mobile" href="#">LOJA</a></li>
+                <li class="nav-item-mobile"><a class="nav-link-mobile" href="#">Ajuda</a></li>
+              </ul>
+            </nav>
+  
+          </div>
+  
+        </div>
+      
+    </header>
+
+    <p>Crie sua Conta</p>
+    
+    <form class="cadastro">
+        <label for="e-mail">E-mail</label>
+        <input id="e-mail" type="email" placeholder="Digite seu e-mail"/>
+    
+        <label for="cpf">CPF</label>
+        <input id="cpf" type="number" placeholder="Digite seu CPF"/>
+    
+        <label for="nome">Nome</label>
+        <input id="nome" type="text" placeholder="Digite seu nome"/>
+        
+        <label for="sobrenome">Sobrenome</label>
+        <input id="sobrenome" type="text" placeholder="Digite seu sobrenome"/>
+    
+        <label for="nascimento">Data de Nascimento</label>
+        <input id="nascimento" type="date">
+    
+        <label for="telefone">Telefone</label>
+        <input id="telefone" type="tel" placeholder="Digite seu telefone"/>
+        
+        <label for="senha">Senha</label>
+        <input id="senha" type="password" placeholder="Digite sua senha"/>
+        
+        <label for="confirmacao">Confirmar Senha</label>
+        <input id="confirmacao" type="password" placeholder="Confirme sua senha"/>
+    </form>
+
+    <form id="termos">
+        <input type="checkbox" id="novidades">
+        <label for="html">Quero receber maiores novidades do mundo do futebol</label><br>
+        <input type="checkbox" id="termos-e-servicos">
+        <label for="css">Eu li e concordo com os Termos e Condições de uso e a Política de Privacidade</label><br>   
+    </form>
+        
+    <div class="botoes">
+        <button id="voltar">Voltar</button>
+        <button id="cadastrar">Cadastrar</button>
+    </div>
+
+
+    <script src="javascript/cadastro.js"></script>
+</body>
+</html>
