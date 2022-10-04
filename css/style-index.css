@@ -460,7 +460,7 @@ main h3{
     color: #544541;     
 
     
-    box-shadow: 2px 4.58075px 4.58075px rgba(0, 0, 0, 0.25), 1px 4.58075px 4.58075px rgba(0, 0, 0, 0.25), 1px 4.58075px 4.58075px rgba(0, 0, 0, 0.25), 1px 4.58075px 4.58075px rgba(0, 0, 0, 0.25), 0px 4.58075px 4.58075px rgba(0, 0, 0, 0.25);
+    box-shadow: 2px 4.58075px 4.58075px #858640 (0, 0, 0, 0.25), 1px 4.58075px 4.58075px rgba(0, 0, 0, 0.25), 1px 4.58075px 4.58075px rgba(0, 0, 0, 0.25), 1px 4.58075px 4.58075px rgba(0, 0, 0, 0.25), 0px 4.58075px 4.58075px rgba(0, 0, 0, 0.25);
     border-radius: 15px;
 }
 
@@ -509,7 +509,7 @@ main h3{
 
 .submit{
     border: none;
-    background-color: black;
+    background-color: #858640;
     color: white;
     width: 250px;
     height: 30px;
