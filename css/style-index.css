@@ -133,7 +133,7 @@ body {
 }
 /* Banner comprido */
 .troca{
-    background-color: rgb(198, 198, 198);
+    background-color: #D9D9D9;
     width: 100vw;
     text-align: -webkit-center;
     font-family: sans-serif;
@@ -190,7 +190,7 @@ body {
 /* Banner com os times */
 .times{
     margin: 25px 0;
-    width: 85vw;
+    width: 100%;
 }
 
 .carroussel {
@@ -416,79 +416,68 @@ main h3{
     color: white;
     background: #858640;
 }
-/* Vantagens */
-.vantagens{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+/* Beneficios */
 
-}
-
-.vantagens span{
-    margin: 15px;
-    font-size: 30px;
-    font-family: sans-serif;
-}
-.vantagem:hover{
-    background-color: rgb(216, 216, 216);
+.beneficios{
+    width: 100%;
+    background-color: #D9D9D9;
+    
 }
 
-.banner-vantagens{
-    width: clamp(230px,45vw,450px);
-    border-radius: 50px;
-    margin-bottom: 10px;
-}
-.vantagens section{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border: 1.5px solid black;
-    border-radius: 20px;
-    padding: 15px;
-    margin: 10px 10px 0px 10px;
-    width: clamp(275px, 80vw,425px);
-}
-.vantagens section :first-child{
-    width: 35px;
-}
-.perguntas-e-respostas{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-}
-.vantagens section p{
+.beneficios h4 {
     text-align: center;
-    font-size: 15px;
+    font-style: normal;
+    font-size: 35px;
+    line-height: 75px;
+    padding: 30px 0px;
     font-family: sans-serif;
+    font-weight: bold;
 }
-.seta-vantagens-baixo{
-    width: 15px;
 
-    transform: rotate(90deg);
+.img-beneficios{
+  padding: 2%;
+}
+
+.lista-beneficios{
+    padding: 2%;
+    width: 60%;
+    float: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
 }
-.seta-vantagens-cima{
-    width: 15px;
-    transform: rotate(270deg);
 
+:hover.beneficio{
+    background-color: #bbbbbb;
 }
-.descricao-vantagem {
-    margin-bottom: 15px;
-    text-align: justify;
-    width: clamp(150px, 80vw,425px);
+.beneficio{
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; 
+    color: #544541;     
+
+    
+    box-shadow: 2px 4.58075px 4.58075px rgba(0, 0, 0, 0.25), 1px 4.58075px 4.58075px rgba(0, 0, 0, 0.25), 1px 4.58075px 4.58075px rgba(0, 0, 0, 0.25), 1px 4.58075px 4.58075px rgba(0, 0, 0, 0.25), 0px 4.58075px 4.58075px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+
+.beneficio p{
+    font-size: 25px;
+}
+
+.descricao-beneficio{
+    padding: 2px;
+    font-size: medium;
+    margin-bottom: 10px;
+    text-align: center;
     font-family: system-ui;
-    display: none;
-
+    align-self: center;
 }
 
-.linha{
-    width: 300px;
-    height: 15px;
-    border-top: 1px solid black;
-}
+
 /* Newsletter */
 .newsletter{
     display: flex;

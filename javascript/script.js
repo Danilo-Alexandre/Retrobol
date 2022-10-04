@@ -1,5 +1,6 @@
-var col = document.getElementsByClassName('vantagem')
+// Menu dos beneficios colapsaveis
 
+var col = document.getElementsByClassName('beneficio')
 for (let i = 0; i < col.length; i++){
     col[i].addEventListener('click', colapsar) 
     
@@ -11,11 +12,6 @@ for (let i = 0; i < col.length; i++){
         }
     }
 }
-
-
-
-
-
 
 
 
