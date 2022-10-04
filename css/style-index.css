@@ -675,7 +675,8 @@ footer {
     }
     
     .logo-retrobol img {
-        width: 110px;
+        width: 250px;
+        height: 100px;
     }
     
     .nav-menu-desktop a {
@@ -695,8 +696,8 @@ footer {
     }
     
     .nav-login img {
-        width: 25px;
-    
+        width: 60px;
+        height: 60px;
         margin-right: 5px;
     }
     
