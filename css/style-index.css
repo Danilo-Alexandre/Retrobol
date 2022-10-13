@@ -615,14 +615,15 @@ footer {
 }
 
 .institucional {
-    margin-left: 35px;
+    align-items: center;
+    text-align: center;
 }
 
 .redes-rodape {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-left: 20px;
+    text-align: center;
 }
 
 .redes-rodape div {
@@ -636,7 +637,7 @@ footer {
 
 .logo-footer img {
     width: 300px;
-    margin-left: 75px;
+    margin-left: 45px;
 }
 
 @media (min-width: 414px) {
@@ -681,6 +682,14 @@ footer {
         margin-bottom: 20px;
     }
 
+   
+    .redes-rodape {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
     .informacoes-rodape {
         display: flex;
         flex-direction: column;
@@ -720,6 +729,10 @@ footer {
         gap: 30px;
         justify-content: space-evenly;
         width: 55vw;
+    }
+
+    .institucional {
+        margin-left: 35px;
     }
 
 
