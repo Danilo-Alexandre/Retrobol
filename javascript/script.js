@@ -212,17 +212,27 @@ botaoMundial.addEventListener("click",()=>{
 // Script para o banner
 let bannerIndex = 1;
 showBanner(bannerIndex);
+
 // Controles próximo/anterior
 function plusBanner(n) {
   showBanner(bannerIndex += n);
   }
+
+  // Troca automática
+function automaticExchange() {
+  let j = 1
+  showBanner(bannerIndex += j);
+  }
+
 // Controle de imagem
 function currentBanner(n) {
   showBanner(bannerIndex = n);
   }
+
   function showBanner(n) {
     let i;
     let banner = document.getElementsByClassName("bannerWide");
+    var timer = setInterval(automaticExchange, 6000);
     if (n > banner.length) {bannerIndex = 1}
     if (n < 1) {bannerIndex = banner.length}
     for (i = 0; i < banner.length; i++) {

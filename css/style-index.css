@@ -109,7 +109,7 @@ body {
     font-family: 'system-ui';
     font-style: normal;
     font-weight: 300;
-    font-size: 35px;
+    font-size: 3vw;
     text-align: center;
     padding: 0px 45px 0px 10px;
     color: #FFFFFF;
@@ -125,7 +125,7 @@ body {
     align-items: center;
     justify-content: center;
     padding: 55px 10px 0px 0px;
-    background: #858640;
+    background: #272727;
     box-shadow: 0px 4px 4px rgb(0 0 0 / 25%), 
     0px 4px 4px rgb(0 0 0 / 25%), 
     0px 4px 4px rgb(0 0 0 / 25%), 
