@@ -105,12 +105,32 @@ body {
     display: none;
 }
 
+.bannerAlert {
+    font-family: 'system-ui';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 35px;
+    text-align: center;
+    padding: 0px 45px 0px 10px;
+    color: #FFFFFF;
+}
+
+.butons{
+    padding: 0px 15px 0px 15px;
+}
+
 .bannerCarroussel {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
-    padding-top: 60px;
+    padding: 55px 10px 0px 0px;
+    background: #858640;
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%), 
+    0px 4px 4px rgb(0 0 0 / 25%), 
+    0px 4px 4px rgb(0 0 0 / 25%), 
+    0px 4px 4px rgb(0 0 0 / 25%), 
+    0px 4px 4px rgb(0 0 0 / 25%);
 }
 
 .bannerCarroussel div {
@@ -119,7 +139,7 @@ body {
 }
 
 .bannerWide :last-child {
-    padding: 0px 11.5px;
+    padding: 0px;
 }
 
 .bannerWide {
@@ -128,7 +148,7 @@ body {
 
 .bannerWide img {
     width: clamp(247px, 105vw, 768px);
-    margin: 0 1vw;
+    margin: 0vw;
 }
 
 .banner-mobile {
@@ -140,29 +160,12 @@ body {
 
 /* Banner comprido */
 .troca {
-    background-color: #D9D9D9;
+    /* background-color: #D9D9D9; */
     width: 100vw;
     text-align: -webkit-center;
     font-family: sans-serif;
 }
 
-.promo {
-    display: flex;
-    align-items: center;
-    width: min(100%, 550px);
-    justify-content: space-between;
-}
-
-.promo-icon {
-    margin: 10px;
-    height: 25px;
-    transform: rotate(-20deg);
-}
-
-.promo div {
-    display: flex;
-    align-items: center;
-}
 
 .seta-promo-esq,
 .seta-promo-dir {
@@ -183,6 +186,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 21px 0px 0px 0px;
 }
 
 .como-funciona p {
@@ -192,7 +196,7 @@ body {
     font-family: sans-serif;
 }
 
-.como-funciona h1 {
+.como-funciona h3 {
     margin-top: 20px;
     max-width: 350px;
     text-align: center;
@@ -205,11 +209,6 @@ body {
     border-radius: 35px;
 }
 
-/* Banner com os times */
-.times {
-    margin: 25px 0;
-    width: 100%;
-}
 
 .carroussel {
     display: none;
@@ -229,11 +228,16 @@ body {
 
 .seta-time-esq,
 .seta-time-dir {
-    width: 15px;
+    width: 25px;
+    background-color: #847a7a;
+    padding: 6px;
+    border-radius: 15px;
+    margin: -25px;
 }
 
 .seta-time-esq {
     transform: rotate(180deg);
+
 }
 
 /* Adiciona animação na seta */
