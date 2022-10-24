@@ -100,9 +100,39 @@ body {
     height: 45px
 }
 
-/* Banner principal */
-.bannerWide {
-    display: none;
+.banner {
+    background: url("../imgs/banners/bannerA.png");
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  
+    height: 30vh;
+    width: 270vw;
+    padding: 0px 10px;
+    transition: background 0.5s;
+  }
+  
+  .arrow-button {
+    background: rgba(141, 141, 141, 0.62);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+  
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+/* Adiciona animação na seta */
+.arrow-button:hover {
+    background-color: rgba(133, 134, 64, 1);
 }
 
 .bannerAlert {
@@ -138,19 +168,6 @@ body {
     align-items: center;
 }
 
-.bannerWide :last-child {
-    padding: 0px;
-}
-
-.bannerWide {
-    display: flex;
-}
-
-.bannerWide img {
-    width: clamp(247px, 105vw, 768px);
-    margin: 0vw;
-}
-
 .banner-mobile {
     width: min(100%, 550px);
     align-items: center;
@@ -166,19 +183,6 @@ body {
     font-family: sans-serif;
 }
 
-
-.seta-promo-esq,
-.seta-promo-dir {
-    height: 15px;
-}
-
-.seta-promo-esq {
-    transform: rotate(180deg);
-}
-
-.promo p {
-    font-size: 13px;
-}
 
 /* Como funciona */
 .como-funciona {
@@ -226,25 +230,6 @@ body {
     align-items: center;
 }
 
-.seta-time-esq,
-.seta-time-dir {
-    width: 25px;
-    background-color: #847a7a;
-    padding: 6px;
-    border-radius: 15px;
-    margin: -25px;
-}
-
-.seta-time-esq {
-    transform: rotate(180deg);
-
-}
-
-/* Adiciona animação na seta */
-.seta-time-esq:hover,
-.seta-time-dir:hover {
-    background-color: rgba(40, 39, 39, 0.178);
-}
 
 .fade {
     animation-name: fade;

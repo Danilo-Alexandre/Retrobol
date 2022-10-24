@@ -208,38 +208,26 @@ botaoMundial.addEventListener("click",()=>{
 
 })
 
+// Mudar a imagem do carrousel a cada 5 segundos
+var contador = 1;
+const backgroundImages = [
+  'url("./imgs/banners/bannerB.png")',
+  'url("./imgs/banners/bannerC.png")',
+  'url("./imgs/banners/bannerD.png")',
+  'url("./imgs/banners/bannerE.png")',
+  'url("./imgs/banners/bannerA.png")',
+];
 
-// Script para o banner
-let bannerIndex = 1;
-showBanner(bannerIndex);
-
-// Controles próximo/anterior
-function plusBanner(n) {
-  showBanner(bannerIndex += n);
-  }
-
-  // Troca automática
-function automaticExchange() {
-  let j = 1
-  showBanner(bannerIndex += j);
-  }
-
-// Controle de imagem
-function currentBanner(n) {
-  showBanner(bannerIndex = n);
-  }
-
-  function showBanner(n) {
-    let i;
-    let banner = document.getElementsByClassName("bannerWide");
-    var timer = setInterval(automaticExchange, 6000);
-    if (n > banner.length) {bannerIndex = 1}
-    if (n < 1) {bannerIndex = banner.length}
-    for (i = 0; i < banner.length; i++) {
-      banner[i].style.display = "none";
-    }
-    banner[bannerIndex-1].style.display = "block";
-  }
+setInterval(() => {
+  const banner = document.querySelector(".banner");
+  banner.style.background = backgroundImages[contador];
+  banner.style.backgroundPosition = "center";
+  banner.style.backgroundRepeat = "no-repeat";
+  banner.style.backgroundSize = "cover";
+  if (contador == 3) {
+    contador = 0;
+  } else contador++;
+}, 5000);
 
 
 // Script para o carroussel de times
@@ -253,17 +241,18 @@ function plusSlides(n) {
 function currentSlide(n) {
     showSlides(slideIndex = n);
   }
-  function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("carroussel");
-    if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-    }
 
-    slides[slideIndex-1].style.display = "block";
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("carroussel");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
   }
+
+  slides[slideIndex-1].style.display = "block";
+}
 
 
 // side bar //
