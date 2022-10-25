@@ -1,0 +1,27 @@
+[
+    {
+        "id": "1",
+        "nome": "Time do Coração",
+        "trimestral": "199.99",
+        "semestral": "189.99",
+        "anual": "159.99"
+    },
+
+    {
+        "id": "2",
+        "nome": "Times Nacionais ",
+        "trimestral": "200.99",
+        "semestral": "199.99",
+        "anual": "169.99"
+    },
+
+    {
+        "id": "3",
+        "nome": "Times Mundiais",
+        "trimestral": "219.99",
+        "semestral": "209.99",
+        "anual": "189.99"
+    }
+]
+
+

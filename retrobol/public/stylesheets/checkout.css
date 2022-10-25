@@ -1,0 +1,254 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    background: #d9d9d9;
+}
+
+main{
+    padding: 20px;
+}
+
+.container-logo{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+#logo{
+    width: 180px;
+    margin: 20px;
+}
+
+#checkout-text{
+    text-align: center;
+}
+
+.container-assinatura, 
+.container-plano,
+.container-cobranca, 
+.container-dados-pessoais, 
+.container-entrega,
+.container-frete, 
+.container-pagamento, 
+.container-resumo{
+    background-color: white;
+    display: flex;
+    padding: 15px;
+    flex-direction: column;
+    gap: 15px;
+    margin: 20px auto;
+    border: 2px solid #b4b533 ;
+    border-radius: 10px;
+    box-shadow: 2px 2px 7px 3px #5b5b5b4d;
+}
+
+
+
+.container-plano,
+.container-dados-pessoais,
+.container-cobranca,
+.container-entrega,
+.container-frete,
+.container-pagamento,
+.container-resumo{
+    filter: opacity(0.5);
+    border: none;
+}
+
+.ocultar-plano, 
+.ocultar-dados-pessoais, 
+.ocultar-cobranca,
+.ocultar-entrega,
+.ocultar-frete,
+.ocultar-pagamento{
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    
+}
+.assinatura-editor{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.assinatura-editor span{
+    display: none;
+    text-decoration: underline;
+    text-underline-position: under;
+}
+
+.escolha-coracao img, 
+.escolha-nacional img, 
+.escolha-mundial img{
+    width: 35px;
+    
+}
+
+
+#label-coracao,
+#label-nacional,
+#label-mundial{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 20px;
+    gap: 10px;
+
+}
+/* 
+.escolha-mundial, .escolha-nacional{
+    display: none;
+} */
+
+#btn-assinatura,
+#btn-plano,
+#btn-dados-pessoais,
+#btn-cobranca,
+#btn-entrega,
+#btn-frete,
+#btn-pagamento,
+#btn-resumo{
+    background-color: #b4b533;
+    border: none;
+    border-radius: 7px;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    width: 100%;
+}
+
+.container-assinatura input[type='radio'],
+.container-frete input[type="radio"] { 
+    transform: scale(1.5); 
+    accent-color: #95962c;
+}
+
+
+
+.planos-input{
+    display: flex;
+    flex-direction: column;
+}
+
+.container-plano select{
+    height: 35px;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+
+
+.dados-pessoais, 
+.dados-cobranca, 
+.dados-entrega{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+}
+.dados-pessoais input, 
+.dados-cobranca input, 
+.dados-entrega input, 
+.dados-cartao input{
+    border-radius: 5px;
+    height: 35px;
+    border: 1px solid gray;
+}
+
+.dados-pessoais input[type="checkbox"], 
+.dados-cobranca input[type="checkbox"],
+.container-resumo input[type="checkbox"]{
+    accent-color: #95962c;
+    
+}
+
+.error-dados{
+    color: red;
+    font-size: 13px;
+    display: none;
+}
+
+.box-novidades{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.container-frete{
+    display: flex;
+    gap: 15px;
+}
+.box-frete-gratis{
+    display: flex;
+    
+    gap: 10px;
+}
+.container-frete p{
+    font-size: 12px;
+}
+
+.container-pagamento{
+    display: flex;
+    flex-direction: column;
+}
+
+.box-cartao{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.box-cartao img{
+    width: 40px;
+}
+.dados-cartao{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+.container-resumo{
+    display: flex;
+    flex-direction: column;
+}
+.container-resumo > div{
+    display: flex;
+    justify-content: space-between;
+}
+#box-resumo-termos{
+    justify-content: flex-start;
+    gap:10px;
+}
+
+/* <<<<<<<<<<<<<<<ESCONDENDO ELEMENTOS>>>>>>>>>>>>>>>>>> */
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width:780px){
+    form{
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row;
+        width: 100vw;
+    }
+   
+    form > *{
+        width: 30vw;;
+    }
+    .ocultar-pagamento{
+        display: flex !important;
+    }
+}

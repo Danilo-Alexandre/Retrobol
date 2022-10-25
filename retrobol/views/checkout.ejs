@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../stylesheets/checkout.css" />
+        
+        <title>Retrôbol</title>
+
+</head>
+<body>
+    <!-- CONTAINER TIPO DE ASSINATURA -->
+
+    <section class="container-logo">
+    <img id="logo" src="../images/Logo-Retrôbol.png" alt="">
+    </section>
+    <h2 id="checkout-text">Checkout</h2>
+    <main>
+
+        
+        
+        <form action="" method="POST" id="form">
+        <section class="container-dados-web">
+            <section class="container-assinatura">
+                <div class="assinatura-editor">
+                    <h3>Tipo de Assinatura</h3>
+                    <span id="editar">Editar</span>
+                </div>
+                    <label id="label-coracao" for="coracao" class="escolha-coracao">
+                        <input id="coracao"  name="assinatura" checked type="radio" value="coracao" >
+                        <img src="../images/coracao.png" alt="icon-coracao">
+                        <span><%= listaPlanos[0].nome %> </span>
+                    </label>
+            
+                    <label id="label-nacional" for="nacional" class="escolha-nacional">
+                        <input id="nacional" name="assinatura" type="radio" value="nacional">
+                        <img src="../images/brasil.png" alt="icon-coracao">
+                        <span><%= listaPlanos[1].nome %> </span>
+                    </label>
+            
+                    <label id="label-mundial" for="mundial" class="escolha-mundial">
+                        <input id="mundial" name="assinatura" type="radio" value="mundial">
+                        <img src="../images/terra.png" alt="icon-coracao">
+                        <span><%= listaPlanos[2].nome %> </span>
+                    </label>
+                    <button type="button" id="btn-assinatura">
+                        Avançar
+                    </button>
+                </section>
+                
+                <!-- CONTAINER ESCOLHA UM PLANO -->
+            
+                <section class="container-plano">
+            
+                    <div class="assinatura-editor">
+                        <h3>Escolha um plano</h3>
+                        <span>Editar</span>
+                    </div>
+                    <div class="ocultar-plano">
+
+                        <div class="planos-input">
+                            <label>Selecione um plano</label>
+                            <select name="planos" id="sessao-planos">
+                                <option name="anual" id="option-anual" value="anual"></option>
+                                <option name="semestral" id="option-semestral" value="semestral"></option>
+                                <option name="trimestral" id="option-trimestral" value="trimestral"></option>
+                            </select>
+                
+                        </div>
+                        <button type="button" id="btn-plano">
+                            Avançar
+                        </button>
+                    </div>
+                </section>
+            
+                <!-- CONTAINER DADOS PESSOAIS -->
+            
+                <section class="container-dados-pessoais">
+            
+                    <div class="assinatura-editor">
+                        <h3>Dados Pessoais</h3>
+                        <span>Editar</span>
+                    </div>
+                    <div class="ocultar-dados-pessoais">
+
+                        <div class="dados-pessoais">
+                            <span>
+                                Já possui conta? <a href="#"> Clique aqui para logar</a>
+                            </span>
+                            <label for="email">E-mail</label>
+                            <input  id="dados-email" name="emailDados" type="email">
+                            <p class="error-dados" id="erro-email"></p>
+
+                            <label for="cpf">CPF</label>
+                            <input id="dados-cpf" name="cpf" type="number">
+                            <p class="error-dados" id="erro-cpf"></p>
+
+                            <label for="nome">Nome</label>
+                            <input id="dados-nome" name="nome" type="text">
+                            <p class="error-dados" id="erro-nome"></p>
+
+
+                            <label for="sobrenome">Sobrenome</label>
+                            <input id="dados-sobrenome" name="sobrenome" type="text">
+                            <p class="error-dados" id="erro-sobrenome"></p>
+
+
+                            <label for="celular">Celular</label>
+                            <input id="dados-celular" name="celular" type="number">
+                            <p class="error-dados" id="erro-celular"></p>
+
+
+                            <label for="nascimento">Data de Nascimento</label>
+                            <input id="dados-nascimento" name="nascimento" type="date">
+
+                            <label for="senha">Senha</label>
+                            <input id="dados-senha" name="senha" type="password">
+                            <p class="error-dados" id="erro-especial"></p>
+                            <p class="error-dados" id="erro-maiuscula"></p>
+                            <p class="error-dados" id="erro-tamanho"></p>
+
+
+                            <label for="confirmar">Confirmar Senha</label>
+                            <input id="dados-confirmacao" name="confirmar" type="password">
+                            <p class="error-dados" id="erro-confirmacao"></p>
+
+
+                            <div class="box-novidades">
+                                <input id="dados-novidades" type="checkbox" value="newsletter">
+                                <p>Quero receber mais novodades!</p>
+                            </div>
+                        </div>
+                
+                        
+                        <button type="button" id="btn-dados-pessoais">
+                            Avançar
+                        </button>
+                    </div>
+
+                </section>
+            
+            
+                <!-- CONTAINER DADOS COBRANCA -->
+            
+            
+                <section class="container-cobranca">
+            
+                    <div class="assinatura-editor">
+                        <h3>Endereço de Cobrança</h3>
+                        <span>Editar</span>
+                    </div>
+
+                    <div class="ocultar-cobranca">
+
+                        <div class="dados-cobranca">
+                            <label for="cep">CEP</label>
+                            <input id="cobranca-cep" name="cepCobranca" type="number">
+                            <p class="error-dados" id="erro-cep"></p>
+
+                            <label for="endereço">Endereço</label>
+                            <input id="cobranca-endereco" name="enderecoCobranca" type="text">
+                            <label for="numero">Número</label>
+                            <input id="cobranca-numero" name="numeroCobranca" type="number">
+                            <p class="error-dados" id="erro-numero"></p>
+
+                            <label for="complemento">Complemento</label>
+                            <input id="cobranca-complemento" name="complementoCobranca" type="text">
+                            <label for="bairro">Bairro</label>
+                            <input id="cobranca-bairro" name="bairroCobranca" type="text">
+                            <label for="estado">Estado</label>
+                            <input id="cobranca-estado" name="estadoCobranca" type="text">
+                            <label for="cidade">Cidade</label>
+                            <input id="cobranca-cidade" name="cidadeCobranca" type="text">
+                            
+                            <div class="box-novidades">
+                                <input type="checkbox" value="entrega" id="endereco-entrega">
+                                <p>Endereço de entrega mesmo da cobrança</p>
+                            </div>
+
+                        </div>
+                
+                        
+                        <button type="button" id="btn-cobranca">
+                            Avançar
+                        </button>
+                    </div>
+
+                </section>
+            
+                <!-- CONTAINER DADOS ENTREGA -->
+            
+            
+                <section class="container-entrega">
+            
+                    <div class="assinatura-editor">
+                        <h3>Endereço para Entrega</h3>
+                        <span>Editar</span>
+                    </div>
+
+                    <div class="ocultar-entrega">
+
+                        <div class="dados-entrega">
+                            <label for="cep">CEP</label>
+                            <input id="entrega-cep" name="cepEntrega" type="number">
+                            <p class="error-dados" id="erro-entrega-cep"></p>
+
+                            <label for="endereço">Endereço</label>
+                            <input id="entrega-endereco" name="enderecoEntrega" type="text">
+                            <label for="numero">Número</label>
+                            <input id="entrega-numero" name="numeroEntrega" type="number">
+                            <p class="error-dados" id="erro-entrega-numero"></p>
+    
+                            <label for="complemento">Complemento</label>
+                            <input id="entrega-complemento" name="complementoEntrega" type="text">
+                            <label for="bairro">Bairro</label>
+                            <input id="entrega-bairro" name="bairroEntrega" type="text">
+                            <label for="estado">Estado</label>
+                            <input id="entrega-estado" name="estadoEntrega" type="text">
+                            <label for="cidade">Cidade</label>
+                            <input id="entrega-cidade" name="cidadeEntrega" type="text">
+                            
+                        
+                        </div>
+                
+                        
+                        <button type="button" id="btn-entrega">
+                            Avançar
+                        </button>
+                    </div>
+
+            
+                </section>
+            
+            
+                <!-- CONTAINER FRETE -->
+            
+            
+            
+                <section class="container-frete">
+            
+                    <div class="assinatura-editor">
+                        <h3>Frete</h3>
+                        <span>Editar</span>
+                    </div>
+            
+                    <div class="ocultar-frete">
+
+                        <div class="box-frete-gratis">
+                            <input id="box-frete"  name="boxFrete" checked type="radio" >
+                            <span>Frete grátis para todo Brasil</span>
+                            
+                        </div>
+                        <p>Atenção: a entrega pode ser feita até o dia 15 do mês seguinte de cada edição.</p>
+                        
+                        <button type="button" id="btn-frete">
+                            Avançar
+                        </button>
+                
+                    </div>
+
+                </section>
+        
+            </section>
+        
+            <!-- CONTAINER PAGAMENTO -->
+        
+            <section class="container-pagamento-web">
+        
+                <section class="container-pagamento">
+                    
+                    <div class="assinatura-editor">
+                        <h3>Pagamento</h3>
+                        <span>Editar</span>
+                    </div>
+
+                    <div class="ocultar-pagamento">
+
+                        <div class="box-cartao">
+                            <img src="../images/cartao.png" alt="icone-cartão">
+                            <span>Cartão de crédito</span>
+                            
+                        </div>
+                        <div class="dados-cartao">
+                    
+                            <label for="numero-cartao">Número do Cartão</label>
+                            <input id="numero-cartao" type="number" name="numeroCartao">
+                            <p class="error-dados" id="erro-cartao"></p>
+
+                            <label for="validade">Data de Validade</label>
+                            <input id="validade-cartao" type="number" name="validadeCartao">
+                            <p class="error-dados" id="erro-validade"></p>
+
+                            <label for="cvv">CVV</label>
+                            <input id="cvv-cartao" type="number" name="cvv">
+                            <p class="error-dados" id="erro-cvv"></p>
+
+                            <label for="nome-cartao">Nome impresso no cartão</label>
+                            <input id="nome-cartao" type="text" name="nomeCartao">
+                            <label for="cpf-cartao">CPF do Titular</label>
+                            <input id="cpf-cartao" type="text" name="cpfCartao">
+                            <p class="error-dados" id="erro-cartao-cpf"></p>
+
+                            
+                        </div>
+                        
+                        <button type="button" id="btn-pagamento">
+                            Avançar
+                        </button>
+                
+                    </div>
+                    
+                </section>
+            </section>
+            <!-- CONTAINER RESUMO -->
+        
+            <section class="conteiner-resumo-web">
+        
+                <section class="container-resumo">
+                    
+                    <div class="assinatura-editor">
+                        <h3>Resumo</h3>
+                        <span>Editar</span>
+                    </div>
+                    
+                    <div class="box-resumo">
+                        <p>Sua próxima edição será a Retrobol mês Outubro 2022</p>
+                        
+                    </div>
+            
+                    <div class="box-resumo-descricao">
+                        <p>Descrição</p>
+                        <p>Valor</p>
+                    </div>
+                    <hr>
+            
+                    <div class="box-resumo-valor">
+                        <p>Valor da Assinatura</p>
+                        <p id="resumo-valor"></p>
+                    </div>
+                    <hr>
+            
+                    <div class="box-resumo-subtotal">
+                        <p>Subtotal</p>
+                        <p id="resumo-subtotal"></p>
+                        
+                    </div>
+                    <hr>
+            
+                    <div class="box-resumo-parcelado">
+                        <p>Valor Parcelado</p>
+                        <p id="resumo-parcelado"></p>
+                        
+                    </div>
+                    <hr>
+            
+                    <div id="box-resumo-termos">
+                        <input type="checkbox" value="termos">
+                        <p>Eu li e concordo com os <span>Termos e Condições de uso</span> e a <span>Politica de Privacidade</span></p>
+                    </div>
+                
+                    
+                    <button type="submit" id="btn-resumo">
+                        Avançar
+                    </button>
+                </section>
+            </section>
+        </form>    
+    </main>
+
+    <script src="../javascripts/checkout.js"></script>
+
+     
+</body>
+</html>

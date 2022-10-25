@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+    margin: 5px;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    border: 1px solid black;
+}
+
+h6{
+    width: 100px;
+}
+
+.all-page{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.titulos{
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.tabela{
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+}
+
+.button{
+    display: flex;
+    gap: 5px
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/clientes/alterar/<%= trazerCliente.id %>?_method=PUT" method="POST">
+    <label for="">Nome</label>
+    <input value="<%= trazerCliente.nome %>" type="text">
+
+    <label for="">Sobrenome</label>
+    <input value="<%= trazerCliente.sobrenome %>" type="text">
+
+    <label for="">Telefone</label>
+    <input value="<%= trazerCliente.celular %>" type="text">
+
+    <label for="">Plano</label>
+    <input value="<%= trazerCliente.plano %>" type="text">
+
+    <label for="">Assinatura</label>
+    <input value="<%= trazerCliente.assinatura %>" type="text">
+
+    <label for="">Senha</label>
+    <input value="<%= trazerCliente.senha %>" type="text">
+
+    <label for="">Email</label>
+    <input value="<%= trazerCliente.email %>" type="text">
+
+    <label for="">CPF</label>
+    <input value="<%= trazerCliente.cpf %>" type="text">
+
+    <input type="submit" type="button">
+
+</form>
+</body>
+</html>
