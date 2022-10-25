@@ -157,7 +157,7 @@ botaoCoracao.addEventListener("click",()=>{
     valorSemestral.innerText = "189,99"
     valorTrimestral.innerText = "199,99"
 
-    imagemPlanos.src = "./imgs/assinaturas/inter.jpg"
+    imagemPlanos.src = "images/imgs/assinaturas/inter.jpg"
 
     
 
@@ -181,7 +181,7 @@ botaoNacional.addEventListener("click",()=>{
     valorSemestral.innerText = "199,99"
     valorTrimestral.innerText = "200,99"
 
-    imagemPlanos.src = "./imgs/assinaturas/brasil1.png"
+    imagemPlanos.src = "images/imgs/assinaturas/brasil1.png"
 
 
 
@@ -204,7 +204,7 @@ botaoMundial.addEventListener("click",()=>{
     valorSemestral.innerText = "209,99"
     valorTrimestral.innerText = "219,99"
 
-    imagemPlanos.src = "./imgs/assinaturas/barcelona1.png"
+    imagemPlanos.src = "images/imgs/assinaturas/barcelona1.png"
 
 })
 
@@ -252,7 +252,7 @@ function currentSlide(n) {
       slides[i].style.display = "none";
     }
 
-    slides[slideIndex-1].style.display = "block";
+    slides[slideIndex-1].style.display = "flex";
   }
 
 
