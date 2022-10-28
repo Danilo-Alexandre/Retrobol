@@ -1001,22 +1001,6 @@ editarFrete.addEventListener("click", ()=>{
 // EVENTLISTENER PAGAMENTO 
 
 
-inputCartao.addEventListener("input", ()=>{
-    if(inputCartao.value.length === 16){
-        erroCartao.style.display = "none"
-        confirmaCartao = true
-
-        
-        
-        
-    }else{
-        erroCartao.innerText = `Cartao inválido`
-        erroCartao.style.display = "block"
-        confirmaCartao = false
-
-    }
-})
-
 inputCartao.addEventListener("blur", ()=>{
     erroCartao.style.display = "none"
 

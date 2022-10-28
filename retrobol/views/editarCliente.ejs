@@ -9,28 +9,28 @@
 <body>
     <form action="/clientes/alterar/<%= trazerCliente.id %>?_method=PUT" method="POST">
     <label for="">Nome</label>
-    <input value="<%= trazerCliente.nome %>" type="text">
+    <input name="nome" value="<%= trazerCliente.nome %>" type="text">
 
     <label for="">Sobrenome</label>
-    <input value="<%= trazerCliente.sobrenome %>" type="text">
+    <input name="sobrenome" value="<%= trazerCliente.sobrenome %>" type="text">
 
     <label for="">Telefone</label>
-    <input value="<%= trazerCliente.celular %>" type="text">
+    <input name="celular" value="<%= trazerCliente.celular %>" type="text">
 
     <label for="">Plano</label>
-    <input value="<%= trazerCliente.plano %>" type="text">
+    <input name="plano" value="<%= trazerCliente.plano %>" type="text">
 
     <label for="">Assinatura</label>
-    <input value="<%= trazerCliente.assinatura %>" type="text">
+    <input name="assinatura" value="<%= trazerCliente.assinatura %>" type="text">
 
     <label for="">Senha</label>
-    <input value="<%= trazerCliente.senha %>" type="text">
+    <input name="senha" value="<%= trazerCliente.senha %>" type="text">
 
     <label for="">Email</label>
-    <input value="<%= trazerCliente.email %>" type="text">
+    <input name="email" value="<%= trazerCliente.email %>" type="text">
 
     <label for="">CPF</label>
-    <input value="<%= trazerCliente.cpf %>" type="text">
+    <input name="cpf" value="<%= trazerCliente.cpf %>" type="text">
 
     <input type="submit" type="button">
 

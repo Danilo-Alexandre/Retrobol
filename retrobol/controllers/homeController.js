@@ -1,6 +1,10 @@
+const modelPlanos = require("../model/modelPlanos")
+
 const homeController = {
     index: (req, res)=>{
-        res.render("home")
+        const todosPlanos = modelPlanos.todosPlanos()
+        console.log(todosPlanos);
+        res.render("home", {todosPlanos})
     }
 
 

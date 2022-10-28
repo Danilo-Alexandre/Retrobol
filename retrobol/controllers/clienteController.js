@@ -16,9 +16,9 @@ const clientes = {
     },
 
     modificarCliente: (req, res)=>{
-       
-        const {id, nome, sobrenome, telefone, plano, assinatura, senha, email, cpf} = req.body
-        modelClientes.atualizaCliente(id, nome, sobrenome, telefone, plano, assinatura, senha, email, cpf)
+       const {id} = req.params
+       const {nome, sobrenome, plano, assinatura, telefone, senha, email, cpf} = req.body
+        modelClientes.atualizaCliente(id, nome, sobrenome, plano, assinatura, telefone, senha, email, cpf)
         res.redirect("/clientes")
 
 

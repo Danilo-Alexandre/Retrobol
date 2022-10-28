@@ -26,6 +26,7 @@ function atualizaCliente(id, nome, sobrenome, plano, assinatura, telefone, senha
 
     todosClientes.find(cliente => {
         if(cliente.id == id){
+            console.log(id);
         cliente.nome = nome
         cliente.sobrenome = sobrenome
         cliente.plano = plano
@@ -36,7 +37,6 @@ function atualizaCliente(id, nome, sobrenome, plano, assinatura, telefone, senha
         cliente.cpf = cpf
         }
 
-        console.log(id);
 
     })
 

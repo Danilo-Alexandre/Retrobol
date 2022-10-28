@@ -286,8 +286,9 @@
                     
                             <label for="numero-cartao">Número do Cartão</label>
                             <input id="numero-cartao" type="number" name="numeroCartao">
-                            <p class="error-dados" id="erro-cartao"></p>
-
+                            <% if(typeof errors !== "undefined"){ %> 
+                            <p class="error-dados" style="display: block;" id="erro-cartao"><%= errors[0].msg %> </p>
+                            <% } %> 
                             <label for="validade">Data de Validade</label>
                             <input id="validade-cartao" type="number" name="validadeCartao">
                             <p class="error-dados" id="erro-validade"></p>
