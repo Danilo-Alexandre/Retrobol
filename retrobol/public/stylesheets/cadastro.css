@@ -1,0 +1,51 @@
+.container-cadastro{
+    display: flex;
+    flex-direction: column;
+    padding: 100px 0 40px 0;
+    align-items: center;
+    gap: 20px;
+
+
+}
+
+.dados-pessoais{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    width: 70vw;
+    max-width: 400px;
+    
+}
+
+.dados-pessoais input{
+    border-radius: 5px;
+    height: 35px;
+    border: 1px solid gray;
+}
+
+.box-novidades{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#btn-dados-pessoais{
+    background-color: #b4b533;
+    border: none;
+    border-radius: 7px;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    width: 70vw;
+    max-width: 400px;
+}
+.dados-pessoais input[type="checkbox"]{
+    accent-color: #95962c;
+    
+}
+
+@media (min-width: 768px){
+    .container-cadastro{
+        padding: 130px 0 40px 0;
+    }
+}

@@ -1,0 +1,280 @@
+@keyframes showLogin {
+    from{
+        transform: scale(0,1);
+        filter: opacity(0);
+    }
+    to{
+        transform: scale(1,1);
+        filter: opacity(1);
+
+
+    }
+} 
+
+@keyframes hideLogin {
+    from{
+        transform: scale(1,1);
+        filter: opacity(1);
+
+    }
+    to{
+        transform: scale(0,1);
+        filter: opacity(0);
+
+
+    }
+} 
+
+
+
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --cor-principal: rgb(51, 51, 51);
+    --cor-header: rgba(217, 217, 217, 1);
+    --verde-principal: rgba(133, 134, 64, 1);
+
+}
+
+main, html{
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+/* HEADER */
+
+header{
+    background-color: var(--cor-header);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+}
+
+.container-nav{
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    justify-content: space-between;
+    padding: 10px 30px;
+}
+
+.menu-wide{
+    justify-content: space-around;
+    width: 100vw;
+    padding: 10px;
+    border-top: 4px solid var(--verde-principal);
+    display: none;
+    color: #858640;
+    font-size: 18px;
+    font-weight: 500;
+
+}
+
+.menu-wide li{
+    list-style: none;
+}
+
+.nav-login{
+    align-items: flex-end;
+    padding-right: 25px;
+}
+
+.nav-menu{
+    align-items: flex-start;
+    padding-left: 25px;
+}
+.nav-login, .nav-menu{
+    padding-top: 70px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    
+}
+.nav-menu li, .nav-login li{
+    list-style: none;
+}
+
+.icon-header{
+    height: 30px;
+    filter: invert(34%) sepia(5%) saturate(3639%) hue-rotate(21deg) brightness(87%) contrast(89%);
+}
+
+header img{
+    height: 50px;
+}
+.container-login{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 20px;
+}
+
+#login{
+    display: none;
+}
+
+
+
+
+.hide-login, .hide-menu{
+    position: absolute;
+    height: 100vh;
+    width: 200px;
+    background-color: var(--cor-header);
+}
+
+.hide{
+    transform: scale(0,1);
+}
+
+.hide-menu{
+
+    left: 0px;
+    transform-origin: left;
+    text-align: left;
+}
+.hide-login{
+
+    right: 0px;
+    transform-origin: right
+}
+
+a{
+    
+    text-decoration: none;
+    color: black;
+
+
+}
+
+a:hover{
+    cursor: pointer;
+}
+
+/* MAIN */
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 400px;
+    padding-top: 70px;
+}
+
+.btn-user{
+    font-size: 18px;
+    color: var(--cor-principal);
+    padding: 10px;
+    width: 200px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 11px #00000012;
+}
+
+.container-btn-user{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px;
+}
+
+
+
+
+
+
+
+
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0px;
+    gap: 10px;
+    background-color: var(--cor-principal);
+    font-family: system-ui;
+    font-size: 12px;
+}
+
+.informacoes-rodape {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+.institucional {
+    align-items: center;
+    text-align: center;
+}
+
+.redes-rodape {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.redes-rodape div {
+    padding: 5px 0px;
+}
+
+#copyright {
+    color: white;
+    padding: 10px 0px 0px;
+}
+
+.logo-footer img {
+    width: 300px;
+    margin-left: 45px;
+}
+
+
+
+
+
+
+@media (min-width: 768px){
+    .menu-wide{
+        display: flex;
+    }
+    #hamburger-menu{
+        display: none;
+    }
+    #login{
+        display: block;
+    }
+    #logo-retrobol{
+        margin-left: 9vw;
+    }
+
+    .container-btn-user{
+        align-self: flex-start;
+        position: relative;
+        left: 100px;
+        margin-top: 10px;
+        padding: 80px;
+    }
+    .hide-login, .hide-menu{
+        display: none !important; 
+    }
+
+
+
+
+    .informacoes-rodape{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100vw;
+    }
+}

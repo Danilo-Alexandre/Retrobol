@@ -1,0 +1,72 @@
+<%- include("./partials/partialHead") %> 
+<link rel="stylesheet" href="../stylesheets/cadastro.css" />
+
+<%- include("./partials/userHeader") %> 
+
+
+<section class="container-cadastro">            
+    <h1>Crie sua conta</h1>
+    <div class="dados-pessoais">
+        <span>
+            Já possui conta? <a href="#"> Clique aqui para logar</a>
+        </span>
+        <label for="email">E-mail</label>
+        <input  id="dados-email" name="emailDados" type="email">
+        <p class="error-dados" id="erro-email"></p>
+
+        <label for="cpf">CPF</label>
+        <input id="dados-cpf" name="cpf" type="number">
+        <p class="error-dados" id="erro-cpf"></p>
+
+        <label for="nome">Nome</label>
+        <input id="dados-nome" name="nome" type="text">
+        <p class="error-dados" id="erro-nome"></p>
+
+
+        <label for="sobrenome">Sobrenome</label>
+        <input id="dados-sobrenome" name="sobrenome" type="text">
+        <p class="error-dados" id="erro-sobrenome"></p>
+
+
+        <label for="celular">Celular</label>
+        <input id="dados-celular" name="celular" type="number">
+        <p class="error-dados" id="erro-celular"></p>
+
+
+        <label for="nascimento">Data de Nascimento</label>
+        <input id="dados-nascimento" name="nascimento" type="date">
+
+        <label for="senha">Senha</label>
+        <input id="dados-senha" name="senha" type="password">
+        <p class="error-dados" id="erro-especial"></p>
+        <p class="error-dados" id="erro-maiuscula"></p>
+        <p class="error-dados" id="erro-tamanho"></p>
+
+
+        <label for="confirmar">Confirmar Senha</label>
+        <input id="dados-confirmacao" name="confirmar" type="password">
+        <p class="error-dados" id="erro-confirmacao"></p>
+
+
+        <div class="box-novidades">
+            <input id="dados-novidades" type="checkbox" value="log-sessao" name="log-sessao">
+            <p>Quero continuar logado!</p>
+        </div>
+    </div>
+
+    
+    <button type="button" id="btn-dados-pessoais">
+        Cadastrar
+    </button>
+    
+</section>
+
+
+
+
+
+
+
+<%- include("./partials/userFooter") %> 
+
+  
