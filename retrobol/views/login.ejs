@@ -1,5 +1,34 @@
 <%- include("./partials/partialHead") %> 
+<link rel="stylesheet" href="../stylesheets/cadastro.css" />
+
 <%- include("./partials/userHeader") %> 
+
+<form action="/login" method="POST">
+    <section class="container-cadastro">            
+        <h1>Faça seu Login</h1>
+        <div class="dados-pessoais">
+          
+            <label for="email">E-mail</label>
+            <input  id="dados-email" name="emailDados" type="email">
+            <p class="error-dados" id="erro-email"></p>
+     
+            <label for="senha">Senha</label>
+            <input id="dados-senha" name="senha" type="password">
+
+            <div class="box-novidades">
+                <input id="dados-novidades" type="checkbox" value="sim" name="log-sessao">
+                <p>Quero continuar logado!</p>
+            </div>
+    
+        </div>
+    
+        
+        <button type="submit" id="btn-dados-pessoais">
+            Login
+        </button>
+        
+    </section>
+</form>
 
 
 
@@ -9,4 +38,6 @@
 
 <%- include("./partials/userFooter") %> 
 
-  
+<!-- <script src="../javascripts/login.js"></script> -->
+</body>
+</html>

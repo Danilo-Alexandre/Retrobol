@@ -44,6 +44,12 @@
     
 }
 
+.error-dados{
+    color: red;
+    font-size: 13px;
+    display: none;
+}
+
 @media (min-width: 768px){
     .container-cadastro{
         padding: 130px 0 40px 0;
