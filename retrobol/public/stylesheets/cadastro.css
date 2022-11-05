@@ -1,3 +1,33 @@
+@keyframes showLogin {
+    from{
+        transform: scale(0,1);
+        filter: opacity(0);
+    }
+    to{
+        transform: scale(1,1);
+        filter: opacity(1);
+
+
+    }
+} 
+
+@keyframes hideLogin {
+    from{
+        transform: scale(1,1);
+        filter: opacity(1);
+
+    }
+    to{
+        transform: scale(0,1);
+        filter: opacity(0);
+
+
+    }
+} 
+
+
+
+
 .container-cadastro{
     display: flex;
     flex-direction: column;
@@ -47,7 +77,11 @@
 .error-dados{
     color: red;
     font-size: 13px;
-    display: none;
+    display: block;
+}
+
+p{
+    display: block;
 }
 
 @media (min-width: 768px){

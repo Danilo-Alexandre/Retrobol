@@ -6,7 +6,7 @@ const loginMenu = document.querySelector("#login-menu")
 
 
 
-hamburgerMenu.addEventListener("click", (e)=>{
+hamburgerMenu.addEventListener("click", ()=>{
     if(window.innerWidth < 768){
         hideMenu.classList.toggle("hide")
     }
@@ -27,7 +27,7 @@ hamburgerMenu.addEventListener("click", (e)=>{
 })
 
 
-loginMenu.addEventListener("click", (e)=>{
+loginMenu.addEventListener("click", ()=>{
     if(window.innerWidth < 768){
         hideLogin.classList.toggle("hide")
     }

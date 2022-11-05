@@ -38,11 +38,35 @@ const homeController = {
         console.log(dataUsuarios);
     },
     processLogin: (req,res)=>{
-        const {email, password} = req.body
+        const {email, senha} = req.body
+        const usuario = modelUsuario.buscaEmailUsuario(email)
         const token = jwt.sign({email}, jwtKey)
-        console.log(token);
-        res.cookie("token", token)
-        res.redirect("/users")
+        const errorsEmail = {
+            email:{
+                msg: "Email não encontrado"
+            }   
+        }
+        const errorsSenha = {
+            senha:{
+                msg: "Senha incorreta"
+            }   
+        }
+      
+        if(!usuario){
+
+            return res.render("login", {errorsEmail})
+        
+        }else{
+            if(bcrypt.compareSync(senha, usuario.senha )){
+                res.cookie("token", token)
+                res.redirect("/users")
+
+            }else{
+                res.render("login", {errorsSenha})
+            }
+
+        }
+        console.log(usuario);
 
     }
 }

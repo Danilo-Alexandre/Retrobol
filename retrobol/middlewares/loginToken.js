@@ -1,5 +1,5 @@
-// const jwt = require("jwt")
-// const {jwtKey} = require("../config/secrets")
+const jwt = require("jsonwebtoken")
+const {jwtKey} = require("../config/secrets")
 
 function authLogin(req, res, next){
     const {token} = req.cookies
@@ -8,11 +8,11 @@ function authLogin(req, res, next){
         res.redirect("/login")
     }
 
-    // try {
-    //     const decode = jwt.verify(token, jwtKey)
-    // } catch (error) {
-    //     res.redirect("/login")
-    // }
+    try {
+        const decode = jwt.verify(token, jwtKey)
+    } catch (error) {
+        res.redirect("/login")
+    }
     
     
     

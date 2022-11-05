@@ -18,10 +18,11 @@ function mostraUsuario(){
 }
 
 
+
 function buscaEmailUsuario(email){
     const todosClientes = mostraUsuario()
-    const buscaCliente = todosClientes.find(cliente => cliente.email == email)
-    return buscaCliente
+    return todosClientes.find(cliente => cliente.email === email)
+    
 
 }
 

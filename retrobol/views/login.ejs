@@ -3,17 +3,33 @@
 
 <%- include("./partials/userHeader") %> 
 
+
 <form action="/login" method="POST">
     <section class="container-cadastro">            
         <h1>Faça seu Login</h1>
         <div class="dados-pessoais">
           
             <label for="email">E-mail</label>
-            <input  id="dados-email" name="emailDados" type="email">
-            <p class="error-dados" id="erro-email"></p>
+            <input  id="dados-email" name="email" type="email">
+            <p class="error-dados" id="erro-email">
+               
+                <% if(locals.errorsEmail && errorsEmail.email){ %>
+                    
+                    <%= errorsEmail.email.msg  %> 
+
+                <% } %>
+            </p>
      
             <label for="senha">Senha</label>
             <input id="dados-senha" name="senha" type="password">
+            <p class="error-dados" id="erro-senha">
+               
+                <% if(locals.errorsSenha && errorsSenha.senha){ %>
+                    
+                    <%= errorsSenha.senha.msg  %> 
+
+                <% } %>
+            </p>
 
             <div class="box-novidades">
                 <input id="dados-novidades" type="checkbox" value="sim" name="log-sessao">
@@ -38,6 +54,6 @@
 
 <%- include("./partials/userFooter") %> 
 
-<!-- <script src="../javascripts/login.js"></script> -->
+<script src="../javascripts/login.js"></script>
 </body>
 </html>
