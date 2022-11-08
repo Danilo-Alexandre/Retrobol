@@ -19,21 +19,24 @@ const homeController = {
     },
     registroUsuario: (req,res)=>{
         const {email} = req.body
-        // const error = {
-        //     msg: "Email já cadastrado"
-        // }
+      
         const dataUsuarios = {
             ...req.body,
             senha: bcrypt.hashSync(req.body.senha, 10),
             confirmar: bcrypt.hashSync(req.body.confirmar, 10)
             
         }
+        const errorEmail = {
+            email:{
+                msg: "Email já cadastrado"
+            }   
+        }
         const todosUsuarios = modelUsuario.buscaEmailUsuario(email)
         if(!todosUsuarios){
             const novoUsuario = modelUsuario.salvaUsuario(dataUsuarios)
            return  res.redirect("/login")
         }else{
-            res.redirect("/cadastro")
+            res.render("cadastro", {errorEmail})
         }
         console.log(dataUsuarios);
     },

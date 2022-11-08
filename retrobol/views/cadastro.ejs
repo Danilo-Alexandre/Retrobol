@@ -6,13 +6,19 @@
 
     <section class="container-cadastro">            
         <h1>Crie sua conta</h1>
+        <span>
+            Já possui conta? Clique <a href="/login">aqui </a>para logar
+        </span>
         <div class="dados-pessoais">
-            <span>
-                Já possui conta? <a href="#"> Clique aqui para logar</a>
-            </span>
             <label for="email">E-mail</label>
             <input  id="dados-email" name="email" type="email">
-            <p class="error-dados" id="erro-email"></p>
+            <p class="error-dados" id="erro-email">
+                <% if(locals.errorEmail && errorEmail.email){ %>
+                    
+                    <%= errorEmail.email.msg  %> 
+
+                <% } %>
+            </p>
     
             <label for="cpf">CPF</label>
             <input id="dados-cpf" name="cpf" type="number">
