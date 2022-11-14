@@ -90,32 +90,20 @@
   <main>
     <img class="whats" src="images/imgs/icon/whatsapp.png" alt="" />
 
-    <section class="bannerCarroussel">
-
-      <div class="bannerWide fade">
-        <img src="images/imgs/banners/bannerA.jpeg" alt="" />
+    <section class="bannerPrincipal">
+      <div class="advertisementsBanner">
+        <span class="textoBanner">Venha conosco fazer parte desse clube dos bem vestidos!</span>
+      </div>
+      <div class="banners">
+        <span>teste</span>
       </div>
 
-      <div class="bannerWide fade">
-        <img src="images/imgs/banners/bannerB.jpeg" alt="" />
-      </div>
-
-      <div class="bannerWide fade">
-        <img src="images/imgs/banners/bannerC.jpeg" alt="" />
-      </div>
 
     </section>
 
     <div class="troca">
       <section class="promo">
 
-        <img class="seta-time-esq" onclick="plusBanner(-1)" src="images/imgs/icon/right-arrow.png" alt="">
-
-        <img class="promo-icon" src="images/imgs/icon/seta-circular.png" alt="" />
-        <p>
-          <strong>PRIMEIRA TROCA GRÁTIS</strong> para todas as compras
-        </p>
-        <img class="seta-time-dir" onclick="plusBanner(1)" src="images/imgs/icon/right-arrow.png" alt="">
       </section>
     </div>
 
@@ -174,9 +162,15 @@
       <section class="assinatura">
         <h4 id="assinaturas-planos">Assinaturas e Planos</h4>
         <div id="botoes-planos">
-          <button id="botao-coracao"><%= todosPlanos[0].nome %> </button>
-          <button id="botao-nacional"><%= todosPlanos[1].nome %></button>
-          <button id="botao-mundial"><%= todosPlanos[2].nome %></button>
+          <button id="botao-coracao">
+            <%= todosPlanos[0].nome %>
+          </button>
+          <button id="botao-nacional">
+            <%= todosPlanos[1].nome %>
+          </button>
+          <button id="botao-mundial">
+            <%= todosPlanos[2].nome %>
+          </button>
         </div>
         <div id="container-imagem-lista">
 
