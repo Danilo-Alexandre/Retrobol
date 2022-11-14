@@ -114,21 +114,6 @@ body {
     display: none;
 }
 
-.bannerCarroussel {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding-top: 60px;
-}
-
-.bannerCarroussel div {
-    display: flex;
-    align-items: center;
-}
-
-
-
 .bannerWide {
     display: flex;
 }
@@ -142,14 +127,6 @@ body {
     align-items: center;
     margin-top: 50px;
 
-}
-
-/* Banner comprido */
-.troca {
-    background-color: #D9D9D9;
-    width: 100vw;
-    text-align: -webkit-center;
-    font-family: sans-serif;
 }
 
 .promo {
@@ -647,6 +624,46 @@ footer {
 .logo-footer img {
     width: 300px;
     margin-left: 45px;
+}
+
+.bannerPrincipal{
+    display: flex;
+    align-items: center;
+    margin-top: 80px;
+    height: 400px;
+}
+
+.advertisementsBanner {
+    background-color: #858640;
+    width: 35%;
+    height: 400px;
+}
+
+.banners {
+    background: url("../retrobol/public/images/imgs/banners/1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  
+    height: 30vh;
+    padding: 0px 10px;
+    transition: background 0.5s;
+
+}
+
+.textoBanner {
+    font-family: 'system-ui';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 35px;
+    text-align: center;
+    padding: 0px 45px 0px 10px;
+    color: #FFFFFF;
 }
 
 @media (min-width: 480px) {
