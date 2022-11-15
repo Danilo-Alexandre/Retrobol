@@ -156,6 +156,29 @@ botaoMundial.addEventListener("click",()=>{
 
 })
 
+// Passando texto para o banner
+const advertisementText = document.getElementsByClassName(".textoBanner");
+
+// Banner automatico 
+let contador = 1;
+const backgroundImages = [
+'url("/images/imgs/banners/1.png")',
+'url("/images/imgs/banners/2.png")',
+'url("/images/imgs/banners/3.png")',
+'url("/images/imgs/banners/4.png")',
+'url("/images/imgs/banners/5.png")',
+        ];
+setInterval(() => {
+    const banner = document.querySelector(".banners");
+    banner.style.background = backgroundImages[contador];
+    banner.style.backgroundPosition = "center";
+    banner.style.backgroundRepeat = "no-repeat";
+    banner.style.backgroundSize = "contain"
+    if (contador == 4) {
+        contador = 0;
+    }
+    else contador ++;
+}, 5000);
 
 
 // Script para o carroussel de times
