@@ -31,8 +31,9 @@ header {
     background-color: var(--cor-header);
 
     width: 100vw;
-
+    font-family: system-ui;
 }
+
 
 #menu-desktop {
     display: none;
@@ -43,7 +44,7 @@ header {
     justify-content: space-between;
     align-items: center;
 
-    margin: 2rem 1rem;
+    margin: 1rem 1rem;
 }
 
 #menu-hamburguer img {
@@ -56,7 +57,7 @@ header {
 }
 
 
-#login -mobile img {
+#login-mobile img {
     width: 30px;
 }
 
@@ -627,42 +628,44 @@ footer {
 }
 
 .bannerPrincipal{
-    display: flex;
-    align-items: center;
-    margin-top: 80px;
-    height: 400px;
-}
 
-.advertisementsBanner {
-    background-color: #858640;
-    width: 35%;
-    height: 400px;
-}
-
-.banners {
-    background: url("../retrobol/public/images/imgs/banners/1.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    margin-top: 35px;
+    background-color: rgb(51 51 51);
 
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-  
-    height: 30vh;
+
+    max-height: 200px;
+    min-width: 100%;
+}
+
+.advertisementsBanner {
+    width: 35%;
+    padding: 0px 10px;
+    text-align: justify;
+
+}
+
+.banners {
+    background: url(/images/imgs/banners/1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    height: 300px;
+    flex-grow: 1;
     padding: 0px 10px;
     transition: background 0.5s;
-
 }
 
 .textoBanner {
     font-family: 'system-ui';
     font-style: normal;
     font-weight: 300;
+
     font-size: 35px;
-    text-align: center;
-    padding: 0px 45px 0px 10px;
     color: #FFFFFF;
 }
 
@@ -825,11 +828,10 @@ footer {
         .nav-menu-desktop a {
             text-decoration: none;
             font-size: 1.5rem;
-            font-weight: 700;
 
             padding: 0px 40px;
 
-            color: var(--verde-principal);
+            color: black;
         }
 
 
@@ -847,7 +849,7 @@ footer {
         .nav-login span {
             font-size: 1.5rem;
 
-            color: var(--verde-principal);
+            color: black;
         }
 
         .listra-menu {
@@ -879,7 +881,7 @@ footer {
 
             padding: 10px;
 
-            color: var(--verde-principal);
+            color: black;
         }
 
         .nav-link-desktop:hover {
