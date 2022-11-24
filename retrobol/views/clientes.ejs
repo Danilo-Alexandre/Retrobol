@@ -1,59 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="../stylesheets/clientes.css">
 
-  </head>
-  <body>
-    <h1></h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin</title>
+  <link rel="stylesheet" href="../stylesheets/clientes.css">
 
-    
-        <div class="titulos">
-            <h2>Nomes</h2>
-            <h2>Sobrenomes</h2>
-            <h2>Plano</h2>
-            <h2>Assinatura</h2>
-            <h2>Ações</h2>
-            
-        </div>
-        <div class="all-page">
-            
-            <div class="tabela">
-                <ul>
-                    <% for(cliente of clientes) { %>
-                    <li>
-                        <h6><%= cliente.nome %></h6>
-                        <h6><%= cliente.sobrenome %></h6> 
-                        <h6><%= cliente.plano %></h6> 
-                        <h6><%= cliente.assinatura %></h6> 
-                        <div class="button">
-                            <a href="/clientes/alterar/<%= cliente.id %> "><button>Editar</button></a> 
-                            
-                            <form action="/clientes/deletar/<%= cliente.id %>?_method=DELETE" method="POST">
-                                <a href="/clientes/deletar/<%= cliente.id %>"><button>Apagar</button></a>
+</head>
 
-                            </form>
-                    </li>
-                    <% } %>
-                        </div>    
-                </ul>
-            </div>
+<body>
+  <h1></h1>
 
-     
-        
-    
-    
-    
-       
+  <section class="filtros-clientes">
+    <span>Filtrar valores por: </span>
+    <label for="nome">Nome: </label>
+    <input id="dados-nome" name="nome" type="text">
+    <p class="error-dados" id="erro-nome"></p>
+
+    <label for="plano">Plano: </label>
+    <select name="" id="dados-assinatura">
+      <option value="Selecione">Selecione</option>
+      <option value="Plano 1">Plano 1</option>
+      <option value="Plano 2">Plano 2</option>
+      <option value="Plano 3">Plano 3</option>
+    </select>
+
+    <label for="cidade">Cidade: </label>
+    <select name="" id="dados-assinatura">
+      <option value="Selecione">Selecione</option>
+      <option value="Cidade 1">Cidade 1</option>
+      <option value="Cidade 2">Cidade 2</option>
+      <option value="Cidade 3">Cidade 3</option>
+    </select>
 
 
-    
+    <button type="submit" id="btn-buscar">Buscar</button>
+
+
+  </section>
+
+  <div class="all-page">
+
+    <div class="tabela">
+
+      <table class="table">
+        <tr class="titulos">
+          <td>Nomes</td>
+          <td>Sobrenomes</td>
+          <td>Plano</td>
+          <td>Assinatura</td>
+          <td>Ações</td>
+        </tr>
+        <% for(cliente of clientes) { %>
+          <tr class="valores">
+            <td> <%= cliente.nome %></td>
+            <td><%= cliente.sobrenome %></td>
+            <td><%= cliente.plano %></td>
+            <td><%= cliente.assinatura %></td>
+            <td class="actions">
+              <div class="button">
+                <a href="/clientes/alterar/<%= cliente.id %> "><button id="btn-editar">Editar</button></a>
+              </div>  
+              <div class="button">
+                <a href="/clientes/deletar/<%= cliente.id %>"><button id="btn-deletar">Apagar</button></a>
+              </div>
+              
+            </td>
+          </tr>
+        <% } %>
+      </table>
+    </div>
+
+    <div class="adm-imagens">
+      <span>Editar imagens do banner principal: </span>
+      <span> .   </span>
 
     </div>
-    
-  </body>
+
+
+
+
+
+
+  </div>
+
+</body>
+
 </html>
