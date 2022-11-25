@@ -3,13 +3,13 @@ const modelUsuario = require("../model/modelUsuario")
 const bcrypt = require("bcrypt")
 const jwt = require("jsonwebtoken")
 const { jwtKey } = require("../config/secrets")
-
+const { Usuario } = require("../models")
+const { Plano } = require("../models")
 
 const homeController = {
-    index: (req, res)=>{
-        const todosPlanos = modelPlanos.todosPlanos()
-        console.log(todosPlanos);
-        res.render("home", {todosPlanos})
+    index: async(req, res)=>{
+        let planos = await Plano.findAll()
+        res.render("home", {planos})
     },
     viewCadastro: (req, res)=>{
         res.render("cadastro")
@@ -18,7 +18,7 @@ const homeController = {
         
         res.render("login", {data: {}})
     },
-    registroUsuario: (req,res)=>{
+    registroUsuario: async (req,res)=>{
         const {email} = req.body
       
         const dataUsuarios = {
@@ -32,18 +32,37 @@ const homeController = {
                 msg: "Email já cadastrado"
             }   
         }
-        const todosUsuarios = modelUsuario.buscaEmailUsuario(email)
-        if(!todosUsuarios){
-            const novoUsuario = modelUsuario.salvaUsuario(dataUsuarios)
-           return  res.redirect("/login")
+
+        const buscaUsuario = await Usuario.findOne({
+            where:{
+                User_email:email
+            }
+        })
+
+        if(!buscaUsuario){
+            const novoUsuario = await Usuario.create({
+                User_nome: dataUsuarios.nome,
+                User_sobrenome: dataUsuarios.sobrenome,
+                User_email: dataUsuarios.email,
+                User_cpf: dataUsuarios.cpf,
+                User_celular: dataUsuarios.celular,
+                User_senha: dataUsuarios.senha
+            })
+            return res.redirect("/login")
+
         }else{
             res.render("cadastro", {errorEmail})
         }
-        console.log(dataUsuarios);
     },
-    processLogin: (req,res)=>{
+    processLogin: async (req,res)=>{
         const {email, senha} = req.body
-        const usuario = modelUsuario.buscaEmailUsuario(email)
+
+        const usuarioCadastro = await Usuario.findOne({
+            where:{
+                User_email:email
+            }
+        })
+
         const token = jwt.sign({email}, jwtKey)
         const errorsEmail = {
             email:{
@@ -55,13 +74,13 @@ const homeController = {
                 msg: "Senha incorreta"
             }   
         }
-      
-        if(!usuario){
+    //   console.log(usuarioCadastro.User_nome)
+        if(!usuarioCadastro){
 
             return res.render("login", {errorsEmail, data: {email: req.body.email}})
         
         }else{
-            if(bcrypt.compareSync(senha, usuario.senha )){
+            if(bcrypt.compareSync(senha, usuarioCadastro.User_senha )){
                 res.cookie("token", token)
                 res.redirect("/users")
 
@@ -70,7 +89,6 @@ const homeController = {
             }
 
         }
-        console.log(usuario);
 
     }
 }

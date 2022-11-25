@@ -151,6 +151,7 @@ form.addEventListener("keypress",(e)=>{
 
 
 function getPlanos(id){
+    console.log(id)
     return fetch(`/checkout/lista/planos/${id}`)
     
 }
@@ -165,15 +166,15 @@ btnAssinatura.addEventListener("click", async ()=>{
 
     if(coracao.checked){
         const planoInfo = await (await getPlanos(1)).json()
-        console.log({optionAnual});
+        console.log(planoInfo.anual);
 
         valorAnual = planoInfo.anual
         valorSemestral = planoInfo.semestral
         valorTrimestral = planoInfo.trimestral
       
-        optionAnual.innerText = `Plano Anual --12x R$${planoInfo.anual.replace(".", ",")}`
-        optionSemestral.innerText = `Plano Semestral  6x--- R$${planoInfo.semestral.replace(".", ",")}`
-        optionTrimestral.innerText = `Plano Trimestral  3x--- R$${planoInfo.trimestral.replace(".", ",")}`
+        optionAnual.innerText = `Plano Anual --12x R$${planoInfo.anual}`
+        optionSemestral.innerText = `Plano Semestral  6x--- R$${planoInfo.semestral}`
+        optionTrimestral.innerText = `Plano Trimestral  3x--- R$${planoInfo.trimestral}`
 
         
     }
@@ -185,9 +186,9 @@ btnAssinatura.addEventListener("click", async ()=>{
         valorSemestral = planoInfo.semestral
         valorTrimestral = planoInfo.semestral
 
-        optionAnual.innerText = `Plano Anual --12x R$${planoInfo.anual.replace(".", ",")}`
-        optionSemestral.innerText = `Plano Semestral  6x--- R$${planoInfo.semestral.replace(".", ",")}`
-        optionTrimestral.innerText = `Plano Trimestral  3x--- R$${planoInfo.trimestral.replace(".", ",")}`
+        optionAnual.innerText = `Plano Anual --12x R$${planoInfo.anual}`
+        optionSemestral.innerText = `Plano Semestral  6x--- R$${planoInfo.semestral}`
+        optionTrimestral.innerText = `Plano Trimestral  3x--- R$${planoInfo.trimestral}`
 
     
 
@@ -200,9 +201,9 @@ btnAssinatura.addEventListener("click", async ()=>{
         valorSemestral = planoInfo.semestral
         valorTrimestral = planoInfo.semestral
 
-        optionAnual.innerText = `Plano Anual --12x R$${planoInfo.anual.replace(".", ",")}`
-        optionSemestral.innerText = `Plano Semestral  6x--- R$${planoInfo.semestral.replace(".", ",")}`
-        optionTrimestral.innerText = `Plano Trimestral  3x--- R$${planoInfo.trimestral.replace(".", ",")}`
+        optionAnual.innerText = `Plano Anual --12x R$${planoInfo.anual}`
+        optionSemestral.innerText = `Plano Semestral  6x--- R$${planoInfo.semestral}`
+        optionTrimestral.innerText = `Plano Trimestral  3x--- R$${planoInfo.trimestral}`
     }
 
    
@@ -284,26 +285,26 @@ btnPlano.addEventListener("click",()=>{
 
         let valorDoze = parseFloat(valorAnual) * 12
 
-        valor.innerText = `R$ ${valorDoze.toString().replace(".", ",")}`
-        subtotal.innerText = `R$ ${valorDoze.toString().replace(".", ",")}`
-        parcelado.innerText = `--12x R$ ${valorAnual.replace(".", ",")}`
+        valor.innerText = `R$ ${valorDoze.toString()}`
+        subtotal.innerText = `R$ ${valorDoze.toString()}`
+        parcelado.innerText = `--12x R$ ${valorAnual}`
     }
     if(optionSemestral.selected){
 
         let valorSeis = parseFloat(valorSemestral) * 6
 
 
-        valor.innerText = `R$ ${valorSeis.toString().replace(".", ",")}`
-        subtotal.innerText = `R$ ${valorSeis.toString().replace(".", ",")}`
-        parcelado.innerText = `--6x R$ ${valorSemestral.replace(".", ",")}`
+        valor.innerText = `R$ ${valorSeis.toString()}`
+        subtotal.innerText = `R$ ${valorSeis.toString()}`
+        parcelado.innerText = `--6x R$ ${valorSemestral}`
     }
     if(optionTrimestral.selected){
 
         let valorTres = parseFloat(valorTrimestral) * 3
 
-        valor.innerText = `R$ ${valorTres.toString().replace(".", ",")}`
-        subtotal.innerText = `R$ ${valorTres.toString().replace(".", ",")}`
-        parcelado.innerText = `--3x R$ ${valorTrimestral.replace(".", ",")}`
+        valor.innerText = `R$ ${valorTres.toString()}`
+        subtotal.innerText = `R$ ${valorTres.toString()}`
+        parcelado.innerText = `--3x R$ ${valorTrimestral}`
     }
 
  
