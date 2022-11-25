@@ -78,8 +78,6 @@ main{
 }
 .assinatura-editor span{
     display: none;
-    text-decoration: underline;
-    text-underline-position: under;
 }
 
 .escolha-coracao img, 
@@ -221,6 +219,21 @@ main{
 #box-resumo-termos{
     justify-content: flex-start;
     gap:10px;
+}
+.editar{
+    background-color: #b4b533;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 7px;
+    padding: 5px 10px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
 }
 
 /* <<<<<<<<<<<<<<<ESCONDENDO ELEMENTOS>>>>>>>>>>>>>>>>>> */

@@ -15,7 +15,8 @@ const homeController = {
         res.render("cadastro")
     },
     viewLogin: (req, res)=>{
-        res.render("login")
+        
+        res.render("login", {data: {}})
     },
     registroUsuario: (req,res)=>{
         const {email} = req.body
@@ -57,7 +58,7 @@ const homeController = {
       
         if(!usuario){
 
-            return res.render("login", {errorsEmail})
+            return res.render("login", {errorsEmail, data: {email: req.body.email}})
         
         }else{
             if(bcrypt.compareSync(senha, usuario.senha )){
@@ -65,7 +66,7 @@ const homeController = {
                 res.redirect("/users")
 
             }else{
-                res.render("login", {errorsSenha})
+                res.render("login", {errorsSenha, data: {email: req.body.email}})
             }
 
         }
