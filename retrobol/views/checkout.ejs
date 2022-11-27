@@ -90,30 +90,30 @@
                                 Já possui conta? <a href="#"> Clique aqui para logar</a>
                             </span>
                             <label for="email">E-mail</label>
-                            <input  id="dados-email" name="emailDados" type="email">
+                            <input  id="dados-email" name="emailDados" type="email" value="<%= clientes.emailDados %>">
                             <p class="error-dados" id="erro-email"></p>
 
                             <label for="cpf">CPF</label>
-                            <input id="dados-cpf" name="cpf" type="number">
+                            <input id="dados-cpf" name="cpf" type="number" value="<%= clientes.cpf %>">
                             <p class="error-dados" id="erro-cpf"></p>
 
                             <label for="nome">Nome</label>
-                            <input id="dados-nome" name="nome" type="text">
+                            <input id="dados-nome" name="nome" type="text" value="<%= clientes.nome %> ">
                             <p class="error-dados" id="erro-nome"></p>
 
 
                             <label for="sobrenome">Sobrenome</label>
-                            <input id="dados-sobrenome" name="sobrenome" type="text">
+                            <input id="dados-sobrenome" name="sobrenome" type="text" value="<%= clientes.sobrenome %>">
                             <p class="error-dados" id="erro-sobrenome"></p>
 
 
                             <label for="celular">Celular</label>
-                            <input id="dados-celular" name="celular" type="number">
+                            <input id="dados-celular" name="celular" type="number" value="<%= clientes.celular %>">
                             <p class="error-dados" id="erro-celular"></p>
 
 
                             <label for="nascimento">Data de Nascimento</label>
-                            <input id="dados-nascimento" name="nascimento" type="date">
+                            <input id="dados-nascimento" name="nascimento" type="date" value="<%= clientes.nascimento %>">
 
                             <label for="senha">Senha</label>
                             <input id="dados-senha" name="senha" type="password">
@@ -156,23 +156,23 @@
 
                         <div class="dados-cobranca">
                             <label for="cep">CEP</label>
-                            <input id="cobranca-cep" name="cepCobranca" type="number">
+                            <input id="cobranca-cep" name="cepCobranca" type="number" value="<%= clientes.cepCobranca %>">
                             <p class="error-dados" id="erro-cep"></p>
 
                             <label for="endereço">Endereço</label>
-                            <input id="cobranca-endereco" name="enderecoCobranca" type="text">
+                            <input id="cobranca-endereco" name="enderecoCobranca" type="text" value="<%= clientes.enderecoCobranca %>">
                             <label for="numero">Número</label>
-                            <input id="cobranca-numero" name="numeroCobranca" type="number">
+                            <input id="cobranca-numero" name="numeroCobranca" type="number" value="<%= clientes.numeroCobranca %>">
                             <p class="error-dados" id="erro-numero"></p>
 
                             <label for="complemento">Complemento</label>
-                            <input id="cobranca-complemento" name="complementoCobranca" type="text">
+                            <input id="cobranca-complemento" name="complementoCobranca" type="text" value="<%= clientes.complementoCobranca %>">
                             <label for="bairro">Bairro</label>
-                            <input id="cobranca-bairro" name="bairroCobranca" type="text">
+                            <input id="cobranca-bairro" name="bairroCobranca" type="text" value="<%= clientes.bairroCobranca %>">
                             <label for="estado">Estado</label>
-                            <input id="cobranca-estado" name="estadoCobranca" type="text">
+                            <input id="cobranca-estado" name="estadoCobranca" type="text" value="<%= clientes.estadoCobranca %>">
                             <label for="cidade">Cidade</label>
-                            <input id="cobranca-cidade" name="cidadeCobranca" type="text">
+                            <input id="cobranca-cidade" name="cidadeCobranca" type="text" value="<%= clientes.cidadeCobranca %>">
                             
                             <div class="box-novidades">
                                 <input type="checkbox" value="entrega" id="endereco-entrega">
@@ -203,23 +203,23 @@
 
                         <div class="dados-entrega">
                             <label for="cep">CEP</label>
-                            <input id="entrega-cep" name="cepEntrega" type="number">
+                            <input id="entrega-cep" name="cepEntrega" type="number" value="<%= clientes.cepEntrega %>">
                             <p class="error-dados" id="erro-entrega-cep"></p>
 
                             <label for="endereço">Endereço</label>
-                            <input id="entrega-endereco" name="enderecoEntrega" type="text">
+                            <input id="entrega-endereco" name="enderecoEntrega" type="text" value="<%= clientes.enderecoEntrega %>">
                             <label for="numero">Número</label>
-                            <input id="entrega-numero" name="numeroEntrega" type="number">
+                            <input id="entrega-numero" name="numeroEntrega" type="number" value="<%= clientes.numeroEntrega %>">
                             <p class="error-dados" id="erro-entrega-numero"></p>
     
                             <label for="complemento">Complemento</label>
-                            <input id="entrega-complemento" name="complementoEntrega" type="text">
+                            <input id="entrega-complemento" name="complementoEntrega" type="text" value="<%= clientes.complementoEntrega %>">
                             <label for="bairro">Bairro</label>
-                            <input id="entrega-bairro" name="bairroEntrega" type="text">
+                            <input id="entrega-bairro" name="bairroEntrega" type="text" value="<%= clientes.bairroEntrega %>">
                             <label for="estado">Estado</label>
-                            <input id="entrega-estado" name="estadoEntrega" type="text">
+                            <input id="entrega-estado" name="estadoEntrega" type="text" value="<%= clientes.estadoEntrega %>">
                             <label for="cidade">Cidade</label>
-                            <input id="entrega-cidade" name="cidadeEntrega" type="text">
+                            <input id="entrega-cidade" name="cidadeEntrega" type="text" value="<%= clientes.cidadeEntrega %>">
                             
                         
                         </div>
@@ -285,12 +285,12 @@
                         <div class="dados-cartao">
                     
                             <label for="numero-cartao">Número do Cartão</label>
-                            <input id="numero-cartao" type="number" name="numeroCartao">
+                            <input id="numero-cartao" type="number" name="numeroCartao" value="<%= clientes.numeroCartao %>">
                             <% if(typeof errors !== "undefined"){ %> 
                             <p class="error-dados" style="display: block;" id="erro-cartao"><%= errors[0].msg %> </p>
                             <% } %> 
                             <label for="validade">Data de Validade</label>
-                            <input id="validade-cartao" type="number" name="validadeCartao">
+                            <input id="validade-cartao" type="number" name="validadeCartao" value="<%= clientes.validadeCartao %>">
                             <p class="error-dados" id="erro-validade"></p>
 
                             <label for="cvv">CVV</label>
@@ -298,9 +298,9 @@
                             <p class="error-dados" id="erro-cvv"></p>
 
                             <label for="nome-cartao">Nome impresso no cartão</label>
-                            <input id="nome-cartao" type="text" name="nomeCartao">
+                            <input id="nome-cartao" type="text" name="nomeCartao" value="<%= clientes.nomeCartao %>">
                             <label for="cpf-cartao">CPF do Titular</label>
-                            <input id="cpf-cartao" type="text" name="cpfCartao">
+                            <input id="cpf-cartao" type="text" name="cpfCartao" value="<%= clientes.cpfCartao %>">
                             <p class="error-dados" id="erro-cartao-cpf"></p>
 
                             

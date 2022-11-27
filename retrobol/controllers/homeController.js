@@ -1,5 +1,5 @@
-const modelPlanos = require("../model/modelPlanos")
-const modelUsuario = require("../model/modelUsuario")
+// const modelPlanos = require("../model/modelPlanos")
+// const modelUsuario = require("../model/modelUsuario")
 const bcrypt = require("bcrypt")
 const jwt = require("jsonwebtoken")
 const { jwtKey } = require("../config/secrets")

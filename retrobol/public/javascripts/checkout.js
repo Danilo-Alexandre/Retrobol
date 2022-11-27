@@ -652,20 +652,21 @@ dadosConfirmacao.addEventListener("blur", ()=>{
 // BOTAO AVANÇAR DADOS
 
 btnDados.addEventListener("click", ()=>{
+    console.log(dadosNome.value)
 
-    if(!confirmaNome){
+    if(!dadosNome.value){
         erroNome.style.display = "block"
         erroNome.innerText = "Campo obrigatório"
     }
 
     
-    if(!confirmaSobrenome){
+    if(!dadosSobrenome.value){
         erroSobrenome.style.display = "block"
         erroSobrenome.innerText = "Campo obrigatório"
     }
 
     
-    if(!confirmaCelular){
+    if(!dadosCelular.value){
         erroCelular.style.display = "block"
         erroCelular.innerText = "Campo obrigatório"
     }
@@ -682,25 +683,26 @@ btnDados.addEventListener("click", ()=>{
         erroConfirmacao.style.display = "block"
     }
 
-    if(!confirmaEmail){
+    if(!dadosEmail.value){
         erroEmail.innerText = "Campo obrigatório"
         erroEmail.style.display = "block"
 
     }
 
-    if(!confirmaCpf){
+    if(!dadosCpf.value){
         erroCpf.innerText = "Campo obrigatório"
         erroCpf.style.display = "block"
     }
 
-    if( confirmaCelular && 
-        confirmaNome && 
-        confirmaSobrenome && 
-        confirmaSenha && 
-        confirmaConfirmacao &&
-        confirmaEmail &&
-        confirmaCpf
+    if( dadosCelular.value && 
+        dadosNome.value && 
+        dadosSenha.value && 
+        dadosSobrenome.value && 
+        dadosConfirmacao.value &&
+        dadosEmail.value &&
+        dadosCpf.value
         ){
+           
 
         ocultarDados.style.display = "none"
         ocultarCobranca.style.display = "flex"
@@ -1007,9 +1009,9 @@ inputCartao.addEventListener("blur", ()=>{
 
 })
 
-inputValidade.addEventListener("input",()=>{
+// inputValidade.addEventListener("input",()=>{
 
-})
+// })
 inputCpfCartao.addEventListener("input", ()=>{
     if(inputCpfCartao.value.length === 11){
         erroCartaoCpf.style.display = "none"

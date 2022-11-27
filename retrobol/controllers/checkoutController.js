@@ -6,8 +6,9 @@ const checkout ={
 
 indexCheckout: async (req, res) => {
     const listaPlanos = await Plano.findAll()
+    const clientes = []
     console.log(listaPlanos)
-    res.render("checkout", {listaPlanos})
+    res.render("checkout", {listaPlanos, clientes} )
 },
 
 listaPlanos: async (req, res)=>{
@@ -25,15 +26,16 @@ guardarPlano: async (req, res)=>{
     const clientes = req.body
     const errors = validationResult(req)
     const listaPlanos = await Plano.findAll()
+    console.log(clientes)
     // const listaPlanos = modelPlanos.todosPlanos()
     if(!errors.isEmpty()){
-        return res.render("checkout", {errors: errors.array(), listaPlanos } )
+        return res.render("checkout", {errors: errors.array(), listaPlanos, clientes } )
     }
 
 
    
 
-    modelPlanos.salvarCliente(clientes)
+    // modelPlanos.salvarCliente(clientes)
     res.send("formulario enviado")
 }
 
