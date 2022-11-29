@@ -5,6 +5,9 @@ module.exports = (sequelize, DataType)=>{
             primaryKey:true,
             autoIncrement:true
         },
+        fk_user:{
+            type:DataType.INTEGER
+        },
         numero_cartao:DataType.STRING,
         nome_cartao:DataType.STRING,
         validade_cartao:DataType.STRING,
@@ -14,5 +17,15 @@ module.exports = (sequelize, DataType)=>{
         tableName:"user_cartao",
         timestamps:false
     })
+
+    Cartao.associate = (models) =>{
+        Cartao.belongsTo(models.Usuario,{
+            foreingKey: "fk_user",
+            as:"usuario"
+        })
+    }
+
+
+
     return Cartao
 }

@@ -31,19 +31,19 @@
                     <label id="label-coracao" for="coracao" class="escolha-coracao">
                         <input id="coracao"  name="assinatura" checked type="radio" value="coracao" >
                         <img src="../images/coracao.png" alt="icon-coracao">
-                        <span><%= listaPlanos[0].nome_plano %> </span>
+                        <span><%= listaPlanos[0].assinatura %> </span>
                     </label>
             
                     <label id="label-nacional" for="nacional" class="escolha-nacional">
                         <input id="nacional" name="assinatura" type="radio" value="nacional">
                         <img src="../images/brasil.png" alt="icon-coracao">
-                        <span><%= listaPlanos[1].nome_plano %> </span>
+                        <span><%= listaPlanos[3].assinatura %> </span>
                     </label>
             
                     <label id="label-mundial" for="mundial" class="escolha-mundial">
                         <input id="mundial" name="assinatura" type="radio" value="mundial">
                         <img src="../images/terra.png" alt="icon-coracao">
-                        <span><%= listaPlanos[2].nome_plano %> </span>
+                        <span><%= listaPlanos[6].assinatura %> </span>
                     </label>
                     <button type="button" id="btn-assinatura">
                         Avançar
@@ -63,9 +63,9 @@
                         <div class="planos-input">
                             <label>Selecione um plano</label>
                             <select name="planos" id="sessao-planos">
-                                <option name="anual" id="option-anual" value="anual"></option>
-                                <option name="semestral" id="option-semestral" value="semestral"></option>
-                                <option name="trimestral" id="option-trimestral" value="trimestral"></option>
+                                <option name="anual" id="option-anual" value=""></option>
+                                <option name="semestral" id="option-semestral" value=""></option>
+                                <option name="trimestral" id="option-trimestral" value=""></option>
                             </select>
                 
                         </div>
@@ -155,23 +155,23 @@
                     <div class="ocultar-cobranca">
 
                         <div class="dados-cobranca">
-                            <label for="cep">CEP</label>
+                            <label for="cepCobranca">CEP</label>
                             <input id="cobranca-cep" name="cepCobranca" type="number" value="<%= clientes.cepCobranca %>">
                             <p class="error-dados" id="erro-cep"></p>
 
-                            <label for="endereço">Endereço</label>
+                            <label for="endereçoCobranca">Endereço</label>
                             <input id="cobranca-endereco" name="enderecoCobranca" type="text" value="<%= clientes.enderecoCobranca %>">
-                            <label for="numero">Número</label>
+                            <label for="numeroCobranca">Número</label>
                             <input id="cobranca-numero" name="numeroCobranca" type="number" value="<%= clientes.numeroCobranca %>">
                             <p class="error-dados" id="erro-numero"></p>
 
-                            <label for="complemento">Complemento</label>
+                            <label for="complementoCobranca">Complemento</label>
                             <input id="cobranca-complemento" name="complementoCobranca" type="text" value="<%= clientes.complementoCobranca %>">
-                            <label for="bairro">Bairro</label>
+                            <label for="bairroCobranca">Bairro</label>
                             <input id="cobranca-bairro" name="bairroCobranca" type="text" value="<%= clientes.bairroCobranca %>">
-                            <label for="estado">Estado</label>
+                            <label for="estadoCobranca">Estado</label>
                             <input id="cobranca-estado" name="estadoCobranca" type="text" value="<%= clientes.estadoCobranca %>">
-                            <label for="cidade">Cidade</label>
+                            <label for="cidadeCobranca">Cidade</label>
                             <input id="cobranca-cidade" name="cidadeCobranca" type="text" value="<%= clientes.cidadeCobranca %>">
                             
                             <div class="box-novidades">
@@ -202,23 +202,23 @@
                     <div class="ocultar-entrega">
 
                         <div class="dados-entrega">
-                            <label for="cep">CEP</label>
+                            <label for="cepEntrega">CEP</label>
                             <input id="entrega-cep" name="cepEntrega" type="number" value="<%= clientes.cepEntrega %>">
                             <p class="error-dados" id="erro-entrega-cep"></p>
 
-                            <label for="endereço">Endereço</label>
+                            <label for="endereçoEntrega">Endereço</label>
                             <input id="entrega-endereco" name="enderecoEntrega" type="text" value="<%= clientes.enderecoEntrega %>">
-                            <label for="numero">Número</label>
+                            <label for="numeroEntrega">Número</label>
                             <input id="entrega-numero" name="numeroEntrega" type="number" value="<%= clientes.numeroEntrega %>">
                             <p class="error-dados" id="erro-entrega-numero"></p>
     
-                            <label for="complemento">Complemento</label>
+                            <label for="complementoEntrega">Complemento</label>
                             <input id="entrega-complemento" name="complementoEntrega" type="text" value="<%= clientes.complementoEntrega %>">
-                            <label for="bairro">Bairro</label>
+                            <label for="bairroEntrega">Bairro</label>
                             <input id="entrega-bairro" name="bairroEntrega" type="text" value="<%= clientes.bairroEntrega %>">
-                            <label for="estado">Estado</label>
+                            <label for="estadoEntrega">Estado</label>
                             <input id="entrega-estado" name="estadoEntrega" type="text" value="<%= clientes.estadoEntrega %>">
-                            <label for="cidade">Cidade</label>
+                            <label for="cidadeEntrega">Cidade</label>
                             <input id="entrega-cidade" name="cidadeEntrega" type="text" value="<%= clientes.cidadeEntrega %>">
                             
                         

@@ -5,13 +5,18 @@ module.exports = (sequelize, DataType)=>{
             primaryKey:true,
             autoIncrement:true
         },
-        nome_plano:DataType.STRING,
-        trimestral:DataType.INTEGER,
-        semestral:DataType.INTEGER,
-        anual:DataType.INTEGER,
+        assinatura:DataType.STRING,
+        plano:DataType.STRING,
+        valor:DataType.INTEGER,
+       
     },{
         tableName:"planos",
         timestamps:false
     })
+
+
+
+
+
     return Plano
 }

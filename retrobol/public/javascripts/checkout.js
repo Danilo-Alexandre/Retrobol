@@ -139,6 +139,7 @@ let confirmaCartaoCpf = false
 let valorAnual
 let valorSemestral
 let valorTrimestral
+let idPlano
 
 
 form.addEventListener("keypress",(e)=>{
@@ -151,7 +152,6 @@ form.addEventListener("keypress",(e)=>{
 
 
 function getPlanos(id){
-    console.log(id)
     return fetch(`/checkout/lista/planos/${id}`)
     
 }
@@ -163,47 +163,60 @@ function getPlanos(id){
 btnAssinatura.addEventListener("click", async ()=>{
     
 
-
+    
     if(coracao.checked){
-        const planoInfo = await (await getPlanos(1)).json()
-        console.log(planoInfo.anual);
+        const planoInfo = await (await getPlanos(4)).json()
+        const planoInfo2 = await (await getPlanos(5)).json()
+        const planoInfo3 = await (await getPlanos(6)).json()
+        idPlano = "coração"
 
-        valorAnual = planoInfo.anual
-        valorSemestral = planoInfo.semestral
-        valorTrimestral = planoInfo.trimestral
+        valorAnual = planoInfo.valor
+        valorSemestral = planoInfo2.valor
+        valorTrimestral = planoInfo3.valor
       
-        optionAnual.innerText = `Plano Anual --12x R$${planoInfo.anual}`
-        optionSemestral.innerText = `Plano Semestral  6x--- R$${planoInfo.semestral}`
-        optionTrimestral.innerText = `Plano Trimestral  3x--- R$${planoInfo.trimestral}`
+        optionAnual.innerText = `Plano Anual --12x R$${valorAnual}`
+        optionSemestral.innerText = `Plano Semestral  6x--- R$${valorSemestral}`
+        optionTrimestral.innerText = `Plano Trimestral  3x--- R$${valorTrimestral}`
 
         
     }
 
     if(nacional.checked){
-        const planoInfo = await (await getPlanos(2)).json()
+        const planoInfo = await (await getPlanos(7)).json()
+        const planoInfo2 = await (await getPlanos(8)).json()
+        const planoInfo3 = await (await getPlanos(9)).json()
 
-        valorAnual = planoInfo.anual
-        valorSemestral = planoInfo.semestral
-        valorTrimestral = planoInfo.semestral
+        idPlano = "nacional"
 
-        optionAnual.innerText = `Plano Anual --12x R$${planoInfo.anual}`
-        optionSemestral.innerText = `Plano Semestral  6x--- R$${planoInfo.semestral}`
-        optionTrimestral.innerText = `Plano Trimestral  3x--- R$${planoInfo.trimestral}`
+
+
+        valorAnual = planoInfo.valor
+        valorSemestral = planoInfo2.valor
+        valorTrimestral = planoInfo3.valor
+
+        optionAnual.innerText = `Plano Anual --12x R$${valorAnual}`
+        optionSemestral.innerText = `Plano Semestral  6x--- R$${valorSemestral}`
+        optionTrimestral.innerText = `Plano Trimestral  3x--- R$${valorTrimestral}`
 
     
 
     }
     
     if(mundial.checked){
-        const planoInfo = await (await getPlanos(3)).json()
+        const planoInfo = await (await getPlanos(10)).json()
+        const planoInfo2 = await (await getPlanos(11)).json()
+        const planoInfo3 = await (await getPlanos(12)).json()
 
-        valorAnual = planoInfo.anual
-        valorSemestral = planoInfo.semestral
-        valorTrimestral = planoInfo.semestral
+        idPlano = "mundial"
 
-        optionAnual.innerText = `Plano Anual --12x R$${planoInfo.anual}`
-        optionSemestral.innerText = `Plano Semestral  6x--- R$${planoInfo.semestral}`
-        optionTrimestral.innerText = `Plano Trimestral  3x--- R$${planoInfo.trimestral}`
+
+        valorAnual = planoInfo.valor
+        valorSemestral = planoInfo2.valor
+        valorTrimestral = planoInfo3.valor
+
+        optionAnual.innerText = `Plano Anual --12x R$${valorAnual}`
+        optionSemestral.innerText = `Plano Semestral  6x--- R$${valorSemestral}`
+        optionTrimestral.innerText = `Plano Trimestral  3x--- R$${valorTrimestral}`
     }
 
    
@@ -284,8 +297,25 @@ btnPlano.addEventListener("click",()=>{
     if(optionAnual.selected){
 
         let valorDoze = parseFloat(valorAnual) * 12
+      switch (idPlano) {
+        case "coração":
+            idPlano = 4
+            break;
+        case "nacional":
+            idPlano = 7
+            break;    
+      
+        case "mundial":
+            idPlano = 10
+            break;
 
-        valor.innerText = `R$ ${valorDoze.toString()}`
+        default:
+            break;
+      }
+      
+      valor.innerText = `R$ ${valorDoze.toString()}`
+      optionAnual.value = idPlano
+      console.log(optionAnual.value);
         subtotal.innerText = `R$ ${valorDoze.toString()}`
         parcelado.innerText = `--12x R$ ${valorAnual}`
     }
@@ -293,7 +323,25 @@ btnPlano.addEventListener("click",()=>{
 
         let valorSeis = parseFloat(valorSemestral) * 6
 
-
+        switch (idPlano) {
+            case "coração":
+                idPlano = 5
+                break;
+            case "nacional":
+                idPlano = 8
+                break;    
+          
+            case "mundial":
+                idPlano = 11
+                break;
+    
+            default:
+                break;
+          }
+          
+          optionSemestral.value = idPlano
+          
+          console.log(optionSemestral.value);
         valor.innerText = `R$ ${valorSeis.toString()}`
         subtotal.innerText = `R$ ${valorSeis.toString()}`
         parcelado.innerText = `--6x R$ ${valorSemestral}`
@@ -302,6 +350,25 @@ btnPlano.addEventListener("click",()=>{
 
         let valorTres = parseFloat(valorTrimestral) * 3
 
+        switch (idPlano) {
+            case "coração":
+                idPlano = 6
+                break;
+            case "nacional":
+                idPlano = 9
+                break;    
+          
+            case "mundial":
+                idPlano = 12
+                break;
+    
+            default:
+                break;
+          }
+          optionTrimestral.value = idPlano
+          console.log(optionTrimestral.value);
+
+        
         valor.innerText = `R$ ${valorTres.toString()}`
         subtotal.innerText = `R$ ${valorTres.toString()}`
         parcelado.innerText = `--3x R$ ${valorTrimestral}`
@@ -310,9 +377,7 @@ btnPlano.addEventListener("click",()=>{
  
 
 
-    console.log(optionAnual.selected);
-    console.log(optionTrimestral.selected);
-    console.log(optionSemestral.selected);
+  
 })
 
 editarPlano.addEventListener("click", ()=>{

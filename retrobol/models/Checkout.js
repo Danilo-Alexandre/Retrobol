@@ -13,5 +13,22 @@ module.exports = (sequelize, DataType)=>{
         tableName:"user_checkout",
         timestamps:false
     })
+
+
+    Checkout.associate = (models) =>{
+        Checkout.belongsTo(models.Usuario,{
+            foreingKey: "fk_user",
+            as:"usuario"
+        })    
+    }
+
+    Checkout.associate = (models) =>{
+        Checkout.belongsTo(models.Plano,{
+            foreingKey: "fk_plano",
+            as:"plano"
+        })
+    }
+
+
     return Checkout
 }
