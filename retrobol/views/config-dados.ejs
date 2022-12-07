@@ -1,0 +1,55 @@
+
+<%- include("./partials/partialHead") %> 
+<link rel="stylesheet" href="../../../stylesheets/config-dados.css" />
+<%- include("./partials/userHeader") %> 
+
+
+<main>
+    <form action="/users/<%= usuarioCadastro.idUsuario %>/configuracoes/dados?_method=PUT " method="POST">
+        
+        <section class="container-cadastro">            
+            <h1>Dados Pessoais</h1>
+            
+            <div class="dados-pessoais">
+             
+                <label for="nome">Nome</label>
+                <input id="dados-nome" name="nome" type="text" value="<%= usuarioCadastro.User_nome  %> ">
+                
+        
+        
+                <label for="sobrenome">Sobrenome</label>
+                <input id="dados-sobrenome" name="sobrenome" type="text" value="<%= usuarioCadastro.User_sobrenome  %>">
+                
+        
+        
+                <label for="celular">Celular</label>
+                <input id="dados-celular" name="celular" type="number" value="<%= usuarioCadastro.User_celular  %>">
+               
+        
+        
+                <label for="nascimento">Data de Nascimento</label>
+                <input id="dados-nascimento" name="nascimento" type="date">
+                
+            </div>
+        
+            <div class="btn-atualizar">
+                
+                <button type="submit" id="btn-dados-pessoais">
+                    Atualizar
+                </button>
+                <button type="button" id="btn-dados-pessoais">
+                    Cancelar
+                </button>
+            </div>
+            
+        </section>
+</main> 
+    
+    
+    
+    
+
+</form>    
+
+
+<%- include("./partials/userFooter") %> 

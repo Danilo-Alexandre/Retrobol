@@ -1,16 +1,42 @@
 <%- include("./partials/partialHead") %> 
-  <link rel="stylesheet" href="../stylesheets/configuracoes.css" />
+  <link rel="stylesheet" href="../../stylesheets/configuracoes.css" />
   <%- include("./partials/userHeader") %> 
 
   <%- include("./partials/userMain") %> 
+  <div class="container-configuracoes">
+    <a href="/users/<%= id %>/configuracoes/dados">
+      <div class="btn-user" id="btn-pedidos">
+          Dados Pessoais
+      </div>
+    </a>
 
+    <a href="/users/<%= id %>/configuracoes/endereco">
+      <div class="btn-user" id="btn-pedidos">
+          Endereço
+      </div>
+    </a>
 
+    <a href="/users/<%= id %>/configuracoes/cartao">
+      <div class="btn-user" id="btn-pedidos">
+          Cartão
+      </div>
+    </a>
+
+    <a href="/users/<%= id %>/configuracoes/senha">
+      <div class="btn-user" id="btn-pedidos">
+          Senha
+      </div>
+    </a>
+  </div>
+
+</section>
+</main>
 
 
 
 
 <%- include("./partials/userFooter") %> 
 
-<script src="../javascripts/users.js"></script>
+<script src="../../javascripts/users.js"></script>
 </body>
 </html>

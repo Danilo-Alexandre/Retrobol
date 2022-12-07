@@ -74,7 +74,7 @@ const homeController = {
                 msg: "Senha incorreta"
             }   
         }
-    //   console.log(usuarioCadastro.User_nome)
+      console.log(usuarioCadastro.idUsuario)
         if(!usuarioCadastro){
 
             return res.render("login", {errorsEmail, data: {email: req.body.email}})
@@ -82,7 +82,7 @@ const homeController = {
         }else{
             if(bcrypt.compareSync(senha, usuarioCadastro.User_senha )){
                 res.cookie("token", token)
-                res.redirect("/users")
+                res.redirect(`/users/${usuarioCadastro.idUsuario}`, )
 
             }else{
                 res.render("login", {errorsSenha, data: {email: req.body.email}})

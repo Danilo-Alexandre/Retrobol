@@ -20,7 +20,7 @@ module.exports = (sequelize, DataType)=>{
 
     Cartao.associate = (models) =>{
         Cartao.belongsTo(models.Usuario,{
-            foreingKey: "fk_user",
+            foreignKey: "fk_user",
             as:"usuario"
         })
     }

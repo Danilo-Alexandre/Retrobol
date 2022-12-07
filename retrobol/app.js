@@ -6,6 +6,7 @@ var logger = require('morgan');
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
+// const configuracaoRouter = require('./routes/users/configuracao');
 const checkoutRouter = require("./routes/checkout")
 const clientesRouter = require("./routes/clientes")
 const methodOverride = require("method-override")
@@ -28,6 +29,7 @@ app.use(methodOverride("_method"))
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+// app.use('/users/configuracao', configuracaoRouter);
 app.use("/checkout", checkoutRouter)
 app.use("/clientes", clientesRouter)
 

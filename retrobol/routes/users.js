@@ -4,22 +4,33 @@ const usersController = require("../controllers/usersController")
 const middlewares = require("../middlewares/loginToken")
 
 /* GET users listing. */
-router.get('/', 
+router.get('/:id', 
             middlewares.authLogin, 
             usersController.userHome
 );
 
-router.get('/assinatura',
+router.get('/:id/assinatura',
             middlewares.authLogin, 
             usersController.userAssinatura 
 );
 
-router.get('/configuracoes', 
+router.get('/:id/configuracoes', 
             middlewares.authLogin, 
             usersController.userConfiguracoes
 );
 
-router.get('/pedidos', 
+router.get('/:id/configuracoes/dados', 
+            middlewares.authLogin, 
+            usersController.userConfigDados
+            
+);
+            
+router.put('/:id/configuracoes/dados',  
+    usersController.userAlteraDados
+);
+            
+
+router.get('/:id/pedidos', 
             middlewares.authLogin, 
             usersController.userPedidos 
 );

@@ -17,7 +17,7 @@ module.exports = (sequelize, DataType)=>{
 
     Checkout.associate = (models) =>{
         Checkout.belongsTo(models.Usuario,{
-            foreingKey: "fk_user",
+            foreignKey: "fk_user",
             as:"usuario"
         })    
     }

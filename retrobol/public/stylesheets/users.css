@@ -181,7 +181,24 @@ main{
     display: flex;
     flex-direction: column;
     gap: 20px;
-    padding: 40px;
+}
+
+.container-pagina{
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    text-align: center;
+    gap: 60px;
+    
+    
+}
+.container-configuracoes{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
 }
 
 
@@ -189,8 +206,7 @@ main{
 
 
 
-
-
+/* FOOTER */
 
 footer {
     display: flex;
@@ -240,7 +256,7 @@ footer {
 
 
 
-
+/* RESPONSIVIDADE */
 
 @media (min-width: 768px){
     .menu-wide{
@@ -257,14 +273,17 @@ footer {
     }
 
     .container-btn-user{
-        align-self: flex-start;
-        position: relative;
-        left: 100px;
-        margin-top: 10px;
-        padding: 80px;
+        
     }
     .hide-login, .hide-menu{
         display: none !important; 
+    }
+    .container-pagina{
+        flex-direction: row;
+        gap:15vw;
+        position: relative;
+        top: 50px;
+
     }
 
 
