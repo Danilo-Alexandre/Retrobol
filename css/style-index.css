@@ -1,3 +1,8 @@
+body {
+    background: #f6f6f6;
+
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -8,18 +13,18 @@
 
 :root {
     --cor-principal: rgb(51, 51, 51);
-    --cor-header: rgba(217, 217, 217, 1);
+    --cor-header: rgba(225, 225, 225, 1);
     --verde-principal: rgba(133, 134, 64, 1);
 
 }
 
 header {
-    position: fixed;
+    border-radius: 15px;
     top: 0;
-
+    padding: 20px;
     background-color: var(--cor-header);
-
-    width: 100%;
+    margin-left: 5%;
+    width: 90%;
 
 }
 
@@ -46,7 +51,7 @@ header {
 
 
 #login -mobile img {
-    width: 30px;
+    width: 5vw;
 }
 
 /* CSS DO SIDE BAR */
@@ -85,9 +90,6 @@ header {
     display: block !important;
 }
 
-body {
-    margin-top: 101px;
-}
 
 
 /* Menu Whatsapp */
@@ -110,7 +112,8 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-top: 60px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .bannerCarroussel div {
@@ -141,7 +144,8 @@ body {
 /* Banner comprido */
 .troca {
     background-color: #D9D9D9;
-    width: 100vw;
+    width: 90vw;
+    margin-left: 5vw;
     text-align: -webkit-center;
     font-family: sans-serif;
 }
@@ -322,7 +326,6 @@ main h3 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #f6f6f6;
     gap: 30px;
     padding: 30px;
 }
@@ -467,12 +470,17 @@ main h3 {
 /* Beneficios */
 
 .beneficios {
-    width: 100%;
+    display: flex;
+    width: 90vw;
+    margin-left: 5vw;
     background-color: #D9D9D9;
-
+    
 }
 
-.beneficios h4 {
+h4 {
+    width: 90vw;
+    margin-left: 5vw;
+    background-color: rgba(217, 217, 217);
     text-align: center;
     font-style: normal;
     font-size: 35px;
@@ -483,6 +491,8 @@ main h3 {
 }
 
 .img-beneficios {
+    height: 438px;
+    size: 0cap;
     padding: 2%;
 }
 
@@ -496,6 +506,9 @@ main h3 {
 
 }
 
+.lista-beneficios:hover {
+    cursor:pointer;
+}
 
 :hover.beneficio {
     background-color: #bbbbbb;
@@ -804,14 +817,14 @@ footer {
         }
 
         .nav-login img {
-            width: 60px;
-            height: 60px;
-            margin-right: 5px;
+            width: 5vw;
+            height: 5vw;
+            margin-right: 20px;
         }
 
         .nav-login span {
             font-size: 1.5rem;
-
+            margin-right: 25px;
             color: var(--verde-principal);
         }
 
