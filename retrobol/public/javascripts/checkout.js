@@ -148,6 +148,12 @@ form.addEventListener("keypress",(e)=>{
     }
 })
 
+function done(event) {
+    
+    //  event.preventDefault()
+     alert("Compra efetuada com sucesso!")
+    
+  }
 
 
 

@@ -3,13 +3,14 @@
 const bcrypt = require("bcrypt")
 const jwt = require("jsonwebtoken")
 const { jwtKey } = require("../config/secrets")
-const { Usuario } = require("../models")
-const { Plano } = require("../models")
+const database = require("../models")
 
 const homeController = {
     index: async(req, res)=>{
-        let planos = await Plano.findAll()
-        res.render("home", {planos})
+        let planos = await database.Plano.findAll()
+        let sended
+        console.log({planos});
+        res.render("home", {planos, sended})
     },
     viewCadastro: (req, res)=>{
         res.render("cadastro")
@@ -18,7 +19,7 @@ const homeController = {
         
         res.render("login", {data: {}})
     },
-    registroUsuario: async (req,res)=>{
+    registroUsuario:async (req,res)=>{
         const {email} = req.body
       
         const dataUsuarios = {
@@ -33,14 +34,14 @@ const homeController = {
             }   
         }
 
-        const buscaUsuario = await Usuario.findOne({
+        const buscaUsuario = await database.Usuario.findOne({
             where:{
                 User_email:email
             }
         })
 
         if(!buscaUsuario){
-            const novoUsuario = await Usuario.create({
+            await database.Usuario.create({
                 User_nome: dataUsuarios.nome,
                 User_sobrenome: dataUsuarios.sobrenome,
                 User_email: dataUsuarios.email,
@@ -57,11 +58,20 @@ const homeController = {
     processLogin: async (req,res)=>{
         const {email, senha} = req.body
 
-        const usuarioCadastro = await Usuario.findOne({
+        const usuarioCadastro = await database.Usuario.findOne({
             where:{
                 User_email:email
             }
         })
+
+        const usuarioAdmin = await database.Administrador.findOne({
+            where:{
+                Admin_email:email
+            }
+        })
+
+
+
 
         const token = jwt.sign({email}, jwtKey)
         const errorsEmail = {
@@ -74,23 +84,50 @@ const homeController = {
                 msg: "Senha incorreta"
             }   
         }
-      console.log(usuarioCadastro.idUsuario)
-        if(!usuarioCadastro){
+      console.log(usuarioAdmin)
+        if(!usuarioCadastro && !usuarioAdmin){
 
             return res.render("login", {errorsEmail, data: {email: req.body.email}})
         
-        }else{
-            if(bcrypt.compareSync(senha, usuarioCadastro.User_senha )){
-                res.cookie("token", token)
-                res.redirect(`/users/${usuarioCadastro.idUsuario}`, )
-
+        }
+        if(usuarioCadastro){
+            if (bcrypt.compareSync(senha, usuarioCadastro.User_senha )){
+            res.cookie("token", token)
+            res.redirect(`/users/${usuarioCadastro.idUsuario}` )
             }else{
                 res.render("login", {errorsSenha, data: {email: req.body.email}})
             }
-
+        }
+        if(usuarioAdmin){
+            if(senha == usuarioAdmin.Admin_senha){
+                res.cookie("token", token)
+                res.redirect(`/clientes` )
+            }else{
+                res.render("login", {errorsSenha, data: {email: req.body.email}})
+            }
         }
 
+    },
+    newsletter: async (req, res) =>{
+        const {email} = req.body
+
+        let planos = await database.Plano.findAll()
+
+        await database.Newsletter.create({
+            email_newsletter: email
+        })
+
+        
+        console.log(email);
+
+        
+        
+        res.render("home", { planos})
+
+
     }
+
 }
+
 
 module.exports = homeController

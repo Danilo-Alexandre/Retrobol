@@ -106,6 +106,13 @@ tr:hover {
     border-radius: 15px;
     width: 98%;
 }
+.active{
+    background-color: #d84b4b;
+    border-style: none;
+    border-radius: 5px;
+    padding: 3px 5px;
+    color: rgb(255, 255, 255);
+}
 
 
 
@@ -178,4 +185,81 @@ button:hover{
 .inputs{
     flex-direction: column;
     background-color: #d84b4b;
+}
+
+.container-paginacao{
+    display: flex;
+}
+
+.paginacao{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 90vw;
+}
+.btn-pagina{
+    background-color: #b4b533a8;
+    border-style: none;
+    border-radius: 5px;
+    padding: 3px 5px;
+    color: rgb(255, 255, 255);
+}
+.page-list{
+    border: none;
+}
+
+.container-editar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container-logo{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+#logo{
+    width: 150px;
+    margin: 20px;
+}
+.main-editar{
+    margin-top: -80px;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+}
+
+.btn-atualiza{
+    background-color: #b4b533a8;
+    border-style: none;
+    border-radius: 5px;
+    padding: 5px;
+    color: rgb(255, 255, 255);
+}
+.form-editar{
+    border: #b4b533 1px solid;
+    display: flex;
+    gap: 10px;
+    padding: 15px;
+    border-radius: 8px;
+    width: 450px;
+    justify-content: space-around;
+}
+
+.titulo-editar{
+    text-align: center;
+    margin-top: 40px;
+
+}
+.update, .div-update{
+    display: flex;
+    flex-direction: column;
+}
+.update-right{
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
 }

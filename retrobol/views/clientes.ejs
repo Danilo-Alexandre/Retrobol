@@ -11,28 +11,32 @@
 </head>
 
 <body>
-  <h1></h1>
+<main>
+  <section class="container-logo">
+    <a href="/"><img id="logo" src="../images/Logo-Retrôbol.png" alt=""></a>
+    </section>
 
+<form action="/clientes/search" method="GET">
   <section class="filtros-clientes">
     <span>Filtrar valores por: </span>
     <label for="nome">Nome: </label>
-    <input id="dados-nome" name="nome" type="text">
+    <input id="dados-nome" name="nome" type="text" value="<%= nome %>" >
     <p class="error-dados" id="erro-nome"></p>
 
     <label for="plano">Plano: </label>
-    <select name="" id="dados-assinatura">
-      <option value="Selecione">Selecione</option>
-      <option value="Plano 1">Plano 1</option>
-      <option value="Plano 2">Plano 2</option>
-      <option value="Plano 3">Plano 3</option>
+    <select name="plano" id="dados-assinatura" value="<%= plano %>" >
+      <option  value=""></option>
+      <option value="Trimestral">Trimestral</option>
+      <option  value="Semestral">Semestral</option>
+      <option value="Anual">Anual</option>
     </select>
 
-    <label for="cidade">Cidade: </label>
-    <select name="" id="dados-assinatura">
-      <option value="Selecione">Selecione</option>
-      <option value="Cidade 1">Cidade 1</option>
-      <option value="Cidade 2">Cidade 2</option>
-      <option value="Cidade 3">Cidade 3</option>
+    <label for="cidade">Assinatura: </label>
+    <select name="assinatura" id="dados-assinatura" value="<%= assinatura %>">
+      <option selected value=""></option>
+      <option value="Time do Coracao">Time do Coração</option>
+      <option value="Times Nacionais">Times Nacionais</option>
+      <option value="Times Mundiais">Times Mundiais</option>
     </select>
 
 
@@ -40,7 +44,7 @@
 
 
   </section>
-
+</form>
   <div class="all-page">
 
     <div class="tabela">
@@ -51,33 +55,70 @@
           <td>Sobrenomes</td>
           <td>Plano</td>
           <td>Assinatura</td>
+          <td>Valor</td>
           <td>Ações</td>
         </tr>
         <% for(cliente of clientes) { %>
           <tr class="valores">
-            <td> <%= cliente.nome %></td>
-            <td><%= cliente.sobrenome %></td>
-            <td><%= cliente.plano %></td>
-            <td><%= cliente.assinatura %></td>
+            <td> <%= cliente.User_nome %></td>
+            <td><%= cliente.User_sobrenome %></td>
+            <% if(cliente.plano.length > 0) { %> 
+            <td><%= cliente.plano[0].plano %></td>
+            <td><%= cliente.plano[0].assinatura %></td>
+            <td><%= cliente.plano[0].valor %></td>
+            <% } else { %>
+              <td><%= cliente.plano[0] %></td>
+              <td><%= cliente.plano[0]%></td>
+              <td><%= cliente.plano[0]%></td>
+              
+              <% } %>  
             <td class="actions">
               <div class="button">
-                <a href="/clientes/alterar/<%= cliente.id %> "><button id="btn-editar">Editar</button></a>
+                <a href="/clientes/alterar/<%= cliente.idUsuario %> "><button id="btn-editar">Editar</button></a>
               </div>  
               <div class="button">
-                <a href="/clientes/deletar/<%= cliente.id %>"><button id="btn-deletar">Apagar</button></a>
+                <form action="/clientes/deletar/<%= cliente.idUsuario %>?_method=DELETE" onsubmit="deleteClient(event)"  method="POST">
+                 <button type="submit" id="btn-deletar">Apagar</button>
+                </form>
               </div>
+
               
             </td>
           </tr>
         <% } %>
       </table>
+      <div class="container-paginacao">
+        <ul class="paginacao">
+          <% for(i = 1; i <= totalPagina ; i++) { %> 
+           <% if(plan){ %>
+            <%  if(i == page){   %>
+                  <li class="page-list"><a href="?page=<%= i %>&nome=<%= nome %>&plano=<%= plano %>&assinatura=<%= assinatura %>"><button class=" active"><%= i %></button></a></li>
+              
+            <%  }else{ %> 
+                  <li class="page-list"><a href="?page=<%= i %>&nome=<%= nome %>&plano=<%= plano %>&assinatura=<%= assinatura %>"><button class="btn-pagina"><%= i %></button></a></li>
+  
+            <% }} else {%>
+            
+            
+              <%  if(i == page){   %>
+              <li class="page-list"><a href="?page=<%= i %>&nome=<%= nome %>&plano=<%= plano %>&assinatura=<%= assinatura %>"><button class=" active"><%= i %></button></a></li>
+              
+              <% }else{ %> 
+              <li class="page-list"><a href="?page=<%= i %>&nome=<%= nome %>&plano=<%= plano %>&assinatura=<%= assinatura %>"><button class="btn-pagina"><%= i %></button></a></li>
+  
+              <% }} %> 
+            <% } %>
+
+
+
+
+
+
+        </ul>
+      </div>
     </div>
 
-    <div class="adm-imagens">
-      <span>Editar imagens do banner principal: </span>
-      <span> .   </span>
-
-    </div>
+    
 
 
 
@@ -86,6 +127,9 @@
 
   </div>
 
+</main>
+<script src="../../javascripts/client.js"></script>
 </body>
+
 
 </html>

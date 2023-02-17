@@ -7,7 +7,6 @@ module.exports = (sequelize, DataType)=>{
         },
         fk_user:DataType.INTEGER,
         fk_plano:DataType.INTEGER,
-        assinatura:DataType.STRING,
         
     },{
         tableName:"user_checkout",
@@ -15,19 +14,10 @@ module.exports = (sequelize, DataType)=>{
     })
 
 
-    Checkout.associate = (models) =>{
-        Checkout.belongsTo(models.Usuario,{
-            foreignKey: "fk_user",
-            as:"usuario"
-        })    
-    }
+ 
 
-    Checkout.associate = (models) =>{
-        Checkout.belongsTo(models.Plano,{
-            foreingKey: "fk_plano",
-            as:"plano"
-        })
-    }
+    
+    
 
 
     return Checkout

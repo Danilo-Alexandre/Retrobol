@@ -4,36 +4,75 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../stylesheets/clientes.css" />
     <title>Document</title>
+
 </head>
 <body>
-    <form action="/clientes/alterar/<%= trazerCliente.id %>?_method=PUT" method="POST">
-    <label for="">Nome</label>
-    <input name="nome" value="<%= trazerCliente.nome %>" type="text">
+    <div class="titulo-editar">
 
-    <label for="">Sobrenome</label>
-    <input name="sobrenome" value="<%= trazerCliente.sobrenome %>" type="text">
+        <h1 >Alteração de dados</h1>
+        <h1>Cliente: <%= trazerCliente.User_nome %> </h1>
+    </div>
+    <main class="main-editar">
+    <section class="container-editar">
+        
+        <form onsubmit="changeClient(event)" class="form-editar" action="/clientes/alterar/<%= trazerCliente[0].idUsuario %>?_method=PUT" method="POST">
+            <section class="update">
 
-    <label for="">Telefone</label>
-    <input name="celular" value="<%= trazerCliente.celular %>" type="text">
+                <div class="div-update">
+                    <label for="">Nome</label>
+                    <input name="nome" value="<%= trazerCliente[0].User_nome %>" type="text">
+                    
+                </div>
+        
+                <div class="div-update">
+                    
+                    <label for="">Sobrenome</label>
+                    <input name="sobrenome" value="<%= trazerCliente[0].User_sobrenome %>" type="text">
+                </div>
+                <div class="div-update">
+                    
+                    <label for="">Telefone</label>
+                    <input name="celular" value="<%= trazerCliente[0].User_celular %>" type="text">
+                </div>
+            
+                
+                <div class="div-update">
+                    
+                    <label for="">Email</label>
+                    <input name="email" value="<%= trazerCliente[0].User_email %>" type="text">
+                </div>
+                <div class="div-update">
+                    
+                    <label for="">CPF</label>
+                    <input name="cpf" value="<%= trazerCliente[0].User_cpf %>" type="text">
+                </div>
+            </section>
+            <section class="update-right">
 
-    <label for="">Plano</label>
-    <input name="plano" value="<%= trazerCliente.plano %>" type="text">
+                <div class="div-update">
+                    
+                    <label for="">Cep</label>
+                    <input name="cep" value="<%= trazerCliente[0].endereco[0].cep %>" type="text">
+                </div>
+                <div class="div-update">
+                    
+                    <label for="">Endereço</label>
+                    <input name="endereco" value="<%= trazerCliente[0].endereco[0].endereco %>" type="text">
+                </div>
+                <div class="div-update">
+                    
+                    <label for="">Cidade</label>
+                    <input name="cidade" value="<%= trazerCliente[0].endereco[0].cidade %>" type="text">
+                </div>
+                <button class="btn-atualiza" type="submit">Atualizar</button>
+            </section>
+    
+        </form>
+    </section>
+</main>
+<script src="../../javascripts/client.js"></script>
 
-    <label for="">Assinatura</label>
-    <input name="assinatura" value="<%= trazerCliente.assinatura %>" type="text">
-
-    <label for="">Senha</label>
-    <input name="senha" value="<%= trazerCliente.senha %>" type="text">
-
-    <label for="">Email</label>
-    <input name="email" value="<%= trazerCliente.email %>" type="text">
-
-    <label for="">CPF</label>
-    <input name="cpf" value="<%= trazerCliente.cpf %>" type="text">
-
-    <input type="submit" type="button">
-
-</form>
 </body>
 </html>

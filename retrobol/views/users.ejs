@@ -1,7 +1,103 @@
-<%- include("./partials/partialHead") %> 
-<%- include("./partials/userHeader") %> 
+<!DOCTYPE html>
+<html lang="pt-br">
 
-<%- include("./partials/userMain") %> 
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../../../stylesheets/users.css" />
+  <title>Retrôbol</title>
+
+</head>
+<body>
+
+    <header>
+        <div class="hide hide-menu">
+            <ul class="nav-menu">
+              <a href="/users/meu-plano">
+                <li>Meu Plano</li>
+              </a>
+              
+              <a href="/users/pedidos">
+                <li>Próxima entrega</li>
+              </a>
+              
+              <a href="/users/configuracoes">
+                <li>Configurações</li>
+              </a>
+            </ul>
+
+        </div>
+
+        <div class="hide hide-login">
+            <ul class="nav-login">
+              <a href="/users/meu-plano">
+                <li>Meu Plano</li>
+              </a>
+              
+              <a href="/users/pedidos">
+                <li>Próxima entrega</li>
+              </a>
+              
+              <a href="/users/configuracoes">
+                <li>Configurações</li>
+              </a>
+            
+             
+            </ul>
+        </div>
+        <nav class="container-nav">
+            <div class="menu-mobile-hide">
+                <img id="hamburger-menu" class="icon-header" src="../../../images/imgs/icon/menu-hamburguer.png" alt="hamburger-menu-icon">
+
+            </div>
+            
+
+              <a href="/"><img id="logo-retrobol" src="../../../images/imgs/logo/Logo-Retrôbol.png" alt="logo"></a>
+  
+            
+              <div class="container-login">
+                  <img id="login-menu" class="icon-header" src="../../../images/imgs/icon/user.png" alt="hamburger-menu-icon">
+                
+<span><%= user.User_nome %></span>
+                  
+  
+</div>
+</nav>
+
+<ul class="menu-wide">
+    <li class="nav-item-desktop"><a class="nav-link-desktop" href="/users/<%= id %>/meu-plano">Meu Plano</a></li>
+    <li class="nav-item-desktop"><a class="nav-link-desktop" href="/users/<%= id %>/pedidos">Proxima Entrega</a></li>
+    <li class="nav-item-desktop"><a class="nav-link-desktop" href="/users/<%= id %>/configuracoes">Configuração</a></li>
+    <li class="nav-item-desktop"><a class="nav-link-desktop" href="/users/<%= id %>/logout">Logout</a></li>
+</ul>
+
+</header>
+
+
+<main>
+    <section class="container-pagina">
+      <div class="container-btn-user">
+        <a href="/users/<%= id %>/meu-plano">
+          <div class="btn-meu-plano" id="btn-assinatura">
+              Meu plano
+          </div>
+        </a>
+
+        <a href="/users/<%= id %>/pedidos">
+          <div class="btn-entrega" id="btn-pedidos">
+              Próxima entrega
+          </div>
+        </a>
+
+        <a href="/users/<%= id %>/configuracoes">
+          <div class="btn-user" id="btn-configuracao">
+              Configurações
+          </div>
+        </a>
+
+      </div>
+
 
 
 </section>
@@ -9,6 +105,45 @@
 
 
 
-<%- include("./partials/userFooter") %> 
+<footer>
+    <section class="informacoes-rodape">
+      <div class="institucional">
+        <article>
+          <h2>Institucional</h2>
+          <p>Sobre nós</p>
+          <p>Imprensa</p>
+          <p>Politica de privacidade</p>
+          <p>Termos e condiçoes de uso</p>
+        </article>
+        <br>
+        <br>
+        <article>
+          <h2>Podemos te Ajudar ?</h2>
+          <p>Entre em contato</p>
+          <p>Parcerias</p>
+        </article>
+      </div>
+      <article class="redes-rodape">
+        <h2>Redes Sociais:</h2>
+        <div>
+          <img src="../../../images/imgs/icon/logo-facebook.png" alt="Logo do Facebook" />
+          <img src="../../../images/imgs/icon/logo-instragam.png" alt="Logo do Instagram" />
+          <!-- <img src="../../..//Retrobol/imgs/icon/logo-whatsapp.png" alt="Logo do Whatsapp"> -->
+        </div>
+      </article>
+      <div class="logo-footer">
+        <img src="../../..//images/imgs/logo/Logo Retrôbol - branco - Cortado.png" alt="">
+      </div>
+    </section>
+
+    <strong id="copyright">copyright &copy; | 2022</strong>
+  </footer>
+  <script src="javascripts/users.js"></script>
+<script src="javascripts/cadastro.js"></script>
+
+</body>
+
+</html>
+
 
   

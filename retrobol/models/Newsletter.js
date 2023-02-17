@@ -1,16 +1,23 @@
 module.exports = (sequelize, DataType)=>{
-    const Contato = sequelize.define("Contato", {
+    const Newsletter = sequelize.define("Newsletter", {
         idNewsletter:{
             type:DataType.INTEGER,
             primaryKey:true,
             autoIncrement:true
         },
-        Newsletter_email:DataType.STRING,
-        Newsletter_msg:DataType.STRING,
+        email_newsletter:DataType.INTEGER,
         
     },{
-        tableName:"",
+        tableName:"newsletter",
         timestamps:false
     })
-    return Contato
+
+
+ 
+
+    
+    
+
+
+    return Newsletter
 }

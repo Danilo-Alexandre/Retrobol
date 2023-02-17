@@ -1,18 +1,54 @@
-const { Usuario } = require("../models")
+const database = require("../models")
 
 const usersController = {
-    userHome: (req, res)=>{
+    userHome: async (req, res)=>{
         const {id}= req.params
-        console.log(id)
-        res.render("users", {id})
+        const user = await database.Usuario.findOne({
+            where:{
+                idUsuario : id
+            }
+        })
+        
+        res.render("users", {id, user})
     },
-    userAssinatura: (req, res)=>{
-        const {id}= req.params
-        res.render("assinatura", {id})
+    logout: async (req, res)=>{
+        
+        
+        res.clearCookie("token")
+        res.redirect("http://localhost:3000/login")
+        
     },
-    userConfiguracoes: (req, res)=>{
+    userMeuPlano: async (req, res)=>{
         const {id}= req.params
-        res.render("configuracoes", {id})
+        const user = await database.Usuario.findOne({
+            where:{
+                idUsuario : id
+            },
+            include: [{
+                model: database.Plano, as: "plano", 
+                
+            
+            }]
+        })
+        res.render("meu-plano", {id, user})
+    },
+    userEntrega: async (req,res)=>{
+        const {id}= req.params
+        const user = await database.Usuario.findOne({
+            where:{
+                idUsuario : id
+            }
+        })
+        res.render("entrega", {user, id})
+    },
+    userConfiguracoes: async (req, res)=>{
+        const {id}= req.params
+        const user = await database.Usuario.findOne({
+            where:{
+                idUsuario : id
+            }
+        })
+        res.render("configuracoes", {id, user})
     },
     userPedidos: (req, res)=>{
         const {id}= req.params
@@ -24,20 +60,19 @@ const usersController = {
     },
     userConfigDados: async (req,res)=>{
         const {id} = req.params
-        const usuarioCadastro = await Usuario.findOne({
+        const user = await database.Usuario.findOne({
             where:{
                 idUsuario: id
             }
         });
-        console.log(usuarioCadastro.i);
-        res.render("config-dados", {usuarioCadastro})
+        res.render("config-dados", {user, id})
 
 
     },
     userAlteraDados: async (req, res)=>{
         const {id} = req.params
         const {nome, sobrenome, celular} = req.body
-       const usuarioAtualizado = Usuario.update({
+      const user = await database.Usuario.update({
             User_nome: nome,
             User_sobrenome: sobrenome,
             User_celular: celular,
@@ -47,11 +82,42 @@ const usersController = {
                 idUsuario: id
             }
         });
-        console.log(nome, sobrenome, celular);
-        res.send("ok")
+        res.redirect(`/users/${id}/configuracoes`)
 
+    },
+    userConfigEndereco: async (req, res) =>{
+        const {id} = req.params
+        const user = await database.Endereco.findOne({
+            where:{
+                fk_user: id
+            },
+            include: [{
+                model: database.Usuario, as: "usuario", attributes: ["User_nome"]
+                
+            
+            }]
+        });
+        res.render("config-endereco", {user, id})
+
+    },
+    alteraEndereco: async (req, res)=>{
+        const {id} = req.params
+        const {endereco, cep, cidade, complemento, bairro, estado} = req.body
+    
+         await database.Endereco.update({
+            endereco,
+            cep,
+            cidade,
+            complemento,
+            bairro,
+            estado,
+        },{
+            where:{
+                fk_user: id
+            }
+        })
+        res.redirect(`/users/${id}/configuracoes`)
     }
-
 
 
 

@@ -1,32 +1,37 @@
 <%- include("./partials/partialHead") %> 
   <link rel="stylesheet" href="../../stylesheets/configuracoes.css" />
   <%- include("./partials/userHeader") %> 
+  <span><%= user.User_nome %></span>
+                  
+  
+</div>
+</nav>
+
+<ul class="menu-wide">
+  <li class="nav-item-desktop"><a class="nav-link-desktop" href="/users/<%= id %>/meu-plano">Meu Plano</a></li>
+  <li class="nav-item-desktop"><a class="nav-link-desktop" href="/users/<%= id %>/pedidos">Proxima Entrega</a></li>
+  <li class="nav-item-desktop"><a class="nav-link-desktop" href="/users/<%= id %>/configuracoes">Configuração</a></li>
+  <li class="nav-item-desktop"><a class="nav-link-desktop" href="/users/<%= id %>/logout">Logout</a></li>
+
+</ul>
+
+</header>
 
   <%- include("./partials/userMain") %> 
-  <div class="container-configuracoes">
+  <div class="container-configuracoes ">
     <a href="/users/<%= id %>/configuracoes/dados">
-      <div class="btn-user" id="btn-pedidos">
+      <div class="btn-res btn-config" id="btn-pedidos">
           Dados Pessoais
       </div>
     </a>
 
     <a href="/users/<%= id %>/configuracoes/endereco">
-      <div class="btn-user" id="btn-pedidos">
+      <div class="btn-res btn-config" id="btn-pedidos">
           Endereço
       </div>
     </a>
 
-    <a href="/users/<%= id %>/configuracoes/cartao">
-      <div class="btn-user" id="btn-pedidos">
-          Cartão
-      </div>
-    </a>
-
-    <a href="/users/<%= id %>/configuracoes/senha">
-      <div class="btn-user" id="btn-pedidos">
-          Senha
-      </div>
-    </a>
+    
   </div>
 
 </section>

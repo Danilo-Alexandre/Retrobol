@@ -4,18 +4,16 @@ const hamburgerMenu = document.querySelector("#hamburger-menu")
 
 
 hamburgerMenu.addEventListener("click", ()=>{
-    if(window.innerWidth < 768){
-        hideMenu.classList.toggle("hide")
-    }
-    if(!hideMenu.classList.contains("hide")){
-        hideMenu.style.animation = "showLogin 1s forwards"
+    if(hideMenu.style.display === "flex"){
+      setTimeout(() => {
+        hideMenu.style.display = "none"
         
-
-        
-        
+      }, 1000);
+      hideMenu.style.animation = "1s ease normal forwards running hideLogin"
+  
     }else{
-        hideMenu.style.animation = "hideLogin 1s forwards"
-
+      hideMenu.style.display = "flex"
+      hideMenu.style.animation = "1s ease normal forwards running showLogin"
+  
     }
- 
-})
+  })

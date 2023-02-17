@@ -1,3 +1,122 @@
+const arrowLeft = document.querySelector(".arrow-mobile-left")
+const arrowRight = document.querySelector(".arrow-mobile-right")
+const bannerMobile = document.querySelectorAll(".banner-mobile")
+const mobileMenu = document.querySelector("#side-bar")
+const hamburgerMenu = document.querySelector("#menu-hamburguer")
+const submit = document.querySelector(".submit")
+
+hamburgerMenu.addEventListener("click", ()=>{
+  if(mobileMenu.style.display === "flex"){
+    setTimeout(() => {
+      mobileMenu.style.display = "none"
+      
+    }, 1000);
+    mobileMenu.style.animation = "1s ease normal forwards running hideLogin"
+
+  }else{
+    mobileMenu.style.display = "flex"
+    mobileMenu.style.animation = "1s ease normal forwards running showLogin"
+
+  }
+})
+
+ function sendEmail() {
+  
+  //  event.preventDefault()
+   alert("Email enviado com sucesso")
+  
+}
+  
+
+
+
+let idx = 0
+
+function carrousselHandler(){
+  switch (idx) {
+    case 0:
+      bannerMobile[0].style.display = "flex"
+      bannerMobile[1].style.display = "none"
+      bannerMobile[2].style.display = "none"
+      bannerMobile[3].style.display = "none"
+      bannerMobile[4].style.display = "none"
+
+      break;
+  
+    case 1:
+      bannerMobile[0].style.display = "none"
+      bannerMobile[1].style.display = "flex"
+      bannerMobile[2].style.display = "none"
+      bannerMobile[3].style.display = "none"
+      bannerMobile[4].style.display = "none"
+
+      break;
+  
+    case 2:
+      bannerMobile[0].style.display = "none"
+      bannerMobile[1].style.display = "none"
+      bannerMobile[2].style.display = "flex"
+      bannerMobile[3].style.display = "none"
+      bannerMobile[4].style.display = "none"
+
+      break;
+  
+    case 3:
+      bannerMobile[0].style.display = "none"
+      bannerMobile[1].style.display = "none"
+      bannerMobile[2].style.display = "none"
+      bannerMobile[3].style.display = "flex"
+      bannerMobile[4].style.display = "none"
+
+      break;  
+  
+    case 4:
+      bannerMobile[0].style.display = "none"
+      bannerMobile[1].style.display = "none"
+      bannerMobile[2].style.display = "none"
+      bannerMobile[3].style.display = "none"
+      bannerMobile[4].style.display = "flex"
+
+      break;   
+   
+    default:
+      break;
+  }
+}
+
+setInterval(() => {
+  if (idx < bannerMobile.length -1){
+    idx++
+  }else{
+    idx = 0
+  }
+  carrousselHandler()
+}, 4000);
+
+
+arrowRight.addEventListener("click", ()=>{
+  if (idx < bannerMobile.length -1){
+    idx++
+  }else{
+    idx = 0
+  }
+
+  carrousselHandler()
+  console.log(idx);
+})
+arrowLeft.addEventListener("click", ()=>{
+  if (idx <= 0){
+    idx = 4
+  }else{
+    idx--
+  }
+  carrousselHandler()
+  
+  console.log(idx);
+})
+
+
+
 // Menu dos beneficios colapsaveis
 
 var col = document.getElementsByClassName('beneficio')
@@ -6,7 +125,7 @@ for (let i = 0; i < col.length; i++){
     
     function colapsar(){
         if (col[i].nextElementSibling.style.display == 'none'){
-            col[i].nextElementSibling.style.display = 'block'
+            col[i].nextElementSibling.style.display = 'flex'
         } else {
             col[i].nextElementSibling.style.display = 'none'
         }
@@ -14,6 +133,69 @@ for (let i = 0; i < col.length; i++){
 }
 
 
+const arrowLeftWide = document.querySelector(".arrow-wide-left")
+const arrowRightWide = document.querySelector(".arrow-wide-right")
+const bannerWide = document.querySelectorAll(".bannerWide")
+
+let idwide = 1
+
+function wideCarroussel() {
+  switch (idwide) {
+    case 1:
+      bannerWide[0].style.display = "flex"
+      bannerWide[1].style.display = "none"
+      bannerWide[2].style.display = "none"
+      break;
+    case 2:
+      bannerWide[0].style.display = "none"
+      bannerWide[1].style.display = "flex"
+      bannerWide[2].style.display = "none"
+    break;
+    case 3:
+      bannerWide[0].style.display = "none"
+      bannerWide[1].style.display = "none"
+      bannerWide[2].style.display = "flex"
+    break;
+  
+    default:
+      break;
+  }
+}
+
+arrowRightWide.addEventListener("click", ()=>{
+  if (idwide < bannerWide.length ){
+    idwide++
+  }else{
+    idwide = 1
+  }
+  wideCarroussel()
+  console.log(idwide);
+
+
+})
+
+arrowLeftWide.addEventListener("click", ()=>{
+  if (idwide <= 1){
+    idwide = bannerWide.length
+  }else{
+    idwide--
+  }
+
+  console.log(idwide);
+  wideCarroussel()
+
+})
+
+setInterval(() => {
+  if (idwide < bannerWide.length -1){
+    idwide++
+  }else{
+    idwide = 1
+  }
+  wideCarroussel()
+}, 4000);
+
+const navMobile = document.querySelector(".nav-list-mobile")
 
 
 
@@ -63,11 +245,6 @@ for (let i = 0; i < col.length; i++){
 
 
 
-
-
-
-
-// POR QUE O ANUAL NÃO MUDA DE COR QUANDO PASSA O MOUSE SÓ NO CSS
 
 const cobranca = document.querySelectorAll(".cobranca")
 const listaPlanos = document.querySelector("#lista-planos")
@@ -209,27 +386,30 @@ botaoMundial.addEventListener("click",()=>{
 })
 
 
-// Script para o banner
-let bannerIndex = 1;
-showBanner(bannerIndex);
-// Controles próximo/anterior
-function plusBanner(n) {
-  showBanner(bannerIndex += n);
-  }
-// Controle de imagem
-function currentBanner(n) {
-  showBanner(bannerIndex = n);
-  }
-  function showBanner(n) {
-    let i;
-    let banner = document.getElementsByClassName("bannerWide");
-    if (n > banner.length) {bannerIndex = 1}
-    if (n < 1) {bannerIndex = banner.length}
-    for (i = 0; i < banner.length; i++) {
-      banner[i].style.display = "none";
-    }
-    banner[bannerIndex-1].style.display = "block";
-  }
+
+
+
+//  Script para o banner
+// let bannerIndex = 1;
+// showBanner(bannerIndex);
+//  Controles próximo/anterior
+// function plusBanner(n) {
+//   showBanner(bannerIndex += n);
+//   }
+//  Controle de imagem
+// function currentBanner(n) {
+//   showBanner(bannerIndex = n);
+//   }
+//   function showBanner(n) {
+//     let i;
+//     let banner = document.getElementsByClassName("bannerWide");
+//     if (n > banner.length) {bannerIndex = 1}
+//     if (n < 1) {bannerIndex = banner.length}
+//     for (i = 0; i < banner.length; i++) {
+//       banner[i].style.display = "none";
+//     }
+//     banner[bannerIndex-1].style.display = "flex";
+//   }
 
 
 // Script para o carroussel de times
@@ -258,13 +438,13 @@ function currentSlide(n) {
 
 // side bar //
 
-const menuHam = document.getElementById('menu-hamburguer')
-const sideBar = document.getElementById('side-bar')
+// const menuHam = document.getElementById('menu-hamburguer')
+// const sideBar = document.getElementById('side-bar')
 
-menuHam.addEventListener('click', () => {
-    if (sideBar.classList.contains('open')) {
-        sideBar.classList.remove('open')
-    } else {
-        sideBar.classList.add('open')
-    }
-})
+// menuHam.addEventListener('click', () => {
+//     if (sideBar.classList.contains('open')) {
+//         sideBar.classList.remove('open')
+//     } else {
+//         sideBar.classList.add('open')
+//     }
+// })

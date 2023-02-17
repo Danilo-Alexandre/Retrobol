@@ -9,9 +9,19 @@ router.get('/:id',
             usersController.userHome
 );
 
-router.get('/:id/assinatura',
+router.get('/:id/meu-plano',
             middlewares.authLogin, 
-            usersController.userAssinatura 
+            usersController.userMeuPlano 
+);
+
+router.get('/:id/logout',
+            middlewares.authLogin, 
+            usersController.logout
+);
+
+router.get('/:id/pedidos',
+            middlewares.authLogin, 
+            usersController.userEntrega
 );
 
 router.get('/:id/configuracoes', 
@@ -27,6 +37,16 @@ router.get('/:id/configuracoes/dados',
             
 router.put('/:id/configuracoes/dados',  
     usersController.userAlteraDados
+);
+router.get('/:id/configuracoes/endereco', 
+            middlewares.authLogin, 
+            usersController.userConfigEndereco
+            
+);
+            
+router.put('/:id/configuracoes/endereco', 
+    middlewares.authLogin, 
+    usersController.alteraEndereco
 );
             
 

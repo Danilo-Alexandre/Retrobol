@@ -22,15 +22,7 @@
           <img src="images/imgs/logo/Logo-Retrôbol.png" alt="Logo da RetrôBol">
         </div>
 
-        <nav class="nav-desktop">
-          <span class="nav-menu-desktop">
-            <a href="#">CLUBE</a>
-          </span>
-
-          <span class="nav-menu-desktop">
-            <a href="#">LOJA</a>
-          </span>
-        </nav>
+       
 
         <div id="login">
           <a href="/login">
@@ -49,10 +41,10 @@
 
       <nav class="nav-desktop-dois">
         <ul class="nav-list-desktop">
-          <li class="nav-item-desktop"><a class="nav-link-desktop" href="#">Assine</a></li>
-          <li class="nav-item-desktop"><a class="nav-link-desktop" href="#">Perfil Jogador</a></li>
-          <li class="nav-item-desktop"><a class="nav-link-desktop" href="#">Conteúdo</a></li>
-          <li class="nav-item-desktop"><a class="nav-link-desktop" href="#">Ajuda</a></li>
+          <li class="nav-item-desktop"><a class="nav-link-desktop" href="/cadastro">Cadastro</a></li>
+          <li class="nav-item-desktop"><a class="nav-link-desktop" href="/login">Login</a></li>
+          <li class="nav-item-desktop"><a class="nav-link-desktop" href="/checkout">Planos</a></li>
+          <li class="nav-item-desktop"><a class="nav-link-desktop" href="#newsletter-scroll">Contato</a></li>
         </ul>
       </nav>
 
@@ -61,24 +53,24 @@
     <div id="menu-mobile">
 
       <div id="menu-hamburguer">
-        <img src="/imgs/icon/menu-hamburguer.png" alt="ícone do menu hamburguer">
+        <img src="images/imgs/icon/menu-hamburguer.png" alt="ícone do menu hamburguer">
       </div>
 
       <div class="logo-mobile">
-        <img src="/imgs/logo/Logo Retrôbol.png" alt="Logo da retrôbol">
+        <img src="images/imgs/logo/Logo-Retrôbol.png" alt="Logo da retrôbol">
       </div>
 
       <div id="login-mobile">
-        <img src="/imgs/icon/do-utilizador.png" alt="">
+       <a href="/login"><img src="images/imgs/icon/do-utilizador.png" alt=""></a>
       </div>
 
       <div id="side-bar">
 
         <nav class="nav-mobile">
           <ul class="nav-list-mobile">
-            <li class="nav-item-mobile"><a class="nav-link-mobile" href="#">CLUBE</a></li>
-            <li class="nav-item-mobile"><a class="nav-link-mobile" href="#">LOJA</a></li>
-            <li class="nav-item-mobile"><a class="nav-link-mobile" href="#">Ajuda</a></li>
+            <li class="nav-item-mobile"><a class="nav-link-mobile" href="/cadastro">Cadastro</a></li>
+            <li class="nav-item-mobile"><a class="nav-link-mobile" href="/login">Perfil</a></li>
+            <li class="nav-item-mobile"><a class="nav-link-mobile" href="/checkout">Planos</a></li>
           </ul>
         </nav>
 
@@ -88,11 +80,41 @@
 
   </header>
   <main>
-    <img class="whats" src="images/imgs/icon/whatsapp.png" alt="" />
+
+    <section class="banner-mobile-carroussel">
+
+      <div class="banner-mobile  fade">
+        <img src="images/imgs/banners/banner-mobile1.jpg" alt="banner-mobile" />
+      </div>
+
+      <div class="banner-mobile hide fade">
+        <img src="images/imgs/banners/banner-mobile2.jpg" alt="banner-mobile" />
+      </div>
+
+      <div class="banner-mobile hide fade">
+        <img src="images/imgs/banners/banner-mobile3.jpg" alt="banner-mobile" />
+      </div>
+
+      <div class="banner-mobile hide fade">
+        <img src="images/imgs/banners/banner-mobile4.png" alt="banner-mobile" />
+      </div>
+
+      <div class="banner-mobile hide fade">
+        <img src="images/imgs/banners/banner-mobile5.jpg" alt="banner-mobile" />
+      </div>
+
+      <button class="arrow-mobile-right">
+        <img src="images/imgs/icon/right-arrow.png" alt="">
+      </button>
+      <button class="arrow-mobile-left">
+        <img src="images/imgs/icon/right-arrow.png" alt="">
+      </button>
+      
+    </section>
 
     <section class="bannerCarroussel">
 
-      <div class="bannerWide fade">
+      <div id="firstBanner" class="bannerWide fade">
         <img src="images/imgs/banners/bannerA.jpeg" alt="" />
       </div>
 
@@ -104,18 +126,23 @@
         <img src="images/imgs/banners/bannerC.jpeg" alt="" />
       </div>
 
+      <button class="arrow-wide-right">
+        <img src="images/imgs/icon/right-arrow.png" alt="">
+      </button>
+      <button class="arrow-wide-left">
+        <img src="images/imgs/icon/right-arrow.png" alt="">
+      </button>
+
     </section>
 
     <div class="troca">
       <section class="promo">
 
-        <img class="seta-time-esq" onclick="plusBanner(-1)" src="images/imgs/icon/right-arrow.png" alt="">
 
         <img class="promo-icon" src="images/imgs/icon/seta-circular.png" alt="" />
         <p>
           <strong>PRIMEIRA TROCA GRÁTIS</strong> para todas as compras
         </p>
-        <img class="seta-time-dir" onclick="plusBanner(1)" src="images/imgs/icon/right-arrow.png" alt="">
       </section>
     </div>
 
@@ -153,11 +180,7 @@
             <p>Escolha um plano, anual, <br>
               semestral ou trimestral</p>
           </li>
-          <li>
-            <img src="images/imgs/icon/preencha.png" alt="" />
-            <p>Preencha seu perfil <br>
-              de torcedor</p>
-          </li>
+          
           <li>
             <img src="images/imgs/icon/carrinho de compras.png" alt="" />
             <p>Aproveira os benefícios <br>
@@ -174,9 +197,9 @@
       <section class="assinatura">
         <h4 id="assinaturas-planos">Assinaturas e Planos</h4>
         <div id="botoes-planos">
-          <button id="botao-coracao"><%= planos[0].nome_plano %> </button>
-          <button id="botao-nacional"><%= planos[1].nome_plano %></button>
-          <button id="botao-mundial"><%= planos[2].nome_plano %></button>
+          <button id="botao-coracao"><%= planos[0].assinatura %> </button>
+          <button id="botao-nacional"><%= planos[4].assinatura %></button>
+          <button id="botao-mundial"><%= planos[7].assinatura %></button>
         </div>
         <div id="container-imagem-lista">
 
@@ -198,17 +221,17 @@
               /mês
             </p>
           </div>
-          <div class="cobranca plano-anual">
-            <p>Anual</p>
-            <p>R$
-              <span id="valor-anual">159,99</span>
-              /mês
-            </p>
-          </div>
           <div class="cobranca plano-semestral">
             <p>Semestral</p>
             <p>R$
               <span id="valor-semestral">189,99</span>
+              /mês
+            </p>
+          </div>
+          <div class="cobranca plano-anual">
+            <p>Anual</p>
+            <p>R$
+              <span id="valor-anual">159,99</span>
               /mês
             </p>
           </div>
@@ -266,29 +289,21 @@
       </div>
       <br />
       <br />
-      <div class="newsletter">
+      <div id="newsletter-scroll" class="newsletter">
         <strong> Quer mais? Nós te damos! </strong>
         <p>
           Te enviamos diretamente todas as novidades sobre o universo do
           futebol! promoções imperdíveis e as últimas tendências que você não
           pode perder!
         </p>
-        <input placeholder="   Digite seu e-mail" class="email" type="email" />
-        <input class="submit" type="submit" />
+        <form class="formulario-newsletter" onsubmit="sendEmail()" action="/newsletter" method="POST">
+          <input placeholder="   Digite seu e-mail" name="email" class="email" type="text" />
+          <input  class="submit" type="submit" />
+          
+
+        </form>
       </div>
-      <div class="clubistasdizem">
-        <div>
-          <h5>Nossos clubistas dizem</h5>
-        </div>
-        <div class="baloes">
-          <div class="balao-esquerdo">
-            <img src="/Retrobol/imgs/icon/Balao esquerdo.png" alt="balao esquerdo">
-          </div>
-          <div class="balao-direito">
-            <img src="/Retrobol/imgs/icon/Balao direito.png" alt="balao direito">
-          </div>
-        </div>
-      </div>
+    
   </main>
 
   <footer>
@@ -314,11 +329,10 @@
         <div>
           <img src="images/imgs/icon/logo-facebook.png" alt="Logo do Facebook" />
           <img src="images/imgs/icon/logo-instragam.png" alt="Logo do Instagram" />
-          <img src="/Retrobol/imgs/icon/logo-whatsapp.png" alt="Logo do Whatsapp">
         </div>
       </article>
       <div class="logo-footer">
-        <img src="/Retrobol/imgs/logo/Logo Retrôbol - branco - Cortado.png" alt="">
+        <img src="images/imgs/logo/Logo Retrôbol - branco - Cortado.png" alt="">
       </div>
     </section>
 

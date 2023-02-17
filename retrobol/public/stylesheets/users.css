@@ -1,10 +1,8 @@
 @keyframes showLogin {
     from{
-        transform: scale(0,1);
         filter: opacity(0);
     }
     to{
-        transform: scale(1,1);
         filter: opacity(1);
 
 
@@ -13,12 +11,10 @@
 
 @keyframes hideLogin {
     from{
-        transform: scale(1,1);
         filter: opacity(1);
 
     }
     to{
-        transform: scale(0,1);
         filter: opacity(0);
 
 
@@ -63,7 +59,17 @@ header{
     justify-content: space-between;
     padding: 10px 30px;
 }
-
+.nav-link-desktop {
+    text-decoration: none;
+    transition: all 0.7s;
+    padding: 10px;
+    color: var(--verde-principal);
+    font-size: 20px;
+}
+.nav-link-desktop:hover {
+    background-color: var(--verde-principal);
+    color: var(--cor-header);
+}
 .menu-wide{
     justify-content: space-around;
     width: 100vw;
@@ -86,18 +92,24 @@ header{
 }
 
 .nav-menu{
-    align-items: flex-start;
-    padding-left: 25px;
+    padding: 30px;
 }
 .nav-login, .nav-menu{
-    padding-top: 70px;
     display: flex;
-    gap: 20px;
     flex-direction: column;
+    height: 100%;
+    padding: 15px 0px;
+    border-radius: 0px 0px 20px 0px;
+    justify-content: space-between;
+    
     
 }
 .nav-menu li, .nav-login li{
     list-style: none;
+    font-size: 25px;
+    border-bottom: solid 2px black;
+    width: 149px;
+
 }
 
 .icon-header{
@@ -119,25 +131,34 @@ header img{
     display: none;
 }
 
+.hide-login{
+    display: none;
+}
+
 
 
 
 .hide-login, .hide-menu{
     position: absolute;
-    height: 100vh;
-    width: 200px;
+    height: 200px;
+    top: 80px;
+
+    width: 149px;
     background-color: var(--cor-header);
 }
 
 .hide{
-    transform: scale(0,1);
+    display: none
+
 }
 
 .hide-menu{
-
     left: 0px;
-    transform-origin: left;
     text-align: left;
+    border-radius: 0px 0px 20px 0px;
+    top: 73px;
+    text-align: center;
+
 }
 .hide-login{
 
@@ -163,17 +184,31 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 400px;
+    /* height: 70vh; */
     padding-top: 70px;
 }
 
-.btn-user{
+.btn-user, .btn-entrega, .btn-meu-plano{
     font-size: 18px;
     color: var(--cor-principal);
     padding: 10px;
     width: 200px;
     border-radius: 10px;
     box-shadow: 0px 0px 20px 11px #00000012;
+}
+
+.btn-res{
+
+    display: flex;
+    font-size: 22px;
+    background-color: #858640;
+    color: white;
+    padding: 20px 10px;
+    width: 200px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 11px #00000012;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .container-btn-user{
@@ -191,6 +226,7 @@ main{
     align-items: center;
     text-align: center;
     gap: 60px;
+
     
     
 }
@@ -237,6 +273,7 @@ footer {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    padding-left: 28px;
 }
 
 .redes-rodape div {
@@ -249,8 +286,7 @@ footer {
 }
 
 .logo-footer img {
-    width: 300px;
-    margin-left: 45px;
+    width: 200px;
 }
 
 
@@ -269,11 +305,13 @@ footer {
         display: block;
     }
     #logo-retrobol{
-        margin-left: 9vw;
+    }
+    .menu-mobile-hide{
+        display: none;
     }
 
-    .container-btn-user{
-        
+    .container-nav{
+        justify-content: space-evenly;   
     }
     .hide-login, .hide-menu{
         display: none !important; 
@@ -281,8 +319,9 @@ footer {
     .container-pagina{
         flex-direction: row;
         gap:15vw;
-        position: relative;
         top: 50px;
+        margin: 113px 0;
+
 
     }
 

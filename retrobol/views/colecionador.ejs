@@ -1,6 +1,21 @@
 <%- include("./partials/partialHead") %> 
   <link rel="stylesheet" href="../stylesheets/perfil-colecionador.css" />
   <%- include("./partials/userHeader") %> 
+  <span><%= user.User_nome %></span>
+                  
+  
+</div>
+</nav>
+
+<ul class="menu-wide">
+  <li class="nav-item-desktop"><a class="nav-link-desktop" href="/users/<%= id %>/meu-plano">Meu Plano</a></li>
+  <li class="nav-item-desktop"><a class="nav-link-desktop" href="/users/<%= id %>/pedido">Proxima Entrega</a></li>
+  <li class="nav-item-desktop"><a class="nav-link-desktop" href="/users/<%= id %>/configuracao">Configuração</a></li>
+  <li class="nav-item-desktop"><a class="nav-link-desktop" href="/users/<%= id %>/logout">Logout</a></li>
+
+</ul>
+
+</header>
 
   <%- include("./partials/userMain") %> 
 </section>

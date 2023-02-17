@@ -1,7 +1,73 @@
 <%- include("./partials/partialHead") %> 
 <link rel="stylesheet" href="../stylesheets/cadastro.css" />
 
-<%- include("./partials/userHeader") %> 
+<title>Retrôbol</title>
+
+</head>
+<body>
+
+    <header>
+        <div class="hide hide-menu">
+            <ul class="nav-menu">
+              <a href="/cadastro">
+                <li>Cadastro</li>
+              </a>
+              
+              <a href="/login">
+                <li>Login</li>
+              </a>
+              
+              <a href="/checkout">
+                <li>Planos</li>
+              </a>
+            </ul>
+
+        </div>
+
+        <div class="hide hide-login">
+            <ul class="nav-login">
+                <a href="/cadastro">
+                    <li>Cadastro</li>
+                  </a>
+                  
+                  <a href="/login">
+                    <li>Login</li>
+                  </a>
+                  
+                  <a href="/checkout">
+                    <li>Planos</li>
+                  </a>
+            
+             
+            </ul>
+        </div>
+        <nav class="container-nav">
+            <div class="menu-mobile-hide">
+                <img id="hamburger-menu" class="icon-header" src="../../../images/imgs/icon/menu-hamburguer.png" alt="hamburger-menu-icon">
+
+            </div>
+            
+
+              <a href="/"><img id="logo-retrobol" src="../../../images/imgs/logo/Logo-Retrôbol.png" alt="logo"></a>
+  
+            
+              <div class="container-login">
+                  <img id="login-menu" class="icon-header" src="../../../images/imgs/icon/user.png" alt="hamburger-menu-icon">
+                
+<span>Login</span>
+                  
+  
+</div>
+</nav>
+
+<ul class="menu-wide">
+    <li class="nav-item-desktop"><a class="nav-link-desktop" href="/cadastro">Cadastro</a></li>
+    <li class="nav-item-desktop"><a class="nav-link-desktop" href="/login">Login</a></li>
+    <li class="nav-item-desktop"><a class="nav-link-desktop" href="/checkout">Planos</a></li>
+
+</ul>
+
+</header>
 
 
 <form action="/login" method="POST">

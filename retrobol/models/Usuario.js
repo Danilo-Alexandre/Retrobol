@@ -15,5 +15,27 @@ module.exports = (sequelize, DataType)=>{
         tableName:"usuarios",
         timestamps:false
     })
+    Usuario.associate = (models)=>{
+        Usuario.hasMany(models.Cartao,{
+            foreignKey: "fk_user",
+            as:"cartoes"
+        });
+        Usuario.hasMany(models.Endereco,{
+            foreignKey: "fk_user",
+            as:"endereco"
+        });
+        Usuario.belongsToMany(models.Plano,{
+            as:"plano",
+            foreignKey: "fk_user",
+            through: models.Checkout
+
+            
+        })
+    };
+    
+    
+    
+    
+
     return Usuario
 }

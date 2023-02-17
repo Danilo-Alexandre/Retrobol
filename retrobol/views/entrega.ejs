@@ -1,0 +1,45 @@
+<%- include("./partials/partialHead") %> 
+  <link rel="stylesheet" href="../../stylesheets/entrega.css" />
+  <%- include("./partials/userHeader") %> 
+  <span><%= user.User_nome %></span>
+                  
+  
+</div>
+</nav>
+
+<ul class="menu-wide">
+    <li class="nav-item-desktop"><a class="nav-link-desktop" href="/users/<%= id %>/meu-plano">Meu Plano</a></li>
+    <li class="nav-item-desktop"><a class="nav-link-desktop" href="/users/<%= id %>/pedidos">Proxima Entrega</a></li>
+    <li class="nav-item-desktop"><a class="nav-link-desktop" href="/users/<%= id %>/configuracoes">Configuração</a></li>
+    <li class="nav-item-desktop"><a class="nav-link-desktop" href="/users/<%= id %>/logout">Logout</a></li>
+
+</ul>
+
+</header>
+
+  <%- include("./partials/userMain") %> 
+  <div class="container-configuracoes">
+    
+      <div class="btn-res" id="btn-pedidos">
+          <p>Sua próxima camiseta chegará dia 27 de fevereiro</p>
+      </div>
+    
+
+    
+      
+    
+
+    
+  </div>
+
+</section>
+</main>
+
+
+
+
+<%- include("./partials/userFooter") %> 
+
+<script src="../../javascripts/users.js"></script>
+</body>
+</html>

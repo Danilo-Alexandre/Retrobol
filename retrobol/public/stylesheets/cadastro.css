@@ -1,10 +1,8 @@
 @keyframes showLogin {
     from{
-        transform: scale(0,1);
         filter: opacity(0);
     }
     to{
-        transform: scale(1,1);
         filter: opacity(1);
 
 
@@ -13,12 +11,10 @@
 
 @keyframes hideLogin {
     from{
-        transform: scale(1,1);
         filter: opacity(1);
 
     }
     to{
-        transform: scale(0,1);
         filter: opacity(0);
 
 
@@ -31,7 +27,7 @@
 .container-cadastro{
     display: flex;
     flex-direction: column;
-    padding: 100px 0 40px 0;
+    padding: 90px 0 40px 0;
     align-items: center;
     gap: 20px;
 

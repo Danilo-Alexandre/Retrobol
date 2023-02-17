@@ -2,7 +2,7 @@
 <%- include("./partials/partialHead") %> 
 <link rel="stylesheet" href="../../../stylesheets/config-dados.css" />
 <%- include("./partials/userHeader") %> 
-<span><%= user.User_nome %></span>
+<span><%= user.usuario.dataValues.User_nome %></span>
                   
   
 </div>
@@ -13,36 +13,44 @@
     <li class="nav-item-desktop"><a class="nav-link-desktop" href="/users/<%= id %>/pedidos">Proxima Entrega</a></li>
     <li class="nav-item-desktop"><a class="nav-link-desktop" href="/users/<%= id %>/configuracoes">Configuração</a></li>
     <li class="nav-item-desktop"><a class="nav-link-desktop" href="/users/<%= id %>/logout">Logout</a></li>
-
 </ul>
 
 </header>
 
 
 <main>
-    <form action="/users/<%= user.idUsuario %>/configuracoes/dados?_method=PUT " method="POST">
+    <form action="/users/<%= user.fk_user %>/configuracoes/endereco?_method=PUT " method="POST">
         
         <section class="container-cadastro">            
-            <h1>Dados Pessoais</h1>
+            <h1>Endereço de Entrega</h1>
             
             <div class="dados-pessoais">
              
-                <label for="nome">Nome</label>
-                <input id="dados-nome" name="nome" type="text" value="<%= user.User_nome  %> ">
+                <label for="cep">Cep</label>
+                <input id="dados-cep" name="cep" type="text" value="<%= user.cep  %> ">
                 
         
         
-                <label for="sobrenome">Sobrenome</label>
-                <input id="dados-sobrenome" name="sobrenome" type="text" value="<%= user.User_sobrenome  %>">
+                <label for="endereco">Endereço</label>
+                <input id="dados-endereco" name="endereco" type="text" value="<%= user.endereco  %>">
                 
         
         
-                <label for="celular">Celular</label>
-                <input id="dados-celular" name="celular" type="number" value="<%= user.User_celular  %>">
+                <label for="numero">Número</label>
+                <input id="dados-numero" name="numero" type="number" value="<%= user.numero  %>">
+
+                <label for="complemento">Complemento</label>
+                <input id="dados-complemento" name="complemento" type="text" value="<%= user.complemento  %>">
+
+                <label for="bairro">Bairro</label>
+                <input id="dados-bairro" name="bairro" type="text" value="<%= user.bairro  %>">
+
+                <label for="cidade">Cidade</label>
+                <input id="dados-cidade" name="cidade" type="text" value="<%= user.cidade  %>">
                
         
         
-
+                
                 
             </div>
         
@@ -52,10 +60,9 @@
                     Atualizar
                 </button>
                 <a href="/users/<%= id %>/configuracoes">
-                    <button onsubmit="sendEmail(event)" type="button" id="btn-dados-cancelar">
+                    <button type="button" id="btn-dados-cancelar">
                         Cancelar
                     </button>
-
                 </a>
             </div>
             

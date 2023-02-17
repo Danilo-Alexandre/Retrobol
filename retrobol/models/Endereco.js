@@ -21,8 +21,8 @@ module.exports = (sequelize, DataType)=>{
 
     Endereco.associate = (models) =>{
         Endereco.belongsTo(models.Usuario,{
-            foreignKey: "fk_user",
-            as:"usuario"
+            as:"usuario",
+            foreignKey: "fk_user"
         })
     }
 

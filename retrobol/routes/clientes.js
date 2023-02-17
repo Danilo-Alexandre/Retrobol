@@ -1,15 +1,18 @@
 const express = require("express")
 const router = express.Router()
 const clienteController = require("../controllers/clienteController")
-
-
-router.get("/", clienteController.clienteIndex )
-router.get("/alterar/:id", clienteController.alterarCliente )
-
-router.put("/alterar/:id", clienteController.modificarCliente )
+const middlewares = require("../middlewares/loginToken")
 
 
 
-router.delete("/deletar/:id", clienteController.deletarCliente)
+router.get("/", middlewares.authLogin,  clienteController.clienteIndex )
+router.get("/alterar/:id", middlewares.authLogin, clienteController.alterarCliente )
+router.get("/search", middlewares.authLogin, clienteController.search )
+
+router.put("/alterar/:id", middlewares.authLogin, clienteController.modificarCliente )
+
+
+
+router.delete("/deletar/:id", middlewares.authLogin, clienteController.deletarCliente)
 
 module.exports = router
